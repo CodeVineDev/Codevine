@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- font links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+    <!-- </font links> -->
+
+    <!-- style and script links -->
+    <link rel="stylesheet" href="font-awesome(4.7.0)/css/font-awesome.min.css">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+
+    <script src="script.js" defer></script>
+
+    <link rel="stylesheet" href="style.css">
+    <!--  </style links>  -->
+
+    <title>Codevine</title>
+
+</head>
+
+<body>
+    <section id="home" class="home">
+        <!-- <navbar >-->
+        <div class="bottom-page-nav">
+            <div><a href="#about"><i class="material-symbols-outlined">person_2</i>
+                    <p>Profile</p>
+                </a></div>
+            <div><a href="#services"><i class="material-symbols-outlined">category</i>
+                    <p>Skills</p>
+                </a></div>
+            <div><a href="#portfolio"><i class="material-symbols-outlined"> toolbar</i>
+                    <p>Projects</p>
+                </a></div>
+            <div class="home-bottom-nav"> <a href="#home"><i class="material-symbols-outlined">home</i>
+                    <p>Home</p>
+                </a></div>
+        </div>
+        <div class="goBack-btn">
+            <a href="#home"><i class="material-symbols-outlined">
+                    home
+                </i></a>
+            <a href="#contact"><i class="material-symbols-outlined">
+                    phone
+                </i></a>
+        </div>
+        <nav class="myNavbar">
+            <div class="navCon">
+                <div class="navbar-brandd">
+                    <p>CODEVINE..</p>
+                </div>
+                <div class="display-theme">
+                    <button id="toggleButton"><i id="iconElement"
+                            class="material-symbols-outlined">light_mode</i></button>
+                </div>
+                <button class="sidebarBtn">
+                    <span class="span"></span>
+                </button>
+
+                <div class=" sideBar">
+                    <div class="centerNav">
+                        <a href="#about">PROFILE</a>
+                        <a href="#services">SKILLS</a>
+                        <a href="#portfolio">PROJECTS</a>
+                        <a href="#contact" class="hidden-link">CONTACT</a>
+                    </div>
+
+                    <div class="navBtns">
+                        <a
+                            href="https://www.dropbox.com/scl/fi/030um7ue3t73qcqwj0ck8/EN-CV-CODEVINE-1.docx?rlkey=ukqfltyxxod42w93e7ow6mu3n&dl=0">
+                            <button class="myCv">MY CV</button>
+                        </a>
+                        <a href="#contact">
+                            <button class="boldContact">CONTACT</button>
+                        </a>
+
+                    </div>
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/cdc-codevine" class="social-icons">
+                            <button>
+                                <i class="fa fa-linkedin"></i>
+                            </button>
+                        </a>
+
+                        <a href="https://github.com/CodeVineDev">
+                            <button>
+                                <i class="fa fa-github"></i>
+                            </button>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </nav>
+        <!-- </navbar >-->
+
+        <!-- <HOME>  -->
+
+        <div class="right-hero">
+            <div class="hidden-hero">
+                <img class="waving" src="https://i.postimg.cc/T1Czf2Fk/pngwing-com-3.png"> <img
+                    src="https://i.postimg.cc/13cHvsfN/pngwing-com-1.png">
+            </div>
+            <div class="hidden-hero">
+                <h1>Hi Everyone, I'm Codevine!</h1>
+            </div>
+            <div class="hidden-hero">
+                <p class="occupation">A Front-End Web Developer</p>
+            </div>
+
+            <div class="socialBtns">
+                <a href="https://www.linkedin.com/in/cdc-codevine"><button> <i class="fa fa-linkedin"></i> View
+                        LinkedIn </button></a>
+
+                <a href="https://github.com/CodeVineDev"><button> <i class="fa fa-github"></i>
+                        View Github</button>
+                </a>
+            </div>
+
+            <div class="hidden-hero">
+                <div class="scroll-down">
+                    <p>Scroll down to know a little more about me</p>
+                    <i class="material-symbols-outlined" id="arrow-down">
+                        expand_more
+                    </i>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- </HOME>  -->
+
+    <!-- <about section> -->
+    <section id="about">
+        <div class="left-about">
+            <div class="h3-hidden">
+                <h3>Get to know more about me</h3>
+            </div>
+            <div class="p-hidden">
+                <p> I'm a creative <span class="mytitle">Front-End Web Developer</span>
+                    passionate about crafting impressive websites and online experiences . My strength lies in
+                    transforming designs into fully operational websites and digital content, leveraging my development
+                    skills to enrich and personalize their functionalities . My aim is to design visually captivating
+                    and user-friendly online platforms that offer smooth navigation. During my free time, I take
+                    pleasure in reading light novels and cherishing moments with myloved ones. <br>
+                    <a href="https://www.linkedin.com/in/cdc-codevine">See my experience and background in details</a>
+                </p>
+            </div>
+
+        </div>
+    </section>
+    <!-- </about section> -->
+
+    <!-- <services section> -->
+    <section id="services">
+        <div class="mySkills">
+            <div class="h3-hidden">
+                <h3> My Tech stack</h3>
+            </div>
+            <div class="p-hidden">
+                <div class="skills">
+                    <div class="html slide"><img src="https://i.postimg.cc/J0N5GwFn/pngwing-com-1-removebg-preview.png"
+                            alt="html">
+                        <p>HTML</p>
+                    </div>
+                    <div class="slide"><img src="https://i.postimg.cc/x83L9vkN/pngwing-com-2-removebg-preview.png"
+                            alt="css">
+                        <p>CSS</p>
+                    </div>
+                    <div class="slide"><img src="https://i.postimg.cc/6qMTHY2c/3-removebg-preview-1.png"
+                            alt="Javascript">
+                        <p>JAVASCRIPT</p>
+                    </div>
+                    <div class="slide"><img src="https://i.postimg.cc/2SsyXq6s/4-removebg-preview-1.png"
+                            alt="bootstrap">
+                        <p>BOOTSTRAP</p>
+                    </div>
+                    <div class="slide"><img src="https://i.postimg.cc/Kc0zhpjr/jquery-img.png" alt="jquery">
+                        <p>JQUERY</p>
+                    </div>
+                    <div class="slide"><img src="https://i.postimg.cc/qMddY8XX/gsaplogo.png" alt="gsap">
+                        <p class="gsap-p">GSAP 3</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+    <!-- </services section> -->
+
+    <!--<projects section> -->
+    <section id="portfolio">
+        <div class="projects">
+            <div clas="project-heading">
+                <h3>Examine my latest project</h3>
+            </div>
+            <div class="myprojects">
+                <div class="project-card">
+                    <div class="card-img">
+                        <img src="https://i.postimg.cc/8Pb4HTFf/programlaptop.jpg" alt="project picture">
+                    </div>
+                    <div class="project-card-body">
+                        <h4>SB-PRO</h4>
+                        <p class="card-text">Some quick example text to build on the card title and make up the
+                            bulk of the card's content.</p>
+                        <div class="skill-used-list">
+                            <div class="skill-used">HTML</div>
+                            <div class="skill-used">CSS</div>
+                            <div class="skill-used">JAVASCRIPT</div>
+                            <div class="skill-used">GSAP</div>
+                        </div>
+                        <div class="code-links">
+                            <a href="#" class="btn">Code <i class="fa fa-github"></i></a>
+                            <a href="#" class="btn">Live Demo <i class="fa fa-external-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="card-img">
+                        <img src="https://i.postimg.cc/8Pb4HTFf/programlaptop.jpg" alt="project picture">
+                    </div>
+                    <div class="project-card-body">
+                        <h4>Card title</h4>
+                        <p class="card-text">Some quick example text to build on the card title and make up the
+                            bulk of the card's content.</p>
+                        <div class="skill-used-list">
+                            <div class="skill-used">HTML</div>
+                            <div class="skill-used">CSS</div>
+                            <div class="skill-used">JAVASCRIPT</div>
+                            <div class="skill-used">GSAP</div>
+                        </div>
+                        <div class="code-links">
+                            <a href="#" class="btn">Code <i class="fa fa-github"></i></a>
+                            <a href="#" class="btn">Live Demo <i class="fa fa-external-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--</projects section> -->
+
+        <!-- <contact section> -->
+    </section>
+    <section id="contact">
+        <div class="contact-sec">
+            <div>
+                <h3>Send me an Email</3>
+                    <p>Let's collaborate to make your vision a reality. Reach out and let's create something remarkable
+                        together !</p>
+            </div>
+            <div>
+                <fieldset class="fieldset">
+                    <legend><img src="https://i.postimg.cc/X7c8Nn47/smiley-face.png" alt=""></legend>
+                    <form action="https://formsubmit.co/codevine2023@gmail.com" method="POST" id="myForm">
+                        <div class="upper-form">
+                            <input type="text" id="name" name="name" placeholder="Enter your name">
+                            <input type="email" id="email" name="email" placeholder="Enter your email">
+                        </div>
+                        <div class="center-form">
+                            <textarea id="textarea" name="message" placeholder="Message" required></textarea>
+                            <input type="hidden" name="_subject" value="CODEVINE SUBMISSION">
+                            <input type="hidden" name="_captcha" value="false">
+                        </div>
+                        <div class="bottom-form">
+                            <input type="hidden" name="_next" value="https://chukwudolue.com.ng/PAGES/thankyou.html">
+                            <button type="submit" id="send">Send Email</button>
+                        </div>
+                    </form>
+
+                </fieldset>
+            </div>
+        </div>
+    </section>
+    <!-- </contact section> -->
+
+    <!-- <footer> -->
+    <footer>
+        <p style="font-size: 16px;"> This portfolio was built with
+        <div class="built-with-icons">
+            <div><img src="IMAGES/pngwing.com__1_-removebg-preview.png" class="small-html"></div>
+            <div><img src="IMAGES/pngwing.com__2_-removebg-preview.png"></div>
+            <div><img src="IMAGES/3-removebg-preview (1).png"></div>
+            <div><img src="IMAGES/gsaplogo.png" class="small-gsap"></div>
+        </div>
+        </p>
+        <p> &copy; Copyright 2023 Chukwudolue Divine. All Rights Reserved </p>
+    </footer>
+    <!-- </footer> -->
+</body>
+
+</html>
