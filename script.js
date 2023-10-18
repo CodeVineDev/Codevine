@@ -51,6 +51,28 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 // Contact script
 
+// Scroll script
+document.addEventListener("DOMContentLoaded", function () {
+  const scroll = new SmoothScroll('a[href*="#"]', {
+    speed: 500, // Adjust the scroll speed as needed
+    offset: function (anchor, toggle) {
+      // Calculate the offset dynamically based on the screen width
+      if (window.innerWidth < 370) {
+        return 55; // Offset for screens narrower than 370px
+      } else if (window.innerWidth < 500) {
+        return 65; // Offset for screens between 370px and 500px
+      } else if (window.innerWidth < 700) {
+        return 75; // Offset for screens between 500px and 700px
+      } else if (window.innerWidth < 852) {
+        return 85; // Offset for screens between 700px and 852px
+      } else if (window.innerWidth < 992) {
+        return 95; // Offset for screens between 852px and 992px
+      } else {
+        return 0; // Default offset for larger screens
+      }
+    },
+  });
+});
 
 // Animation script
 const contactButton = document.querySelector(".boldContact");
@@ -292,35 +314,43 @@ timeLine
 
 gsap.registerPlugin(ScrollTrigger);
 
-gsap.to(".left-about h3", {
-  scrollTrigger: {
-    trigger: ".left-about",
-    start: "-20% center",
-    end: "bottom top",
-    toggleActions: "restart",
+gsap.fromTo(
+  ".left-about h3",
+  {
+    opacity: 0,
+    scale: 1,
+    y: "100%",
   },
-  opacity: 1,
-  scale: 1,
-  ease: "power2.in",
-  duration: 1,
-  y: 0,
-});
+  {
+    scrollTrigger: {
+      trigger: ".left-about",
+      start: "top 90%",
+      end: "bottom top",
+      toggleActions: "restart",
+    },
+    opacity: 1,
+    scale: 1,
+    ease: "power2.in",
+    duration: 1,
+    y: 0,
+  }
+);
 gsap.to(".left-about p", {
   scrollTrigger: {
     trigger: ".left-about",
-    start: "-500px",
+    start: "top 80%",
     end: "bottom 80%",
     toggleActions: "restart",
   },
   opacity: 1,
   duration: 1,
-  delay: 1,
+  delay: 0.8,
   y: 0,
 });
 gsap.to(".mySkills h3", {
   scrollTrigger: {
     trigger: ".mySkills",
-    start: "-40% center",
+    start: "-45% center",
     end: "bottom top",
     toggleActions: "restart",
   },
@@ -339,13 +369,12 @@ gsap.fromTo(
   {
     scrollTrigger: {
       trigger: ".mySkills",
-      start: "-100px center",
+      start: "-45% center",
       end: "bottom top",
-      marker: true,
       toggleActions: "restart",
     },
     ease: "bounce",
-    delay: 0.8,
+    delay: 1.2,
     stagger: 0.3,
     opacity: 1,
     y: 0,
