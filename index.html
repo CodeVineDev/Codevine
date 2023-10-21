@@ -29,6 +29,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
 
+    <!-- Include AOS CSS from CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+
+    <!-- Include AOS JavaScript from CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
     <script src="script.js" defer></script>
 
     <link rel="stylesheet" href="style.css">
@@ -116,33 +122,30 @@
         <!-- <HOME>  -->
         <div class="homepage">
             <div class="right-hero">
-                <div class="hidden-hero">
+                <div data-aos="zoom-in" data-aos-delay="1200" data-aos-duration="1000">
                     <img class="waving" src="https://i.postimg.cc/T1Czf2Fk/pngwing-com-3.png"> <img
                         src="https://i.postimg.cc/13cHvsfN/pngwing-com-1.png">
                 </div>
-                <div class="hidden-hero">
-                    <h1>Hi Everyone, I'm Codevine!</h1>
-                </div>
-                <div class="hidden-hero">
-                    <p class="occupation">A Front-End Web Developer</p>
-                </div>
+                <h1 data-aos="fade-up" data-aos-delay="1500" data-aos-duration="1000">Hi Everyone, I'm Codevine!</h1>
+                <p class="occupation" data-aos="fade-up" data-aos-delay="1800" data-aos-duration="1000">A Front-End Web
+                    Developer</p>
+
 
                 <div class="socialBtns">
-                    <a href="https://www.linkedin.com/in/cdc-codevine"><button> <i class="fa fa-linkedin"></i> View
+                    <a href="https://www.linkedin.com/in/cdc-codevine" data-aos="zoom-in" data-aos-delay="2100"
+                        data-aos-duration="1000"><button> <i class="fa fa-linkedin"></i> View
                             LinkedIn </button></a>
 
-                    <a href="https://github.com/CodeVineDev"><button> <i class="fa fa-github"></i>
+                    <a href="https://github.com/CodeVineDev" data-aos="zoom-in" data-aos-delay="2400"
+                        data-aos-duration="1000"><button> <i class="fa fa-github"></i>
                             View Github</button>
                     </a>
                 </div>
-
-                <div class="hidden-hero">
-                    <div class="scroll-down">
-                        <p>Scroll down to know a little more about me</p>
-                        <i class="material-symbols-outlined" id="arrow-down">
-                            expand_more
-                        </i>
-                    </div>
+                <div class="scroll-down" data-aos="fade-up" data-aos-delay="2700" data-aos-duration="1000">
+                    <p>Scroll down to know a little more about me</p>
+                    <i class="material-symbols-outlined" id="arrow-down">
+                        expand_more
+                    </i>
                 </div>
             </div>
         </div>
@@ -153,23 +156,18 @@
     <!-- <about section> -->
     <section id="about">
         <div class="left-about">
-            <div class="h3-hidden">
-                <h3>Meet the Developer</h3>
-            </div>
-            <div class="p-hidden">
-                <p> I'm a creative <span class="mytitle">Front-End Web Developer <iconify-icon
-                            icon="noto:man-technologist-medium-dark-skin-tone"></iconify-icon></span>
-                    passionate about crafting impressive websites and online experiences . My strength lies in
-                    transforming designs into fully operational websites and digital content, leveraging my development
-                    skills to enrich and personalize their functionalities . My aim is to design visually captivating
-                    and user-friendly online platforms that offer smooth navigation. During my free time, I take
-                    pleasure in reading light novels and cherishing moments with my loved ones. <br>
-                    <a href="https://www.linkedin.com/in/cdc-codevine"><iconify-icon
-                            icon="noto:backhand-index-pointing-right"></iconify-icon> See my experience and background
-                        in details</a>
-                </p>
-            </div>
-
+            <h3 data-aos="fade-up" data-aos-duration="1000">Meet the Developer</h3>
+            <p data-aos="fade-up" data-aos-duration="1000"> I'm a creative <span class="mytitle">Front-End Web Developer
+                    <iconify-icon icon="noto:man-technologist-medium-dark-skin-tone"></iconify-icon></span>
+                passionate about crafting impressive websites and online experiences . My strength lies in
+                transforming designs into fully operational websites and digital content, leveraging my development
+                skills to enrich and personalize their functionalities . My aim is to design visually captivating
+                and user-friendly online platforms that offer smooth navigation. During my free time, I take
+                pleasure in reading light novels and cherishing moments with my loved ones. <br>
+                <a href="https://www.linkedin.com/in/cdc-codevine"><iconify-icon
+                        icon="noto:backhand-index-pointing-right"></iconify-icon> See my experience and background
+                    in details</a>
+            </p>
         </div>
     </section>
     <!-- </about section> -->
@@ -177,33 +175,31 @@
     <!-- <services section> -->
     <section id="services">
         <div class="mySkills">
-            <div class="h3-hidden">
-                <h3> My Tech stack</h3>
-            </div>
-            <div class="p-hidden">
-                <div class="skills">
-                    <div class="html slide"><img src="https://i.postimg.cc/J0N5GwFn/pngwing-com-1-removebg-preview.png"
-                            alt="html">
-                        <p>HTML</p>
-                    </div>
-                    <div class="slide"><img src="https://i.postimg.cc/x83L9vkN/pngwing-com-2-removebg-preview.png"
-                            alt="css">
-                        <p>CSS</p>
-                    </div>
-                    <div class="slide"><img src="https://i.postimg.cc/6qMTHY2c/3-removebg-preview-1.png"
-                            alt="Javascript">
-                        <p>JAVASCRIPT</p>
-                    </div>
-                    <div class="slide"><img src="https://i.postimg.cc/2SsyXq6s/4-removebg-preview-1.png"
-                            alt="bootstrap">
-                        <p>BOOTSTRAP</p>
-                    </div>
-                    <div class="slide"><img src="https://i.postimg.cc/Kc0zhpjr/jquery-img.png" alt="jquery">
-                        <p>JQUERY</p>
-                    </div>
-                    <div class="slide"><img src="https://i.postimg.cc/qMddY8XX/gsaplogo.png" alt="gsap">
-                        <p class="gsap-p">GSAP 3</p>
-                    </div>
+            <h3 data-aos="fade-up" data-aos-delay="0" data-aos-duration="1000"> My Tech stack</h3>
+            <div class="skills">
+                <div class="html slide" data-aos="fade-right" data-aos-delay="0" data-aos-duration="1000"><img
+                        src="https://i.postimg.cc/J0N5GwFn/pngwing-com-1-removebg-preview.png" alt="html">
+                    <p>HTML</p>
+                </div>
+                <div class="slide" data-aos="fade-right" data-aos-delay="300" data-aos-duration="1000"><img
+                        src="https://i.postimg.cc/x83L9vkN/pngwing-com-2-removebg-preview.png" alt="css">
+                    <p>CSS</p>
+                </div>
+                <div class="slide" data-aos="fade-right" data-aos-delay="600" data-aos-duration="1000"><img
+                        src="https://i.postimg.cc/6qMTHY2c/3-removebg-preview-1.png" alt="Javascript">
+                    <p>JAVASCRIPT</p>
+                </div>
+                <div class="slide" data-aos="fade-right" data-aos-delay="900" data-aos-duration="1000"><img
+                        src="https://i.postimg.cc/2SsyXq6s/4-removebg-preview-1.png" alt="bootstrap">
+                    <p>BOOTSTRAP</p>
+                </div>
+                <div class="slide" data-aos="fade-right" data-aos-delay="1200" data-aos-duration="1000"><img
+                        src="https://i.postimg.cc/Kc0zhpjr/jquery-img.png" alt="jquery">
+                    <p>JQUERY</p>
+                </div>
+                <div class="slide" data-aos="fade-right" data-aos-delay="1500" data-aos-duration="1000"><img
+                        src="https://i.postimg.cc/qMddY8XX/gsaplogo.png" alt="gsap">
+                    <p class="gsap-p">GSAP 3</p>
                 </div>
             </div>
         </div>
@@ -216,10 +212,10 @@
     <section id="portfolio">
         <div class="projects">
             <div clas="project-heading">
-                <h3>Examine my latest project</h3>
+                <h3 data-aos="fade-up" data-aos-duration="1000">Examine my latest project</h3>
             </div>
             <div class="myprojects">
-                <div class="project-card">
+                <div class="project-card" data-aos="fade-right" data-aos-delay="300" data-aos-duration="1000">
                     <div class="card-img">
                         <img src="https://i.postimg.cc/8Pb4HTFf/programlaptop.jpg" alt="project picture">
                     </div>
@@ -252,14 +248,15 @@
     <section id="contact">
         <div class="contact-sec">
             <div>
-                <h3>Send me an Email</3>
-                    <p>Yes You <iconify-icon icon="noto:index-pointing-at-the-viewer"></iconify-icon> send an email,
-                        Let's collaborate
-                        to make your vision a reality. Reach out and let's create something remarkable
-                        together !</p>
+                <h3 data-aos="fade-up" data-aos-delay="0" data-aos-duration="1000">Send me an Email</h3>
+                <p data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">Yes You <iconify-icon
+                        icon="noto:index-pointing-at-the-viewer"></iconify-icon> send an email,
+                    Let's collaborate
+                    to make your vision a reality. Reach out and let's create something remarkable
+                    together !</p>
             </div>
             <div>
-                <fieldset class="fieldset">
+                <fieldset class="fieldset" data-aos="zoom-in" data-aos-delay="300" data-aos-duration="1000">
                     <legend><img src="https://i.postimg.cc/X7c8Nn47/smiley-face.png" alt=""></legend>
                     <form action="https://formsubmit.co/codevine2023@gmail.com" method="POST" id="myForm">
                         <div class="upper-form">
@@ -296,6 +293,10 @@
         <p> &copy; Copyright 2023 Chukwudolue Divine. All Rights Reserved </p>
     </footer>
     <!-- </footer> -->
+
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 </html>

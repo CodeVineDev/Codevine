@@ -58,7 +58,7 @@
 html {
   overflow-x: hidden;
   scroll-behavior: smooth;
-  scroll-padding: var(--scroll-padding, 5rem);
+  scroll-padding: 10rem;
 }
 
 body {
@@ -241,8 +241,7 @@ h6 {
   height: 15px;
   background-color: var(--ping-pink);
   border-radius: 50%;
-  animation: heartbeat-2 3s cubic-bezier(0.25, 2.5, 0.75, -0.5) alternate
-    infinite;
+  animation: heartbeat-2 3s cubic-bezier(0.25, 2.5, 0.75, -0.5) alternate infinite;
 
   /* Apply heartbeat-2 animation with specified cubic bezier */
 }
@@ -291,9 +290,11 @@ h1,
 p {
   text-wrap: balance;
 }
+
 .home-page {
   position: relative;
 }
+
 .right-hero {
   text-align: center;
   height: 40rem;
@@ -315,12 +316,10 @@ p {
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  background-image: linear-gradient(
-    to right,
-    var(--darker-blue),
-    var(--blue-text),
-    var(--text-head)
-  );
+  background-image: linear-gradient(to right,
+      var(--darker-blue),
+      var(--blue-text),
+      var(--text-head));
   font-family: var(--font-head);
 }
 
@@ -369,8 +368,7 @@ p {
 
 #arrow-down {
   width: 150px;
-  animation: arrow-down 1s cubic-bezier(0.86, 0.06, 0.93, 0.14) infinite
-    forwards alternate;
+  animation: arrow-down 1s cubic-bezier(0.86, 0.06, 0.93, 0.14) infinite forwards alternate;
 }
 
 .goBack-btn {
@@ -379,11 +377,9 @@ p {
 
 .goBack-btn a {
   z-index: 1;
-  background-image: linear-gradient(
-    to right,
-    var(--blue-text),
-    var(--text-head)
-  );
+  background-image: linear-gradient(to right,
+      var(--blue-text),
+      var(--text-head));
   padding: 7px 9px;
   border-radius: 50%;
   bottom: 40px;
@@ -428,8 +424,7 @@ p {
   height: 15px;
   background-color: var(--ping-pink);
   border-radius: 50%;
-  animation: heartbeat-2 3s cubic-bezier(0.25, 2.5, 0.75, -0.5) alternate
-    infinite;
+  animation: heartbeat-2 3s cubic-bezier(0.25, 2.5, 0.75, -0.5) alternate infinite;
 
   /* Apply heartbeat-2 animation with specified cubic bezier */
 }
@@ -448,7 +443,7 @@ p {
 /* ABOUT STYLING */
 .left-about {
   background: var(--linear-bg);
-  padding-block: 18%;
+  padding-block: 10%;
 }
 
 .left-about :is(.h3-hidden, .p-hidden, .project-heading) {
@@ -456,7 +451,7 @@ p {
 }
 
 .left-about h3 {
-  margin: 10px 0 30px 0;
+  margin: 0 0 30px 0;
   text-align: center;
   color: var(--blue-text);
   font-family: var(--font-head);
@@ -470,7 +465,7 @@ p {
 }
 
 .left-about p:not(.mytitle) {
-  opacity: 0;
+  padding: 0 5px;
   transform: translateY(100%);
   white-space: inherit;
   color: var(--tab-color);
@@ -499,10 +494,6 @@ p {
 }
 
 .mySkills h3 {
-  opacity: 0;
-  scale: 0;
-  transform: translateY(100%);
-
   margin: 10px 0 50px 0;
   text-align: center;
   color: var(--blue-text);
@@ -516,7 +507,7 @@ p {
 
   display: grid;
   gap: 1.5rem;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 150px), 1fr));
 }
 
 /* Apply the animation to your element on hover */
@@ -562,10 +553,6 @@ p {
 }
 
 .projects h3 {
-  opacity: 0;
-  scale: 0;
-  transform: translateY(100%);
-
   margin: 20px 0 50px 0;
   text-align: center;
   color: var(--blue-text);
@@ -592,7 +579,6 @@ p {
   width: min(93%, 1200px);
   margin: auto;
 
-  opacity: 0;
   display: grid;
   gap: 3rem;
   grid-template-columns: repeat(2, 1fr);
@@ -622,7 +608,8 @@ p {
 .project-card-body {
   padding: 20px 10px;
 }
-.skill-used-heading{
+
+.skill-used-heading {
   font-family: var(--font-special);
   font-size: 14px;
   font-style: normal;
@@ -687,15 +674,22 @@ p {
 }
 
 .contact-sec h3 {
-  margin: 20px 0 50px 0;
+  margin: 20px 0 5px 0;
   text-align: center;
   color: var(--blue-text);
   font-family: var(--font-head);
   font-size: clamp(20px, 4vw, 35px);
-
-  opacity: 0;
-  scale: 0;
 }
+
+.contact-sec p {
+  color: var(--tab-color);
+  font-family: var(--font-body);
+  font-weight: 400;
+  margin: 0 0 50px 0;
+  text-align: center;
+  font-size: clamp(14px, 4vw, 16px);
+}
+
 
 fieldset {
   width: min(93%, 1200px);
@@ -776,19 +770,6 @@ fieldset {
   box-shadow: 5px 5px 10px var(--faint-blue);
 }
 
-.contact-sec p {
-  color: var(--tab-color);
-  font-family: var(--font-body);
-  font-weight: 400;
-  letter-spacing: -0.5px;
-  word-spacing: 2px;
-  width: 70%;
-  font-size: var(--font-size-sm);
-  line-height: 20.8px;
-  margin: auto;
-  margin-bottom: 30px;
-}
-
 .contact-sec legend {
   margin-left: 48%;
 }
@@ -850,11 +831,9 @@ footer p {
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
-    background-image: linear-gradient(
-      to right,
-      var(--blue-text),
-      var(--text-head)
-    );
+    background-image: linear-gradient(to right,
+        var(--blue-text),
+        var(--text-head));
     font-family: var(--font-head);
   }
 
@@ -901,11 +880,6 @@ footer p {
     grid-template-columns: 1fr;
   }
 
-  .skills {
-    display: grid;
-    gap: 1.5rem;
-    grid-template-columns: repeat(2, 1fr) !important;
-  }
 }
 
 @media (max-width: 852px) {
@@ -1086,11 +1060,7 @@ footer p {
     margin-bottom: 80px;
   }
 }
-@media (max-width: 1100px) {
-  .skills {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
+
 
 /* ANIMATIONS */
 /* Define the keyframes animation */

@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", function () {
       } else if (window.innerWidth < 992) {
         return 95; // Offset for screens between 852px and 992px
       } else {
-        return 0; // Default offset for larger screens
+        return 0 + "88px"; // Default offset for larger screens
       }
     },
   });
@@ -183,63 +183,6 @@ timeLine
       opacity: 1,
     }
   )
-  .fromTo(
-    ".hidden-hero img",
-    {
-      scale: 0,
-    },
-    {
-      scale: 1,
-      ease: "bounce",
-    }
-  )
-  .fromTo(
-    ".hidden-hero h1",
-    {
-      y: "100%",
-    },
-    {
-      y: 0,
-    }
-  )
-  .fromTo(
-    ".hidden-hero p",
-    {
-      y: "100%",
-    },
-    {
-      y: 0,
-    }
-  )
-  .fromTo(
-    ".socialBtns",
-    {
-      opacity: 0,
-    },
-    {
-      opacity: 1,
-    }
-  )
-  .fromTo(
-    ".socialBtns a button",
-    {
-      scale: 0,
-    },
-    {
-      stagger: 0.2,
-      ease: "bounce",
-      scale: 1,
-    }
-  )
-  .fromTo(
-    ".hidden-hero .scroll-down",
-    {
-      y: "100%",
-    },
-    {
-      y: 0,
-    }
-  )
 
   .fromTo(
     ".sidebarBtn .span",
@@ -315,115 +258,50 @@ timeLine
 gsap.registerPlugin(ScrollTrigger);
 
 gsap.fromTo(
-  ".left-about h3",
-  {
-    opacity: 0,
-    scale: 1,
-    y: "100%",
-  },
-  {
-    scrollTrigger: {
-      trigger: ".left-about",
-      start: "top 90%",
-      end: "bottom top",
-      toggleActions: "restart",
-    },
-    opacity: 1,
-    scale: 1,
-    ease: "power2.in",
-    duration: 1,
-    y: 0,
-  }
-);
-gsap.to(".left-about p", {
-  scrollTrigger: {
-    trigger: ".left-about",
-    start: "top 80%",
-    end: "bottom 80%",
-    toggleActions: "restart",
-  },
-  opacity: 1,
-  duration: 1,
-  delay: 0.8,
-  y: 0,
-});
-gsap.to(".mySkills h3", {
-  scrollTrigger: {
-    trigger: ".mySkills",
-    start: "-45% center",
-    end: "bottom top",
-    toggleActions: "restart",
-  },
-  opacity: 1,
-  scale: 1,
-  ease: "power2.in",
-  duration: 1,
-  y: 0,
-});
-gsap.fromTo(
   ".mySkills .slide",
   {
-    opacity: 0,
-    y: "-100%",
+    filter: "blur(3px)",
   },
   {
     scrollTrigger: {
       trigger: ".mySkills",
-      start: "-45% center",
+      start: "top center",
       end: "bottom top",
       toggleActions: "restart",
     },
-    ease: "bounce",
-    delay: 1.2,
-    stagger: 0.3,
-    opacity: 1,
-    y: 0,
+    duration: 1.5,
+    filter: "blur(0)",
   }
 );
-gsap.to(".projects h3", {
-  scrollTrigger: {
-    trigger: ".projects",
-    start: "-30% center",
-    end: "bottom top",
-    toggleActions: "restart",
+gsap.fromTo(
+  ".projects .myprojects",
+  {
+    filter: "blur(3px)",
   },
-  opacity: 1,
-  scale: 1,
-  ease: "power2.in",
-  duration: 1,
-  y: 0,
-});
-gsap.to(".projects .myprojects", {
-  scrollTrigger: {
-    trigger: ".projects",
-    start: "-100px center",
-    end: "bottom top",
-    toggleActions: "restart",
+  {
+    scrollTrigger: {
+      trigger: ".projects",
+      start: "top center",
+      end: "bottom top",
+      toggleActions: "restart",
+    },
+    duration: 1,
+    filter: "blur(0)",
+  }
+);
+gsap.fromTo(
+  "fieldset",
+  {
+    filter: "blur(3px)",
   },
-  opacity: 1,
-  duration: 2,
-  delay: 0.5,
-});
-gsap.to(".contact-sec h3", {
-  scrollTrigger: {
-    trigger: ".contact-sec",
-    start: "-30% center",
-    end: "bottom top",
-    toggleActions: "restart",
-  },
-  opacity: 1,
-  scale: 1,
-  markers: true,
-  duration: 1,
-});
-gsap.to("fieldset", {
-  scrollTrigger: {
-    trigger: ".contact-sec",
-    start: "-100px center",
-    end: "bottom top",
-    toggleActions: "restart",
-  },
-  opacity: 1,
-  duration: 2,
-  delay: 1,
-});
+  {
+    scrollTrigger: {
+      trigger: ".contact-sec",
+      start: "-100px center",
+      end: "bottom top",
+      toggleActions: "restart",
+    },
+    duration: 1,
+    filter: "blur(0)",
+  }
+);
