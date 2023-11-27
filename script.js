@@ -258,22 +258,6 @@ timeLine
 gsap.registerPlugin(ScrollTrigger);
 
 gsap.fromTo(
-  ".mySkills .slide",
-  {
-    filter: "blur(3px)",
-  },
-  {
-    scrollTrigger: {
-      trigger: ".mySkills",
-      start: "top center",
-      end: "bottom top",
-      toggleActions: "restart",
-    },
-    duration: 1.5,
-    filter: "blur(0)",
-  }
-);
-gsap.fromTo(
   ".projects .myprojects",
   {
     filter: "blur(3px)",

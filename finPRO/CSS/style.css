@@ -150,7 +150,9 @@ iconify-icon {
   background: var(--deep-blue);
 }
 
-.container {
+.container_whole {
+  width: min(97%, 1280px);
+  margin: auto;
   display: grid;
   gap: 4rem;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 150px), 1fr));
@@ -212,4 +214,9 @@ iconify-icon {
 
 .search_section .searchbar span:hover {
   color: var(--orange);
+}
+/*      HOME STYLING        */
+.homepage{
+  border: var(--red-border);
+  height: 500px;
 }
