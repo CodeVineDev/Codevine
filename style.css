@@ -442,8 +442,10 @@ p {
 
 /* ABOUT STYLING */
 .left-about {
-  background: var(--linear-bg);
+  background: var(--primary-color);
+  box-shadow: 10px 6px 20px var(--faint-blue);
   padding-block: 10%;
+
 }
 
 .left-about :is(.h3-hidden, .p-hidden, .project-heading) {
@@ -476,12 +478,32 @@ p {
   line-height: 1.5;
   width: min(95%, 1200px);
   margin: auto;
+  margin-bottom: 30px;
 }
 
-.left-about p a {
+.about-social-buttons {
+  width: min(95%, 1200px);
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.about-social-buttons button {
+  background: var(--primary-color);
   font-weight: 700;
-  font-size: clamp(15px, 4vw, 20px);
+  padding: 10px 5px;
+  border-radius: 5px;
+  font-size: clamp(14px, 4vw, 16px);
   color: var(--blue-text);
+  text-decoration: none;
+  border: 1px solid var(--blue-text);
+  transition: 200ms ease-in-out;
+  width: 100%;
+}
+
+.about-social-buttons button:hover {
+  box-shadow: 5px 5px 10px var(--faint-blue);
 }
 
 /* END OF ABOUT STYLING */
@@ -844,6 +866,13 @@ footer p {
 }
 
 @media (max-width: 500px) {
+  .about-social-buttons {
+    width: min(95%, 1200px);
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
   .display-theme {
     right: 80px;
     top: 10px !important;
@@ -863,6 +892,7 @@ footer p {
 }
 
 @media (max-width: 700px) {
+
   .right-hero {
     text-align: center;
     width: 100%;
@@ -883,6 +913,7 @@ footer p {
 }
 
 @media (max-width: 852px) {
+  
   .project-card {
     grid-template-columns: 1fr;
   }
