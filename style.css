@@ -660,7 +660,7 @@ p {
   left: 50%;
   z-index: 2;
   transform: translate(-50%, -50%);
-  color: var(--primary-color);
+  color: #ffffff;
   font-family: var(--font-head);
   font-size: clamp(50px, 6vw, 100px);
 
