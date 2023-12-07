@@ -574,7 +574,7 @@ p {
   padding: 100px 0;
 }
 
-.projects h3 {
+.projects h3:not(.project-name) {
   margin: 20px 0 50px 0;
   text-align: center;
   color: var(--blue-text);
@@ -608,26 +608,73 @@ p {
 
 .card-img img {
   display: block;
+  position: relative;
   width: 100%;
   border-radius: 5px;
+}
+
+.card-img {
+  transition: 200ms ease-in-out;
+}
+
+.card-img::before {
+  content: '';
+  position: absolute;
+  top: -100%;
+  z-index: 1;
+  background: rgba(219, 234, 254, 0.8);
+  width: 100%;
+  height: 50%;
+  transition: 200ms ease-in-out;
+}
+
+.card-img::after {
+  content: '';
+  position: absolute;
+  background: rgba(219, 234, 254, 0.8);
+  top: 100%;
+  width: 100%;
+  height: 50%;
+  transition: 200ms ease-in-out;
+}
+
+.card-img:hover {
+  box-shadow: 10px 6px 15px var(--faint-blue);
+}
+.card-img:hover .project-name{
+  color: var(--text-head);
+}
+
+.card-img:hover::before {
+  top: 0;
+}
+
+.card-img:hover::after {
+  top: 50%;
+}
+
+.project-name {
+  transition: 200ms ease-in-out;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+  transform: translate(-50%, -50%);
+  color: var(--primary-color);
+  font-family: var(--font-head);
+  font-size: clamp(50px, 6vw, 100px);
+
 }
 
 .project-card {
   box-shadow: 1px 1px 10px var(--faint-blue);
   margin: auto;
+  overflow: hidden;
   transition: 200ms ease-in-out;
   border-radius: 5px;
-
-  display: grid;
-  gap: 1rem;
-  grid-template-columns: repeat(1, 1fr);
 }
 
-.project-card:hover {
-  box-shadow: 10px 6px 15px var(--faint-blue);
-}
-
-.project-card-body {
+/* .project-card-body {
   padding: 20px 10px;
 }
 
@@ -685,7 +732,7 @@ p {
 
 .code-links a:hover {
   box-shadow: 5px 5px 10px var(--faint-blue);
-}
+} */
 
 /* END OF PROJECT STYLING */
 
@@ -873,6 +920,7 @@ footer p {
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
+
   .display-theme {
     right: 80px;
     top: 10px !important;
@@ -905,21 +953,16 @@ footer p {
   .center-form {
     grid-column: span 2;
   }
-
   .myprojects {
     grid-template-columns: 1fr;
   }
 
 }
 
-@media (max-width: 852px) {
-  
-  .project-card {
-    grid-template-columns: 1fr;
-  }
-}
+
 
 @media (max-width: 992px) {
+  
   .display-theme {
     right: 80px;
     top: 17px;

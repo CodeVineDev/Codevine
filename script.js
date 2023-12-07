@@ -256,23 +256,6 @@ timeLine
   );
 
 gsap.registerPlugin(ScrollTrigger);
-
-gsap.fromTo(
-  ".projects .myprojects",
-  {
-    filter: "blur(3px)",
-  },
-  {
-    scrollTrigger: {
-      trigger: ".projects",
-      start: "top center",
-      end: "bottom top",
-      toggleActions: "restart",
-    },
-    duration: 1,
-    filter: "blur(0)",
-  }
-);
 gsap.fromTo(
   "fieldset",
   {
