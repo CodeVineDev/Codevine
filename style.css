@@ -913,6 +913,9 @@ footer p {
 }
 
 @media (max-width: 500px) {
+  .left-about{
+    padding-block: 20%;
+  }
   .about-social-buttons {
     width: min(95%, 1200px);
     margin: auto;
