@@ -39,7 +39,7 @@ toggleButton.addEventListener("click", () => {
   }
 });
 
-// Navbar query script
+// Navbar script
 document.addEventListener("DOMContentLoaded", function () {
   var sidebarBtn = document.querySelector(".sidebarBtn");
   var sideBar = document.querySelector(".sideBar");
@@ -50,6 +50,29 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 // Contact script
+
+// PROJECT POP UP SCRIPT
+var previewContainer = document.querySelector('.project-preview');
+var previewBox = previewContainer.querySelectorAll('.preview');
+
+document.querySelectorAll('.myprojects .project-card').forEach(project => {
+  project.onclick = () => {
+    previewContainer.style.display = 'flex';
+    let name = project.getAttribute('data-name');
+    previewBox.forEach(preview => {
+      let target = preview.getAttribute('data-target');
+      if (name == target) {
+        preview.classList.add('active');
+      }
+    });
+  }
+})
+previewBox.forEach(close => {
+  close.querySelector('.fa-times').onclick = () => {
+    close.classList.remove('active');
+    previewContainer.style.display = 'none';
+  };
+})
 
 // Scroll script
 document.addEventListener("DOMContentLoaded", function () {
