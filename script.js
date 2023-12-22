@@ -158,7 +158,7 @@ timewave
     // Rotate the element to 20 degrees
   })
   .to(element, {
-    duration: 5,
+    duration: 1,
     rotate: 0,
   });
 
@@ -169,7 +169,6 @@ timeLine
       y: "-100%",
     },
     {
-      duration: 1,
       y: 0,
       ease: "bounce",
     }
@@ -254,21 +253,3 @@ timeLine
       opacity: 1,
     }
   );
-
-gsap.registerPlugin(ScrollTrigger);
-gsap.fromTo(
-  "fieldset",
-  {
-    filter: "blur(3px)",
-  },
-  {
-    scrollTrigger: {
-      trigger: ".contact-sec",
-      start: "-100px center",
-      end: "bottom top",
-      toggleActions: "restart",
-    },
-    duration: 1,
-    filter: "blur(0)",
-  }
-);
