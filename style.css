@@ -437,7 +437,7 @@ p {
 .left-about {
   background: var(--primary-color);
   box-shadow: 10px 6px 20px var(--faint-blue);
-  padding-block: 10%;
+  padding-block: 5%;
 
 }
 
@@ -457,6 +457,21 @@ p {
   color: var(--blue-text);
   font-family: var(--font-head);
   font-size: clamp(20px, 4vw, 35px);
+}
+
+.left-about img {
+ width: 100%;
+  border-radius: 10px;
+}
+.myimage{
+  width: 300px;
+  padding: 20px;
+  background: var(--faint-blue);
+  margin: auto;
+  display: block;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  box-shadow: 1px 1px 10px var(--nav-shadow);
 }
 
 .mytitle {
@@ -481,7 +496,7 @@ p {
   margin-bottom: 30px;
 }
 
-.left-about p span:not(.mytitle) {
+.left-about p span:not(.mytitle,.myimage) {
   display: block;
   margin-bottom: 10px;
 }
@@ -1047,6 +1062,10 @@ footer p {
 /* MEDIA QUERY */
 
 @media (max-width: 370px) {
+  .socialBtns a button {
+    padding: 8px;
+    margin-inline: 8px;
+  }
   .skill-used {
     font-size: 12px;
   }
