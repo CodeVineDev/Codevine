@@ -54,11 +54,17 @@ document.addEventListener("DOMContentLoaded", function () {
 // PROJECT POP UP SCRIPT
 var previewContainer = document.querySelector('.project-preview');
 var previewBox = previewContainer.querySelectorAll('.preview');
+var previewCard = document.querySelector('#preview-card')
 
 document.querySelectorAll('.myprojects .project-card').forEach(project => {
   project.onclick = () => {
     previewContainer.style.display = 'flex';
+    previewContainer.style.pointerEvents = 'visible';
+    previewContainer.style.opacity = '1';
+    previewCard.style.opacity = '1';
+    previewCard.style.transform = "translate(0, 10px)"
     let name = project.getAttribute('data-name');
+
     previewBox.forEach(preview => {
       let target = preview.getAttribute('data-target');
       if (name == target) {
@@ -70,7 +76,10 @@ document.querySelectorAll('.myprojects .project-card').forEach(project => {
 previewBox.forEach(close => {
   close.querySelector('.fa-times').onclick = () => {
     close.classList.remove('active');
-    previewContainer.style.display = 'none';
+    previewContainer.style.pointerEvents = 'none';
+    previewContainer.style.opacity = '0';
+    previewCard.style.transform = "translate(0, -10px)"
+    previewCard.style.opacity = 0;
   };
 })
 
