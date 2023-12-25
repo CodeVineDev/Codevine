@@ -460,18 +460,19 @@ p {
 }
 
 .left-about img {
- width: 100%;
+  width: 100%;
   border-radius: 10px;
 }
-.myimage{
+
+.myimage {
   width: 300px;
   padding: 20px;
-  background: var(--faint-blue);
+  background: var(--primary-color);
   margin: auto;
   display: block;
   border-radius: 10px;
   margin-bottom: 30px;
-  box-shadow: 1px 1px 10px var(--nav-shadow);
+  box-shadow: 1px 1px 10px var(--faint-blue);
 }
 
 .mytitle {
@@ -496,7 +497,7 @@ p {
   margin-bottom: 30px;
 }
 
-.left-about p span:not(.mytitle,.myimage) {
+.left-about p span:not(.mytitle, .myimage) {
   display: block;
   margin-bottom: 10px;
 }
@@ -620,12 +621,11 @@ p {
 }
 
 .project-card {
-  /* box-shadow: 1px 1px 10px var(--faint-blue); */
   margin: auto;
   cursor: pointer;
   transition: 200ms ease-in-out;
   padding: 1rem 1rem 0 1rem;
-  border: 1px solid rgba(128, 128, 128, 0.733);
+  box-shadow: 1px 1px 10px var(--faint-blue);
   border-radius: 10px;
 }
 
@@ -928,8 +928,8 @@ fieldset {
   padding: 10px;
   margin: auto;
   box-shadow: 1px 1px 10px var(--faint-blue);
-  /* border: none; */
-  border-radius: 5px;
+  border: none;
+  border-radius: 10px;
   background: var(--primary-color);
 
   opacity: 0;
@@ -952,10 +952,11 @@ fieldset {
 }
 
 .upper-form input {
-  border-radius: 5px;
+  border-radius: 10px;
   padding: 10px;
   background: var(--primary-color);
-  border: 1px solid var(--tab-color);
+  box-shadow: 1px 1px 10px var(--faint-blue);
+  border: none;
   outline: none;
   margin-bottom: 1rem;
   width: 100%;
@@ -972,8 +973,9 @@ fieldset {
 }
 
 .center-form textarea {
-  border: 1px solid var(--tab-color);
-  border-radius: 5px;
+  box-shadow: 1px 1px 10px var(--faint-blue);
+  border: none;
+  border-radius: 10px;
   outline: none;
   color: var(--tab-color);
   padding: 10px;
@@ -1062,10 +1064,22 @@ footer p {
 /* MEDIA QUERY */
 
 @media (max-width: 370px) {
+  .myimage {
+    width: 280px;
+    padding: 20px;
+    background: var(--primary-color);
+    margin: auto;
+    display: block;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    box-shadow: 1px 1px 10px var(--faint-blue);
+  }
+
   .socialBtns a button {
     padding: 8px;
     margin-inline: 8px;
   }
+
   .skill-used {
     font-size: 12px;
   }
