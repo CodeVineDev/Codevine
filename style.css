@@ -659,11 +659,13 @@ p {
   position: absolute;
   top: 50%;
   left: 50%;
+  width: 100%;
   z-index: 2;
   transform: translate(-50%, -50%);
   color: #ffffff;
+  text-align: center;
   font-family: var(--font-head);
-  font-size: clamp(50px, 6vw, 100px);
+  font-size: clamp(35px, 6vw, 45px);
 
 }
 

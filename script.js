@@ -43,6 +43,12 @@ toggleButton.addEventListener("click", () => {
 document.addEventListener("DOMContentLoaded", function () {
   var sidebarBtn = document.querySelector(".sidebarBtn");
   var sideBar = document.querySelector(".sideBar");
+  var centerNav = document.querySelector(".centerNav");
+
+  centerNav.addEventListener("click", function () {
+    sideBar.classList.toggle("active");
+    sidebarBtn.classList.toggle("toggle");
+  })
 
   sidebarBtn.addEventListener("click", function () {
     sideBar.classList.toggle("active");
