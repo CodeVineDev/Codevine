@@ -785,7 +785,7 @@ p {
   text-align: center;
   background: var(--primary-color);
   position: relative;
-  margin: 2rem;
+  margin: 1rem;
   height: max-content;
   width: 27rem;
   border-radius: 10px;
@@ -1105,7 +1105,7 @@ footer p {
 
 @media (max-width: 500px) {
   .project-preview .preview {
-    width: 25rem;
+    width: 30rem;
   }
 
   .left-about {
