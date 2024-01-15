@@ -824,6 +824,7 @@ p {
 
 .preview p {
   font-size: clamp(14px, 4vw, 16px);
+  width: 100%;
   color: var(--tab-color);
   margin-bottom: 5px;
   font-family: var(--font-body);
