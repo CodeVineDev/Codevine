@@ -1160,6 +1160,9 @@ footer p {
 }
 
 @media (max-width: 992px) {
+  .write-up p {
+    font-size: 14px;
+  }
   .write-up {
     order: 2;
     padding: 0;
