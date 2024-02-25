@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function () {
   centerNav.addEventListener("click", function () {
     sideBar.classList.toggle("active");
     sidebarBtn.classList.toggle("toggle");
-  })
+  });
 
   sidebarBtn.addEventListener("click", function () {
     sideBar.classList.toggle("active");
@@ -58,36 +58,36 @@ document.addEventListener("DOMContentLoaded", function () {
 // Contact script
 
 // PROJECT POP UP SCRIPT
-var previewContainer = document.querySelector('.project-preview');
-var previewBox = previewContainer.querySelectorAll('.preview');
-var previewCard = document.querySelector('#preview-card')
+var previewContainer = document.querySelector(".project-preview");
+var previewBox = previewContainer.querySelectorAll(".preview");
+var previewCard = document.querySelector("#preview-card");
 
-document.querySelectorAll('.myprojects .project-card').forEach(project => {
+document.querySelectorAll(".myprojects .project-card").forEach((project) => {
   project.onclick = () => {
-    previewContainer.style.display = 'flex';
-    previewContainer.style.pointerEvents = 'visible';
-    previewContainer.style.opacity = '1';
-    previewCard.style.opacity = '1';
-    previewCard.style.transform = "translate(0, 10px)"
-    let name = project.getAttribute('data-name');
+    previewContainer.style.display = "flex";
+    previewContainer.style.pointerEvents = "visible";
+    previewContainer.style.opacity = "1";
+    previewCard.style.opacity = "1";
+    previewCard.style.transform = "translate(0, 10px)";
+    let name = project.getAttribute("data-name");
 
-    previewBox.forEach(preview => {
-      let target = preview.getAttribute('data-target');
+    previewBox.forEach((preview) => {
+      let target = preview.getAttribute("data-target");
       if (name == target) {
-        preview.classList.add('active');
+        preview.classList.add("active");
       }
     });
-  }
-})
-previewBox.forEach(close => {
-  close.querySelector('.fa-times').onclick = () => {
-    close.classList.remove('active');
-    previewContainer.style.pointerEvents = 'none';
-    previewContainer.style.opacity = '0';
-    previewCard.style.transform = "translate(0, -10px)"
+  };
+});
+previewBox.forEach((close) => {
+  close.querySelector(".fa-times").onclick = () => {
+    close.classList.remove("active");
+    previewContainer.style.pointerEvents = "none";
+    previewContainer.style.opacity = "0";
+    previewCard.style.transform = "translate(0, -10px)";
     previewCard.style.opacity = 0;
   };
-})
+});
 
 // Scroll script
 document.addEventListener("DOMContentLoaded", function () {
