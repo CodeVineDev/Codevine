@@ -444,12 +444,6 @@ p {
   overflow: hidden;
 }
 
-/* .left-about img{
-  width: 300px;
-  height: 300px;
-  border-radius: 10px;
-} */
-
 .left-about h3 {
   margin: 0 0 30px 0;
   text-align: center;
@@ -465,15 +459,14 @@ p {
 
 .myimage {
   width: 300px;
+  height: 300px;
   padding: 20px;
   background: var(--primary-color);
   margin: auto;
-  margin-top: 20px;
   border-radius: 10px;
   margin-bottom: 30px;
   box-shadow: 1px 1px 10px var(--faint-blue);
   order: 2;
-
 }
 
 .mytitle {
@@ -500,14 +493,12 @@ p {
 
 .write-up {
   width: 100%;
-  border: var(--red-border);
   order: 1;
   padding: 10px;
 }
 
 .write-up p {
-  font-size: 16px;
-  border: var(--red-border);
+  font-size: 18px;
 }
 
 
@@ -971,7 +962,9 @@ fieldset {
   height: 65px;
   color: var(--tab-color);
 }
-.upper-form input:focus, .center-form textarea:focus {
+
+.upper-form input:focus,
+.center-form textarea:focus {
   border: 1px solid var(--blue-text)
 }
 
@@ -1167,6 +1160,21 @@ footer p {
 }
 
 @media (max-width: 992px) {
+  .write-up {
+    order: 2;
+    padding: 0;
+  }
+
+  .myimage {
+    order: 1;
+    margin-bottom: 10px;
+  }
+
+  .about-text:not(.mytitle) {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
   .skill-used {
     font-size: 14px;
   }
