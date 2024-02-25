@@ -971,6 +971,9 @@ fieldset {
   height: 65px;
   color: var(--tab-color);
 }
+.upper-form input:focus, .center-form textarea:focus {
+  border: 1px solid var(--blue-text)
+}
 
 .upper-form input::placeholder {
   color: var(--tab-color);
