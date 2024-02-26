@@ -82,9 +82,9 @@ h6 {
   padding-block: 0.5rem;
   background: var(--primary-color);
   box-shadow: 2px 2px 5px var(--nav-shadow);
-  position: fixed;
+  
   width: 100%;
-  z-index: 10;
+  z-index: 2;
 }
 
 .navCon {
@@ -1316,7 +1316,7 @@ footer p {
   }
 
   .bottom-page-nav {
-    position: fixed;
+    /* position: sti; */
     width: 100%;
     bottom: 0;
     z-index: 10;
