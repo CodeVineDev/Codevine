@@ -475,7 +475,7 @@ p {
   margin: auto;
   display: block;
   border-radius: 10px;
-  margin-bottom: 5px;
+  margin-bottom: 30px;
   box-shadow: 1px 1px 10px var(--faint-blue);
 }
 
@@ -487,26 +487,24 @@ p {
 
 .left-about p:not(.mytitle) {
   padding: 0 5px;
+  transform: translateY(100%);
+  white-space: inherit;
   color: var(--tab-color);
   font-family: var(--font-body);
   font-weight: 500;
-  font-size: clamp(15px, 4vw, 20px);
-  line-height: 1.5;
+  letter-spacing: -0.5px;
+  word-spacing: 2px;
+  font-size: clamp(16px, 4vw, 20px);
+  line-height: 1.4;
   width: min(95%, 1200px);
+  margin: auto;
+  margin-bottom: 30px;
 }
 
 .left-about p span:not(.mytitle, .myimage) {
   display: block;
   margin-bottom: 10px;
 }
-.about-content{
-  display: grid;
-  grid-template-columns: 1fr 300px;
-  width: min(95%, 1200px);
-  margin: auto;
- 
-}
-
 
 .about-social-buttons {
   width: min(95%, 1200px);
@@ -1170,13 +1168,6 @@ footer p {
 }
 
 @media (max-width: 992px) {
-  .about-content{
-    display: grid;
-    grid-template-columns: 1fr;
-    width: min(95%, 1200px);
-    margin: auto;
-  }
-  
   .skill-used {
     font-size: 14px;
   }
