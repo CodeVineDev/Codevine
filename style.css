@@ -478,13 +478,7 @@ p {
   font-family: var(--font-special);
   color: var(--text-head);
 }
-.write-up-container{
-  display: grid;
-  gap: 2rem;
-  grid-template-columns: 1fr 300px;
-  width: min(95%, 1200px);
-  margin: auto;
-}
+
 
 .left-about p:not(.mytitle) {
   margin: auto;
