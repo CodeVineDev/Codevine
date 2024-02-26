@@ -56,12 +56,12 @@
 }
 
 html {
-  overflow-x: hidden;
   scroll-behavior: smooth;
   scroll-padding: 10rem;
 }
 
 body {
+  overflow-x:hidden ;
   position: relative;
   background-attachment: fixed;
   background: var(--linear-bg);
@@ -1065,9 +1065,7 @@ footer p {
 /* MEDIA QUERY */
 
 @media (max-width: 370px) {
-  body *{
-    border: 1px solid red;
-  }
+ 
   .myimage {
     width: 280px;
     padding: 20px;
