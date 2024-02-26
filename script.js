@@ -89,28 +89,7 @@ previewBox.forEach((close) => {
   };
 });
 
-// Scroll script
-document.addEventListener("DOMContentLoaded", function () {
-  const scroll = new SmoothScroll('a[href*="#"]', {
-    speed: 500, // Adjust the scroll speed as needed
-    offset: function (anchor, toggle) {
-      // Calculate the offset dynamically based on the screen width
-      if (window.innerWidth < 370) {
-        return 55; // Offset for screens narrower than 370px
-      } else if (window.innerWidth < 500) {
-        return 65; // Offset for screens between 370px and 500px
-      } else if (window.innerWidth < 700) {
-        return 75; // Offset for screens between 500px and 700px
-      } else if (window.innerWidth < 852) {
-        return 85; // Offset for screens between 700px and 852px
-      } else if (window.innerWidth < 992) {
-        return 95; // Offset for screens between 852px and 992px
-      } else {
-        return 0 + "88px"; // Default offset for larger screens
-      }
-    },
-  });
-});
+
 
 // Animation script
 const contactButton = document.querySelector(".boldContact");
