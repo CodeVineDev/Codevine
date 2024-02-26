@@ -1132,7 +1132,7 @@ footer p {
     top: 100%;
     right: -650px;
     width: 100vw !important;
-    height: 600vh !important;
+    height: 100vh !important;
     background: var(--primary-color);
     padding: 100px 20px;
     display: flex;
