@@ -506,12 +506,7 @@ p {
   margin: auto;
  
 }
-.right-about-img{
-  order: 2;
-}
-.left-about-write-up{
-  order: 1;
-}
+
 
 .about-social-buttons {
   width: min(95%, 1200px);
@@ -1181,12 +1176,7 @@ footer p {
     width: min(95%, 1200px);
     margin: auto;
   }
-  .right-about-img{
-    order: 1;
-  }
-  .left-about-write-up{
-    order: 2;
-  }
+  
   .skill-used {
     font-size: 14px;
   }
