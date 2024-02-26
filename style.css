@@ -1283,10 +1283,7 @@ footer p {
     transition: 0.3s;
   }
 
-  .active {
-    transition: 300ms ease;
-    right: 0;
-  }
+ 
 
   .sidebarBtn.toggle span {
     background: transparent;
