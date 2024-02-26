@@ -296,7 +296,7 @@ p {
 
 .right-hero {
   text-align: center;
-  height: 40rem;
+  height: 100dvh;
   width: 100%;
   display: grid;
   place-content: center;
@@ -492,7 +492,6 @@ p {
 .write-up {
   width: 100%;
   order: 1;
-  padding: 10px;
 }
 
 .write-up p {
@@ -501,7 +500,7 @@ p {
 
 
 .about-social-buttons {
-  width: min(95%, 1200px);
+  width: min(93%, 1200px);
   margin: auto;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
