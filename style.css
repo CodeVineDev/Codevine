@@ -46,6 +46,13 @@
   --ping-pink: var(--text-head);
   --primary-color: var(--grad-bg);
 }
+body, html{
+ 
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+}
 
 *,
 *::before,
@@ -56,7 +63,6 @@
 }
 
 html {
-  overflow-x: hidden;
   scroll-behavior: smooth;
   scroll-padding: 10rem;
 }
@@ -285,10 +291,10 @@ h6 {
 /*END OF NAVBAR STYLING */
 
 /* HOME STLYING */
-h1,
+/* h1,
 p {
   text-wrap: balance;
-}
+} */
 
 .home-page {
   position: relative;
@@ -473,9 +479,8 @@ p {
   padding: 20px;
   background: var(--primary-color);
   margin: auto;
-  display: block;
   border-radius: 10px;
-  margin-bottom: 30px;
+  margin-top: 0;
   box-shadow: 1px 1px 10px var(--faint-blue);
 }
 
@@ -487,7 +492,6 @@ p {
 
 .left-about p:not(.mytitle) {
   padding: 0 5px;
-  transform: translateY(100%);
   white-space: inherit;
   color: var(--tab-color);
   font-family: var(--font-body);
@@ -504,6 +508,14 @@ p {
 .left-about p span:not(.mytitle, .myimage) {
   display: block;
   margin-bottom: 10px;
+}
+
+.write-up-container{
+  display: grid;
+  grid-template-columns: 1fr .5fr;
+  gap: 2rem;
+  width: min(95%, 1200px);
+  margin: auto;
 }
 
 .about-social-buttons {
@@ -1173,6 +1185,16 @@ footer p {
 }
 
 @media (max-width: 992px) {
+  .write-up-container{
+    grid-template-columns: 1fr;
+    gap: .5rem;
+  }
+  .write-up{
+    order: 2;
+  }
+  .myimage{
+    order: 1;
+  }
   .skill-used {
     font-size: 14px;
   }
