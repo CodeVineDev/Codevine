@@ -666,10 +666,15 @@ p {
   width: 100%;
   z-index: 2;
   transform: translate(-50%, -50%);
-  color: #ffffff;
+  color: #021120;
   text-align: center;
+  width: max-content;
+  padding: 2px 8px;
+  border-radius: 5px;
+  backdrop-filter: blur(10px);
   font-family: var(--font-head);
-  font-size: clamp(35px, 6vw, 45px);
+  font-size: clamp(25px, 6vw, 35px);
+  border: 1px solid var(--grad-bg);
 }
 
 .project-name::after {
