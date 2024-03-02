@@ -724,7 +724,7 @@ h6 {
   color: var(--blue-text);
   font-weight: 600;
   font-family: var(--font-special);
-  border: 2px solid var(--blue-text);
+  border: 1px solid var(--blue-text);
   transition: 200ms ease-in-out;
 }
 .details button:hover{
