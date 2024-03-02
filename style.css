@@ -290,27 +290,17 @@ h6 {
 
 /*END OF NAVBAR STYLING */
 
-/* HOME STLYING */
-/* h1,
-p {
-  text-wrap: balance;
-} */
-
 .home-page {
   position: relative;
 }
 
 .right-hero {
+  border: var(--red-border);
   text-align: center;
   height: 100dvh;
   width: 100%;
   display: grid;
   place-content: center;
-}
-
-.right-hero img {
-  width: 30px;
-  margin-bottom: 10px;
 }
 
 .right-hero h1 {
@@ -336,8 +326,11 @@ p {
 
 .occupation {
   font-family: var(--font-head);
+  font-weight: 600;
   color: var(--tab-color);
-  font-size: clamp(20px, 4vw, 35px);
+  width: min(80%, 1000px);
+  margin: auto;
+  font-size: var(--font-size-sm);
 }
 
 .socialBtns {
@@ -1025,16 +1018,6 @@ fieldset {
 
 .bottom-form button:hover {
   box-shadow: 5px 5px 10px var(--faint-blue);
-}
-
-.contact-sec legend {
-  margin-left: 48%;
-}
-
-.contact-sec legend img {
-  width: 30px;
-  perspective: 300%;
-  animation: smiley-face 1s ease infinite alternate;
 }
 
 /* END OF CONTACT STYLING */

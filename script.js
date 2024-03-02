@@ -180,25 +180,10 @@ tl.to(circleContact, {
 tl.play();
 
 const timeLine = gsap.timeline({
-  // defaults: {
-  //     duration: 1
-  // }
+  defaults: {
+      duration: .5
+  }
 });
-
-const element = document.querySelector(".waving");
-const timewave = gsap.timeline({ repeat: -1, yoyo: true, ease: "linear" });
-
-// Add animation to the timeline
-timewave
-  .to(element, {
-    duration: 0.5, // Animation duration in seconds
-    rotate: 30,
-    // Rotate the element to 20 degrees
-  })
-  .to(element, {
-    duration: 1,
-    rotate: 0,
-  });
 
 timeLine
   .fromTo(
