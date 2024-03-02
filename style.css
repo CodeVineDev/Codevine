@@ -295,7 +295,6 @@ h6 {
 }
 
 .right-hero {
-  border: var(--red-border);
   text-align: center;
   height: 100dvh;
   width: 100%;
@@ -304,6 +303,7 @@ h6 {
 }
 
 .right-hero h1 {
+  letter-spacing: 2px;
   width: 100%;
   margin: auto;
   padding: 10px;
@@ -325,8 +325,9 @@ h6 {
 }
 
 .occupation {
-  font-family: var(--font-head);
-  font-weight: 600;
+  font-family: var(--font-body);
+  font-weight: 400;
+  line-height: 1.5;
   color: var(--tab-color);
   width: min(80%, 1000px);
   margin: auto;
@@ -489,10 +490,10 @@ h6 {
   color: var(--tab-color);
   font-family: var(--font-body);
   font-weight: 500;
-  letter-spacing: -0.5px;
-  word-spacing: 2px;
+  letter-spacing: .5px;
+  word-spacing: 1.5px;
   font-size: clamp(16px, 4vw, 20px);
-  line-height: 1.4;
+  line-height: 1.5;
   width: min(95%, 1200px);
   margin: auto;
   margin-bottom: 30px;
@@ -615,10 +616,13 @@ h6 {
 .projects p {
   color: var(--tab-color);
   font-family: var(--font-special);
-  font-weight: 600;
   font-size: clamp(12px, 4vw, 15px);
   padding: 10px 10px 10px 0;
 }
+.project-write-up{
+  margin-bottom: 30px;
+}
+
 
 .myprojects {
   width: min(93%, 1200px);
@@ -633,7 +637,7 @@ h6 {
   margin: auto;
   cursor: pointer;
   transition: 200ms ease-in-out;
-  padding: 1rem 1rem 0 1rem;
+  padding: 1rem;
   box-shadow: 1px 1px 10px var(--faint-blue);
   border-radius: 10px;
 }
@@ -711,6 +715,20 @@ h6 {
   background: var(--primary-color);
   display: flex;
   justify-content: space-between;
+}
+.details button{
+  padding: 3px 10px;
+  border-radius: 5px;
+  background: none;
+  font-size: 14px;
+  color: var(--blue-text);
+  font-weight: 600;
+  font-family: var(--font-special);
+  border: 2px solid var(--blue-text);
+  transition: 200ms ease-in-out;
+}
+.details button:hover{
+  box-shadow: 5px 5px 10px var(--faint-blue);
 }
 
 .details i {

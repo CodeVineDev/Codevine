@@ -58,11 +58,11 @@ document.addEventListener("DOMContentLoaded", function () {
 // Contact script
 
 // PROJECT POP UP SCRIPT
-var previewContainer = document.querySelector(".project-preview");
-var previewBox = previewContainer.querySelectorAll(".preview");
-var previewCard = document.querySelector("#preview-card");
+let previewContainer = document.querySelector(".project-preview");
+let previewBox = previewContainer.querySelectorAll(".preview");
+let previewCard = document.querySelector("#preview-card");
 
-document.querySelectorAll(".myprojects .project-card").forEach((project) => {
+document.querySelectorAll(".myprojects .project-card .show-card").forEach((project) => {
   project.onclick = () => {
     previewContainer.style.display = "flex";
     previewContainer.style.pointerEvents = "visible";
