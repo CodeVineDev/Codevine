@@ -490,7 +490,8 @@ p {
 .mytitle {
   text-align: center;
   font-family: var(--font-special);
-  color: var(--text-head);
+  font-weight: 600;
+  color: var(--tab-color);
 }
 
 .left-about p:not(.mytitle) {
@@ -725,37 +726,22 @@ p {
 .show-card:hover{
   box-shadow: 5px 5px 10px var(--faint-blue);
 }
-/* 
+
 .project-preview {
-  pointer-events: none;
-  opacity: 0;
-  transition: 200ms;
-  position: fixed;
-  top: 0;
-  left: 0;
-  min-height: 100vh;
-  width: 100%;
-  z-index: 10;
-  background: rgba(0, 0, 0, 0.8);
-  display: flex; eliminate this later
-  align-items: center;
-  justify-content: center;
-} */
-
-/* .project-preview .preview {
-  opacity: 0;
-  transition: 200ms;
-  transform: translateY(-10px);
-
-  padding: 1.5rem;
-  text-align: center;
-  background: var(--primary-color);
-  position: relative;
-  margin: 1rem;
-  height: max-content;
-  width: 27rem;
+  min-height: 90vh;
   border-radius: 10px;
-} */
+  width: 100%;
+  margin: auto;
+  border: none;
+ 
+}
+
+.project-preview .preview {
+  position: relative;
+  padding: 1.5rem;
+  background: var(--primary-color);
+  max-width: 100%;
+}
 
 .project-preview img {
   width: 100%;
@@ -765,10 +751,9 @@ p {
 }
 
 .project-preview .preview .fa-times {
-  position: absolute;
-  top: 0.2rem;
-  right: 0.2rem;
-  cursor: pointer;
+  position: fixed;
+  top: 50px;
+  right: 50px;
   color: var(--nav-shadow);
   font-size: 1.7rem;
   background: none;

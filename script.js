@@ -61,9 +61,11 @@ document.addEventListener("DOMContentLoaded", function () {
 let openModal = document.querySelector('.show-card');
 let closeModal = document.querySelector('.fa-times');
 let modal = document.querySelector('.project-preview')
+let body = document.getElementById('body');
 
 openModal.addEventListener('click', () => {
   modal.showModal();
+  body.style.overflowY = 'hidden';
 })
 modal.addEventListener('click', e => {
   const dialogDimensions = modal.getBoundingClientRect()
@@ -75,10 +77,12 @@ modal.addEventListener('click', e => {
 
   } {
     modal.close();
+    body.style.overflowY = 'scroll';
   }
 })
 closeModal.addEventListener('click', () => {
   modal.close();
+  body.style.overflowY = 'scroll';
 })
 
 
