@@ -12,7 +12,7 @@
   --grad-bg: white;
   --linear-bg: linear-gradient(90deg, #dbeafe 0%, #ffffff 100%);
   --text-head: #ff1493;
-  --tab-color: #021120;
+  --tab-color: #333;
   --darker-blue: #1572b6;
   --blue-text: #0a84ff;
   --nav-shadow: #c5c5c5;
@@ -42,7 +42,7 @@
   --faint-blue: #1e1e1e;
   --nav-shadow: #555555;
   --pink: #ff66b2;
-  --tab-color: #cccccc;
+  --tab-color: #929292;
   --ping-pink: var(--text-head);
   --primary-color: var(--grad-bg);
 }
@@ -336,9 +336,14 @@ p {
 }
 
 .occupation {
-  font-family: var(--font-head);
+  font-family: var(--font-body);
+  font-weight: 600;
   color: var(--tab-color);
-  font-size: clamp(20px, 4vw, 35px);
+  width: min(95%, 1200px);
+  line-height: 1.5;
+
+  font-size: clamp(16px, 4vw, 20px);
+  margin: auto;
 }
 
 .socialBtns {
@@ -371,7 +376,7 @@ p {
   font-family: var(--font-body);
   color: var(--tab-color);
   font-weight: 400;
-  font-size: var(--font-size-sm);
+  font-size: clamp(16px, 4vw, 20px);
   margin-top: 30px;
 }
 
@@ -500,7 +505,7 @@ p {
   letter-spacing: -0.5px;
   word-spacing: 2px;
   font-size: clamp(16px, 4vw, 20px);
-  line-height: 1.4;
+  line-height: 1.5;
   width: min(95%, 1200px);
   margin: auto;
   margin-bottom: 30px;
@@ -994,6 +999,12 @@ fieldset {
 .upper-form input::placeholder {
   color: var(--tab-color);
 }
+/* .upper-form input:focus ~ .upper-form input::placeholder {
+  font-size: 12px;
+  transform: translateY(-10px);
+  transition: 200ms ease-in-out;
+} */
+
 
 .center-form textarea::placeholder {
   color: var(--tab-color);
