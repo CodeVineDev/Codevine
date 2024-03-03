@@ -75,15 +75,6 @@ body {
   background: var(--linear-bg);
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 0;
-  padding: 0;
-}
 
 /* NAVBAR STYLING */
 .myNavbar {
@@ -741,6 +732,47 @@ p {
   padding: 1.5rem;
   background: var(--primary-color);
   max-width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+.about-project{
+  border: var(--red-border);
+  width: min(80%, 800px);
+  margin: auto;
+  text-align: center;
+  padding: 3rem 2rem;
+}
+.about-project h3{
+  font-size: clamp(20px, 4vw, 35px);
+  font-family: var(--font-head);
+  margin-bottom: 30px;
+}
+.preview .about-project .about-text{
+  font-size: clamp(16px, 4vw, 20px);
+  font-family: var(--font-body);
+  text-align: center;
+  margin-bottom: 40px;
+}
+.about-project button{
+  padding: 15px 40px;
+  border-radius: 5px;
+  color: var(--blue-text);
+  font-size: clamp(16px, 4vw, 20px);
+  background: none;
+  border: 1px solid var(--blue-text);
+  transition: 200ms ease-out;
+}
+.about-project button:hover{
+  box-shadow: 5px 5px 10px var(--faint-blue); 
+}
+.content-project{
+  border: var(--red-border);
+  width: min(80%, 800px);
+  margin: auto;
+}
+.content-project{
+  
 }
 
 .project-preview img {

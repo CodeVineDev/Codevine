@@ -61,11 +61,13 @@ document.addEventListener("DOMContentLoaded", function () {
 let openModal = document.querySelector('.show-card');
 let closeModal = document.querySelector('.fa-times');
 let modal = document.querySelector('.project-preview')
+let modalContent = document.querySelector('.project-preview .preview');
 let body = document.getElementById('body');
 
 openModal.addEventListener('click', () => {
   modal.showModal();
   body.style.overflowY = 'hidden';
+  modalContent.scrollTo(0, 0);
 })
 modal.addEventListener('click', e => {
   const dialogDimensions = modal.getBoundingClientRect()
