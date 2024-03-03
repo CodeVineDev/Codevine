@@ -290,20 +290,31 @@ h6 {
 
 /*END OF NAVBAR STYLING */
 
+/* HOME STLYING */
+/* h1,
+p {
+  text-wrap: balance;
+} */
+
 .home-page {
   position: relative;
 }
 
 .right-hero {
   text-align: center;
-  height: 100dvh;
+  height: 100vh;
   width: 100%;
   display: grid;
   place-content: center;
 }
 
+.space {
+  height: 30px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
 .right-hero h1 {
-  letter-spacing: 2px;
   width: 100%;
   margin: auto;
   padding: 10px;
@@ -325,13 +336,9 @@ h6 {
 }
 
 .occupation {
-  font-family: var(--font-body);
-  font-weight: 400;
-  line-height: 1.5;
+  font-family: var(--font-head);
   color: var(--tab-color);
-  width: min(80%, 1000px);
-  margin: auto;
-  font-size: var(--font-size-sm);
+  font-size: clamp(20px, 4vw, 35px);
 }
 
 .socialBtns {
@@ -490,10 +497,10 @@ h6 {
   color: var(--tab-color);
   font-family: var(--font-body);
   font-weight: 500;
-  letter-spacing: .5px;
-  word-spacing: 1.5px;
+  letter-spacing: -0.5px;
+  word-spacing: 2px;
   font-size: clamp(16px, 4vw, 20px);
-  line-height: 1.5;
+  line-height: 1.4;
   width: min(95%, 1200px);
   margin: auto;
   margin-bottom: 30px;
@@ -616,13 +623,10 @@ h6 {
 .projects p {
   color: var(--tab-color);
   font-family: var(--font-special);
+  font-weight: 600;
   font-size: clamp(12px, 4vw, 15px);
   padding: 10px 10px 10px 0;
 }
-.project-write-up{
-  margin-bottom: 30px;
-}
-
 
 .myprojects {
   width: min(93%, 1200px);
@@ -637,7 +641,7 @@ h6 {
   margin: auto;
   cursor: pointer;
   transition: 200ms ease-in-out;
-  padding: 1rem;
+  padding: 1rem 1rem 0 1rem;
   box-shadow: 1px 1px 10px var(--faint-blue);
   border-radius: 10px;
 }
@@ -715,20 +719,6 @@ h6 {
   background: var(--primary-color);
   display: flex;
   justify-content: space-between;
-}
-.details button{
-  padding: 3px 10px;
-  border-radius: 5px;
-  background: none;
-  font-size: 14px;
-  color: var(--blue-text);
-  font-weight: 600;
-  font-family: var(--font-special);
-  border: 1px solid var(--blue-text);
-  transition: 200ms ease-in-out;
-}
-.details button:hover{
-  box-shadow: 5px 5px 10px var(--faint-blue);
 }
 
 .details i {
@@ -951,6 +941,9 @@ h6 {
   font-weight: 400;
   margin: 0 0 50px 0;
   text-align: center;
+  width: min(95%, 1200px);
+  margin: auto;
+  margin-bottom: 20px;
   font-size: clamp(14px, 4vw, 16px);
 }
 
@@ -1036,6 +1029,16 @@ fieldset {
 
 .bottom-form button:hover {
   box-shadow: 5px 5px 10px var(--faint-blue);
+}
+
+.contact-sec legend {
+  margin-left: 48%;
+}
+
+.contact-sec legend img {
+  width: 30px;
+  perspective: 300%;
+  animation: smiley-face 1s ease infinite alternate;
 }
 
 /* END OF CONTACT STYLING */
@@ -1336,12 +1339,12 @@ footer p {
 
   .bottom-page-nav {
     position: fixed;
+
     width: 100%;
     bottom: 0;
     z-index: 10;
     padding: 10px 10px 32px 10px;
     display: block;
-    /* background: #FF1493; */
     box-shadow: 0px -3px 3px var(--nav-shadow);
     background: var(--primary-color);
     font-weight: bold;
@@ -1350,11 +1353,13 @@ footer p {
 
     display: flex;
     justify-content: space-around;
+    align-items: center;
   }
 
   .bottom-page-nav div {
     text-align: center;
     font-size: 14px;
+    transform: translateY(10px);
   }
 
   .bottom-page-nav a {

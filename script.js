@@ -181,7 +181,7 @@ tl.play();
 
 const timeLine = gsap.timeline({
   defaults: {
-      duration: .5
+      duration: .3
   }
 });
 
