@@ -725,7 +725,7 @@ p {
 .show-card:hover{
   box-shadow: 5px 5px 10px var(--faint-blue);
 }
-
+/* 
 .project-preview {
   pointer-events: none;
   opacity: 0;
@@ -737,12 +737,12 @@ p {
   width: 100%;
   z-index: 10;
   background: rgba(0, 0, 0, 0.8);
-  /* display: flex; */
+  display: flex; eliminate this later
   align-items: center;
   justify-content: center;
-}
+} */
 
-.project-preview .preview {
+/* .project-preview .preview {
   opacity: 0;
   transition: 200ms;
   transform: translateY(-10px);
@@ -755,7 +755,7 @@ p {
   height: max-content;
   width: 27rem;
   border-radius: 10px;
-}
+} */
 
 .project-preview img {
   width: 100%;
