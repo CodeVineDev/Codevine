@@ -829,7 +829,7 @@ p {
   border-radius: 5px;
   font-weight: 600;
   font-family: var(--font-special);
-  font-size: clamp(14px, 4vw, 18px);
+  font-size: clamp(14px, 4vw, 16px);
 
 }
 .golive-btn{
