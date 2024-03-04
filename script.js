@@ -69,19 +69,19 @@ openModal.addEventListener('click', () => {
   body.style.overflowY = 'hidden';
   modalContent.scrollTo(0, 0);
 })
-modal.addEventListener('click', e => {
-  const dialogDimensions = modal.getBoundingClientRect()
-  {
-    e.clientX < dialogDimensions.left ||
-      e.clientX > dialogDimensions.right ||
-      e.clientY < dialogDimensions.top ||
-      e.clientY > dialogDimensions.bottom
+// modal.addEventListener('click', e => {
+//   const dialogDimensions = modal.getBoundingClientRect()
+// if {
+//   e.clientX < dialogDimensions.left ||
+//     e.clientX > dialogDimensions.right ||
+//     e.clientY < dialogDimensions.top ||
+//     e.clientY > dialogDimensions.bottom
 
-  } {
-    modal.close();
-    body.style.overflowY = 'scroll';
-  }
-})
+// } {
+//   modal.close();
+//   body.style.overflowY = 'scroll';
+// }
+// })
 closeModal.addEventListener('click', () => {
   modal.close();
   body.style.overflowY = 'scroll';
