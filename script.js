@@ -1,3 +1,6 @@
+window.addEventListener('load', () => {
+  window.scrollTo(0, 0); // Scrolls to the top-left corner of the page
+});
 // TOGGLE THEMES SCRIPT
 const toggleButton = document.getElementById("toggleButton");
 const iconElement = document.getElementById("iconElement");
@@ -63,6 +66,7 @@ let closeModal = document.querySelector('.fa-times');
 let modal = document.querySelector('.project-preview')
 let modalContent = document.querySelector('.project-preview .preview');
 let body = document.getElementById('body');
+
 
 openModal.addEventListener('click', () => {
   modal.showModal();

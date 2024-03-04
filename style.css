@@ -302,7 +302,7 @@ p {
 }
 
 .space {
-  height: 30px;
+  height: 10px;
   width: 100%;
   margin-bottom: 10px;
 }
@@ -322,13 +322,10 @@ p {
   font-family: var(--font-head);
 }
 
-.hidden-hero {
-  overflow: hidden;
-}
 
 .occupation {
   font-family: var(--font-body);
-  font-weight: 600;
+  font-weight: 400;
   color: var(--tab-color);
   width: min(95%, 1200px);
   line-height: 1.5;
