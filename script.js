@@ -61,18 +61,33 @@ document.addEventListener("DOMContentLoaded", function () {
 // Contact script
 
 // PROJECT POP UP SCRIPT
-let openModal = document.querySelector('.show-card');
-let closeModal = document.querySelector('.fa-times');
-let modal = document.querySelector('.project-preview')
-let modalContent = document.querySelector('.project-preview .preview');
-let body = document.getElementById('body');
+function openDialog(boxNumber) {
+  var dialog = document.getElementById('dialog' + boxNumber);
+  dialog.showModal();
+}
+
+function closeDialog(boxNumber) {
+  var dialog = document.getElementById('dialog' + boxNumber);
+  dialog.close();
+}
 
 
-openModal.addEventListener('click', () => {
-  modal.showModal();
-  body.style.overflowY = 'hidden';
-  modalContent.scrollTo(0, 0);
-})
+  
+ 
+
+
+
+
+// openModal.addEventListener('click', () => {
+//   modal.showModal();
+//   body.style.overflowY = 'hidden';
+//   modalContent.scrollTo(0, 0);
+// })
+// closeModal.addEventListener('click', () => {
+//   modal.close();
+//   body.style.overflowY = 'scroll';
+// })
+
 // modal.addEventListener('click', e => {
 //   const dialogDimensions = modal.getBoundingClientRect()
 // if {
@@ -86,10 +101,7 @@ openModal.addEventListener('click', () => {
 //   body.style.overflowY = 'scroll';
 // }
 // })
-closeModal.addEventListener('click', () => {
-  modal.close();
-  body.style.overflowY = 'scroll';
-})
+
 
 
 // let previewContainer = document.querySelector(".project-preview");

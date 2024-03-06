@@ -125,7 +125,7 @@
                 <div class="space">
 
                 </div>
-                <h1 data-aos="fade-up">Hi Everyone, I'm CODEVINE </h1>
+                <h1 data-aos="fade-up">Hey there, I'm CODEVINE </h1>
                 <p class="occupation" data-aos="fade-up">A
                     Performance-Driven Front-End Web Developer building and managing Websites and Web Applications that
                     leads to the
@@ -177,7 +177,7 @@
                             The secret to my success? Making a 1% improvement every day - it's about evolving, learning,
                             and growing. #LISTEN MORE, TALK LESS.
                             <br>
-                            Make sure to 
+                            Make sure to
                         </span>
                     </p>
                 </div>
@@ -240,29 +240,124 @@
             </div>
             <div class="myprojects">
                 <div class="project-card" data-aos="fade-up" data-aos-duration="1000">
-                    <div class="card-img" data-name="p-1">
-                        <img src="IMAGES/alisterbank-homepage.jpg" alt="project picture">
+                    <div class="card-img">
+                        <img src="IMAGES/portfolify.jpg" alt="project picture">
                     </div>
                     <div class="right-info">
-                        <h4>ALISTER BANK</h4>
-                        <p>A fictional banking institution aimed at delivering a modern, secure, and
-                            user-friendly online banking experience.</p>
+                        <h4>PORTFOLIFY</h4>
+                        <p>
+                            Portfolify stands as a thriving Open-Source project that I created, envisioned as an
+                            invaluable resource for developers seeking polished portfolio templates.
+                        </p>
                         <div class="details">
                             <div class="status">
                                 <p>In Progress</p>
                                 <div class="status-pulse"></div>
                             </div>
                         </div>
-                        <button class="show-card">Case Study</button>
+                        <button class="show-card" onclick="openDialog(1)">Case Study</button>
+                    </div>
+                </div>
+            </div>
+            <div class="myprojects">
+                <div class="project-card" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="card-img">
+                        <img src="IMAGES/alisterbank-homepage.jpg" alt="project picture">
+                    </div>
+                    <div class="right-info">
+                        <h4>ALISTER BANK</h4>
+                        <p>
+                            Alister Bank is a fictional banking institution and I created this website from scratch
+                            using the frontend
+                            tools I know.
+                        </p>
+                        <div class="details">
+                            <div class="status">
+                                <p>In Progress</p>
+                                <div class="status-pulse"></div>
+                            </div>
+                        </div>
+                        <button class="show-card" onclick="openDialog(2)">Case Study</button>
                     </div>
                 </div>
             </div>
 
         </div>
-        <dialog class="project-preview">
+        <dialog class="project-preview" id="dialog1">
 
-            <div class="preview" data-target="p-1">
-                <i class="fa fa-times-circle fa-times"></i>
+            <div class="preview">
+                <i class="fa fa-times-circle fa-times" onclick="closeDialog(1)"></i>
+                <div class="about-project">
+                    <h2>PORTFOLIFY</h2>
+                    <p>This page contains the case study of Portfolify website which includes the
+                        Project Overview,
+                        Tools Used and Live Links to the official product.
+                    </p>
+                    <a href="https://github.com/CodeVineDev/Portfolify"><button>PROJECT LINK</button></a>
+                </div>
+                <div class="content-project">
+                    <img src="IMAGES/portfolify.jpg" alt="project picture">
+                    <h3>
+                        PROJECT OVERVIEW
+                    </h3>
+                    <div class="overview">
+                        <p>"Portfolify" is more than just a frontend project; it's a testament to empowerment and
+                            accessibility in the digital realm. As a frontend web developer, my mission with Portfolify
+                            is clear: to provide a comprehensive and customizable template solution for individuals
+                            seeking to showcase their talents and expertise online. <br><br>
+                            Portfolify is an open-source project hosted on GitHub,
+                            inviting contributions from developers worldwide to enhance and expand its features,
+                            ensuring its relevance and usability for years to come.
+
+                        </p>
+
+
+
+                        <h3>Key Features:</h3>
+
+                        <ul>
+                            <li> Sleek and Versatile Design: Portfolify boasts a modern and adaptable design, ensuring
+                                that users can effortlessly tailor their portfolios to reflect their unique style and
+                                personality.</li>
+                            <li> Responsive Layout: With a mobile-first approach, Portfolify ensures that portfolios
+                                look stunning and function flawlessly across a wide range of devices and screen sizes.
+                            </li>
+                            <li>User-friendly Customization: Through intuitive customization options, users can easily
+                                modify colors, fonts, layouts, and content to suit their preferences and branding.
+                            </li>
+                            <li>Portfolio Sections: Portfolify offers a variety of pre-designed sections, including
+                                about me, skills, projects, testimonials, and contact, allowing users to showcase their
+                                professional journey comprehensively.</li>
+                            <li> Accessibility and Performance: Committed to inclusivity, Portfolify adheres to
+                                accessibility best practices and prioritizes performance optimization to deliver an
+                                exceptional user experience for all visitors.
+                            </li>
+                        </ul>
+                    </div>
+                    <h3>
+                        TOOLS USED
+                    </h3>
+                    <div class="tools-used">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JAVASCRIPT</span>
+                        <span>SASS</span>
+                        <span>Git</span>
+                        <span>Github</span>
+                    </div>
+                    <h3>
+                        SEE LIVE
+                    </h3>
+                    <a href="https://github.com/CodeVineDev/Portfolify"><button class="golive-btn">
+                            PROJECT LINK
+                        </button></a>
+                </div>
+            </div>
+        </dialog>
+        <dialog class="project-preview" id="dialog2">
+
+            <div class="preview">
+                <i class="fa fa-times-circle fa-times" onclick="closeDialog(2)"></i>
                 <div class="about-project">
                     <h2>ALISTER BANK</h2>
                     <p>This page contains the case study of Alister Bank website which includes the
