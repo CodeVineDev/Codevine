@@ -669,7 +669,7 @@ p {
   align-items: center;
 }
 
-.status-pulse {
+.status-pulse-incomplete{
   margin-left: -5px;
   width: 15px;
   height: 15px;
@@ -677,16 +677,44 @@ p {
   background: #ffa500;
   /* IF COMPLETED
   background: rgb(0, 128, 0); */
-  animation: status-pulse 2s linear infinite;
+  animation: status-pulse-incomplete 2s linear infinite;
 }
 
-@keyframes status-pulse {
+@keyframes status-pulse-incomplete {
   0% {
     box-shadow: 0 0 0 0 rgb(255, 165, 0, 0.7), 0 0 0 0 rgb(255, 165, 0, 0.7);
   }
 
   40% {
     box-shadow: 0 0 0 10px rgb(255, 165, 0, 0), 0 0 0 0 rgb(255, 165, 0, 0.7);
+  }
+
+  80% {
+    box-shadow: 0 0 0 10px rgb(255, 165, 0, 0), 0 0 0 0 rgb(255, 165, 0, 0);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgb(255, 165, 0, 0), 0 0 0 0 rgb(255, 165, 0, 0);
+  }
+}
+.status-pulse-complete {
+  margin-left: -5px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  /* IF INCOMPLETED  
+   background: #ffa500;*/
+  background: rgb(0, 128, 0);
+  animation: status-pulse-complete  2s linear infinite;
+}
+
+@keyframes status-pulse-complete {
+  0% {
+    box-shadow: 0 0 0 0 rgb(0, 128, 0, 0.7), 0 0 0 0 rgb(0, 128, 0, 0.7);
+  }
+
+  40% {
+    box-shadow: 0 0 0 10px rgb(255, 165, 0, 0), 0 0 0 0 rgb(0, 128, 0, 0.7);
   }
 
   80% {
