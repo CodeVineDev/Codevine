@@ -73,6 +73,7 @@ body {
   position: relative;
   background-attachment: fixed;
   background: var(--linear-bg);
+  container-type: inline-size;
 }
 
 
@@ -84,6 +85,7 @@ body {
   position: fixed;
   width: 100%;
   z-index: 10;
+  /* border: var(--red-border); */
 }
 
 .navCon {
@@ -669,7 +671,7 @@ p {
   align-items: center;
 }
 
-.status-pulse-incomplete{
+.status-pulse-incomplete {
   margin-left: -5px;
   width: 15px;
   height: 15px;
@@ -697,6 +699,7 @@ p {
     box-shadow: 0 0 0 0 rgb(255, 165, 0, 0), 0 0 0 0 rgb(255, 165, 0, 0);
   }
 }
+
 .status-pulse-complete {
   margin-left: -5px;
   width: 15px;
@@ -705,7 +708,7 @@ p {
   /* IF INCOMPLETED  
    background: #ffa500;*/
   background: rgb(0, 128, 0);
-  animation: status-pulse-complete  2s linear infinite;
+  animation: status-pulse-complete 2s linear infinite;
 }
 
 @keyframes status-pulse-complete {
@@ -1119,10 +1122,6 @@ footer p {
     margin-inline: 8px;
   }
 
-  .skill-used {
-    font-size: 12px;
-  }
-
   .right-hero h1 {
     width: 94%;
     -webkit-background-clip: text;
@@ -1193,33 +1192,53 @@ footer p {
   }
 }
 
-@media (max-width: 992px) {
-  .details {
-    justify-content: center;
+@container (inline-size <=992px) {
+  .goBack-btn a:nth-child(1) {
+    display: none;
   }
 
-  .project-card {
-    display: grid;
-    gap: 3rem;
-    grid-template-columns: 1fr;
+  .home-bottom-nav a {
+    display: none;
+  }
+
+  .goBack-btn a:nth-child(2) {
+    display: block;
+    bottom: 120px;
+  }
+
+  .bottom-page-nav {
+    position: fixed;
+
+    width: 100%;
+    bottom: 0;
+    z-index: 10;
+    padding: 10px 10px 32px 10px;
+    display: block;
+    box-shadow: 0px -3px 3px var(--nav-shadow);
+    background: var(--primary-color);
+    font-weight: bold;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .bottom-page-nav div {
     text-align: center;
-  }
-
-  .write-up-container {
-    grid-template-columns: 1fr;
-    gap: .5rem;
-  }
-
-  .write-up {
-    order: 2;
-  }
-
-  .myimage {
-    order: 1;
-  }
-
-  .skill-used {
     font-size: 14px;
+    transform: translateY(10px);
+  }
+
+  .bottom-page-nav a {
+    color: var(--blue-text);
+    text-decoration: none;
+    font-family: var(--font-body);
+  }
+
+  .bottom-page-nav a:hover {
+    color: var(--text-head);
   }
 
   .display-theme {
@@ -1248,23 +1267,6 @@ footer p {
   .navBtns button {
     margin-bottom: 20px;
     width: 100%;
-  }
-
-  .social-icons {
-    display: block;
-    display: flex;
-    justify-content: space-evenly;
-  }
-
-  .social-icons button {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    padding: 10px;
-  }
-
-  .navBtns a:nth-child(2) {
-    display: none;
   }
 
   .sideBar {
@@ -1343,57 +1345,51 @@ footer p {
     transform: rotate(-45deg);
   }
 
-  .goBack-btn a:nth-child(1) {
-    display: none;
-  }
-
-  .home-bottom-nav a {
-    display: none;
-  }
-
-  .goBack-btn a:nth-child(2) {
+  .social-icons {
     display: block;
-    bottom: 120px;
-  }
-
-  .bottom-page-nav {
-    position: fixed;
-
-    width: 100%;
-    bottom: 0;
-    z-index: 10;
-    padding: 10px 10px 32px 10px;
-    display: block;
-    box-shadow: 0px -3px 3px var(--nav-shadow);
-    background: var(--primary-color);
-    font-weight: bold;
-    border-top-right-radius: 5px;
-    border-top-left-radius: 5px;
-
     display: flex;
-    justify-content: space-around;
-    align-items: center;
+    justify-content: space-evenly;
   }
 
-  .bottom-page-nav div {
+  .social-icons button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    padding: 10px;
+  }
+
+  .navBtns a:nth-child(2) {
+    display: none;
+  }
+
+  .write-up-container {
+    grid-template-columns: 1fr;
+    gap: .5rem;
+  }
+
+  .write-up {
+    order: 2;
+  }
+
+  .myimage {
+    order: 1;
+  }
+
+  .details {
+    justify-content: center;
+  }
+
+  .project-card {
+    display: grid;
+    gap: 3rem;
+    grid-template-columns: 1fr;
     text-align: center;
-    font-size: 14px;
-    transform: translateY(10px);
-  }
-
-  .bottom-page-nav a {
-    color: var(--blue-text);
-    text-decoration: none;
-    font-family: var(--font-body);
-  }
-
-  .bottom-page-nav a:hover {
-    color: var(--text-head);
   }
 
   footer {
     margin-bottom: 80px;
   }
+
 }
 
 /* ANIMATIONS */

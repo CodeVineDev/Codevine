@@ -72,69 +72,6 @@ function closeDialog(boxNumber) {
 }
 
 
-  
- 
-
-
-
-
-// openModal.addEventListener('click', () => {
-//   modal.showModal();
-//   body.style.overflowY = 'hidden';
-//   modalContent.scrollTo(0, 0);
-// })
-// closeModal.addEventListener('click', () => {
-//   modal.close();
-//   body.style.overflowY = 'scroll';
-// })
-
-// modal.addEventListener('click', e => {
-//   const dialogDimensions = modal.getBoundingClientRect()
-// if {
-//   e.clientX < dialogDimensions.left ||
-//     e.clientX > dialogDimensions.right ||
-//     e.clientY < dialogDimensions.top ||
-//     e.clientY > dialogDimensions.bottom
-
-// } {
-//   modal.close();
-//   body.style.overflowY = 'scroll';
-// }
-// })
-
-
-
-// let previewContainer = document.querySelector(".project-preview");
-// let previewBox = previewContainer.querySelectorAll(".preview");
-// let previewCard = document.querySelector("#preview-card");
-
-// document.querySelectorAll(".myprojects .project-card .show-card").forEach((project) => {
-//   project.onclick = () => {
-//     previewContainer.style.display = "flex";
-//     previewContainer.style.pointerEvents = "visible";
-//     previewContainer.style.opacity = "1";
-//     previewCard.style.opacity = "1";
-//     previewCard.style.transform = "translate(0, 10px)";
-//     let name = project.getAttribute("data-name");
-
-//     previewBox.forEach((preview) => {
-//       let target = preview.getAttribute("data-target");
-//       if (name == target) {
-//         preview.classList.add("active");
-//       }
-//     });
-//   };
-// });
-// previewBox.forEach((close) => {
-//   close.querySelector(".fa-times").onclick = () => {
-//     close.classList.remove("active");
-//     previewContainer.style.pointerEvents = "none";
-//     previewContainer.style.opacity = "0";
-//     previewCard.style.transform = "translate(0, -10px)";
-//     previewCard.style.opacity = 0;
-//   };
-// });
-
 // Scroll script
 document.addEventListener("DOMContentLoaded", function () {
   const scroll = new SmoothScroll('a[href*="#"]', {
