@@ -335,17 +335,24 @@ p {
 }
 
 .socialBtns {
+  display: flex;
+  gap: 1rem;
+  flex: 1;
+  flex-wrap: wrap;
+  width: fit-content;
+  margin: auto;
+  border: var(--red-border);
   margin-top: 30px;
 }
 
 .socialBtns a button {
+  width: 100%;
   background: transparent;
   border: 1px solid var(--blue-text);
-  margin-inline: 15px;
   padding: 10px;
   color: var(--blue-text);
   border-radius: 5px;
-  font-size: clamp(.8rem, 1.5cqi + .2rem, 1.5rem);
+  font-size: clamp(.8rem, 1.5cqi + .2rem, 1rem);
   font-family: var(--font-special);
   font-weight: 600;
   transition: 200ms ease-in-out;
@@ -379,18 +386,21 @@ p {
 
 .goBack-btn a {
   z-index: 1;
-  background-image: linear-gradient(to right,
-      var(--blue-text),
-      var(--text-head));
-  padding: 7px 9px;
+  background: var(--grad-bg);
+  width: 40px;
+  height: 40px;
+  padding: 8px;
+  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.336));
   border-radius: 50%;
   bottom: 40px;
   right: 30px;
   position: fixed;
+
 }
 
 .goBack-btn a i {
-  color: var(--primary-color);
+  color: var(--blue-text);
+  font-size: 25px; 
 }
 
 .bottom-page-nav .home-bottom-nav a {
@@ -669,7 +679,7 @@ p {
   align-items: center;
 }
 
-.status-pulse-incomplete{
+.status-pulse-incomplete {
   margin-left: -5px;
   width: 15px;
   height: 15px;
@@ -697,6 +707,7 @@ p {
     box-shadow: 0 0 0 0 rgb(255, 165, 0, 0), 0 0 0 0 rgb(255, 165, 0, 0);
   }
 }
+
 .status-pulse-complete {
   margin-left: -5px;
   width: 15px;
@@ -705,7 +716,7 @@ p {
   /* IF INCOMPLETED  
    background: #ffa500;*/
   background: rgb(0, 128, 0);
-  animation: status-pulse-complete  2s linear infinite;
+  animation: status-pulse-complete 2s linear infinite;
 }
 
 @keyframes status-pulse-complete {
@@ -1346,7 +1357,7 @@ footer p {
 
   .goBack-btn a:nth-child(2) {
     display: block;
-    bottom: 120px;
+    bottom: 80px;
   }
 
   .bottom-page-nav {
@@ -1355,7 +1366,7 @@ footer p {
     width: 100%;
     bottom: 0;
     z-index: 10;
-    padding: 10px 10px 32px 10px;
+    padding: 10px;
     display: block;
     box-shadow: 0px -3px 3px var(--nav-shadow);
     background: var(--primary-color);
@@ -1370,8 +1381,7 @@ footer p {
 
   .bottom-page-nav div {
     text-align: center;
-    font-size: 14px;
-    transform: translateY(10px);
+    font-size: clamp(.6rem, 1cqi + .3rem, 1rem);
   }
 
   .bottom-page-nav a {
