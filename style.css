@@ -335,13 +335,16 @@ p {
 }
 
 .socialBtns {
-  display: flex;
-  gap: 1rem;
-  flex: 1;
-  flex-wrap: wrap;
-  width: fit-content;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   margin: auto;
+  width: min(90%, 400px);
+  gap: 1rem;
   margin-top: 30px;
+}
+
+.socialBtns div {
+  width: 100%;
 }
 
 .socialBtns a button {
@@ -399,7 +402,7 @@ p {
 
 .goBack-btn a i {
   color: var(--blue-text);
-  font-size: 25px; 
+  font-size: 25px;
 }
 
 .bottom-page-nav .home-bottom-nav a {
@@ -1123,10 +1126,12 @@ footer p {
     margin-bottom: 30px;
     box-shadow: 1px 1px 10px var(--faint-blue);
   }
+  .socialBtns {
+    grid-template-columns: 1fr;
+  }
 
   .socialBtns a button {
     padding: 8px;
-    margin-inline: 8px;
   }
 
   .right-hero h1 {
