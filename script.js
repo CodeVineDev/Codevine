@@ -89,7 +89,7 @@ document.addEventListener("DOMContentLoaded", function () {
       } else if (window.innerWidth < 992) {
         return 95; // Offset for screens between 852px and 992px
       } else {
-        return 0 + "88px"; // Default offset for larger screens
+        return 0 + "70px"; // Default offset for larger screens
       }
     },
   });
