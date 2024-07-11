@@ -83,29 +83,28 @@ body {
   box-shadow: 2px 2px 5px var(--nav-shadow);
   position: fixed;
   width: 100%;
+  height: 70px;
   z-index: 10;
 }
 
 .navCon {
   width: 100%;
   margin: auto;
-  background: var(--primary-color);
   position: relative;
+  place-content: center;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
 
-.navbar-brandd {
-  grid-column: 1/2;
-  line-height: 3;
-  margin-left: clamp(20px, 4vw, 50px);
-}
-
 .navbar-brandd p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
   color: var(--text-head);
   font-family: var(--font-head);
   font-weight: 900;
-  font-size: clamp(20px, 4vw, 24px);
+  font-size: clamp(1.2rem, 1.5cqi + .3rem, 2rem);
 }
 
 .sideBar {
@@ -143,9 +142,8 @@ body {
   width: 40px;
   height: 40px;
   position: absolute;
-  top: 15px;
+  top: 7px;
   right: 30%;
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -295,7 +293,7 @@ p {
 
 .right-hero {
   text-align: center;
-  height: 100vh;
+  height: 100svh;
   width: 100%;
   display: grid;
   place-content: center;
@@ -411,6 +409,9 @@ p {
 
 .goBack-btn a:nth-child(1) {
   display: block;
+  width: 50px;
+  height: 50px;
+  padding: 12px;
 }
 
 .goBack-btn a:nth-child(2) {
@@ -1126,6 +1127,7 @@ footer p {
     margin-bottom: 30px;
     box-shadow: 1px 1px 10px var(--faint-blue);
   }
+
   .socialBtns {
     grid-template-columns: 1fr;
   }
@@ -1152,8 +1154,10 @@ footer p {
 }
 
 @media (max-width: 500px) {
-
-
+  .navbar-brandd {
+    height: 55px;
+    margin-left: 20px;
+  }
 
   .left-about {
     padding-block: 20%;
@@ -1161,7 +1165,6 @@ footer p {
 
   .display-theme {
     right: 80px;
-    top: 10px !important;
   }
 
   .sideBar {
@@ -1232,7 +1235,7 @@ footer p {
 
   .display-theme {
     right: 80px;
-    top: 17px;
+    top: 10px;
   }
 
   .hidden-link {
@@ -1271,13 +1274,24 @@ footer p {
     padding: 10px;
   }
 
+  .navbar-brandd {
+    height: 55px;
+  }
+
+  .navbar-brandd p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+
   .navBtns a:nth-child(2) {
     display: none;
   }
 
   .sideBar {
     position: absolute;
-    top: 100%;
+    top: 60px;
     right: -650px;
     width: 100%;
     height: 100vh;
@@ -1294,7 +1308,7 @@ footer p {
     width: 30px;
     height: 30px;
     position: absolute;
-    top: clamp(15px, 4vw, 25px);
+    top: 16px;
     right: 30px;
     overflow: hidden;
   }
