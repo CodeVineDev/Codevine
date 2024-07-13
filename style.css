@@ -74,9 +74,6 @@ body {
   background-attachment: fixed;
   background: var(--linear-bg);
 }
-.container {
-  container-type: inline-size;
-}
 
 
 /* NAVBAR STYLING */
@@ -456,7 +453,6 @@ p {
   background: var(--primary-color);
   box-shadow: 10px 6px 20px var(--faint-blue);
   padding-block: 5%;
-  container-type: inline-size;
 }
 
 .left-about :is(.h3-hidden, .p-hidden, .project-heading) {
@@ -1185,7 +1181,7 @@ footer p {
   }
 }
 
-@container (inline-size <= 700px) {
+@media (max-width: 700px) {
   .write-up-container {
     grid-template-columns: 1fr;
     gap: .5rem;
@@ -1417,7 +1413,7 @@ footer p {
   }
 
   footer {
-    margin-bottom: 80px;
+    margin-bottom: 60px;
   }
 }
 
