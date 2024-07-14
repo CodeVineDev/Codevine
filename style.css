@@ -3,8 +3,10 @@
   --font-head: "Montserrat", serif;
   --font-body: "Lato", sans-serif;
   --font-special: "Poppins", sans-serif;
-  --font-size-lg: 24px;
-  --font-size-sm: 16px;
+  --font-size-h1: clamp(2rem, 5cqi + 0.5rem, 30rem);
+  --font-size-h3: clamp(1rem, 1.5cqi + .3rem, 1.2rem);
+  --font-size-p: clamp(.8rem, 1.5cqi + .3rem, 1rem);
+  --font-size-special: clamp(.7rem, 1.5cqi + .3rem, 1rem);
   --red-border: 2px solid red;
   --line-height-body: 20.8px;
   --line-height-head: 26.4px;
@@ -28,8 +30,10 @@
   --font-head: "Montserrat", serif;
   --font-body: "Lato", sans-serif;
   --font-special: "Poppins", sans-serif;
-  --font-size-lg: 24px;
-  --font-size-sm: 16px;
+  --font-size-h1: clamp(2rem, 5cqi + 0.5rem, 30rem);
+  --font-size-h3: clamp(1rem, 1.5cqi + .3rem, 1.2rem);
+  --font-size-p: clamp(.8rem, 1.5cqi + .3rem, 1rem);
+  --font-size-special: clamp(.7rem, 1.5cqi + .3rem, 1rem);
   --red-border: 2px solid red;
   --line-height-body: 20.8px;
   --line-height-head: 26.4px;
@@ -309,8 +313,7 @@ p {
   width: 100%;
   margin: auto;
   padding: 10px;
-  /* font-size: clamp(40px, 5vw, 100px); */
-  font-size: clamp(2rem, 5cqi + 0.5rem, 30rem);
+  font-size: var(--font-size-h1);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -328,7 +331,7 @@ p {
   color: var(--tab-color);
   width: min(95%, 1200px);
   line-height: 1.5;
-  font-size: clamp(1rem, 1.5cqi + .3rem, 3rem);
+  font-size:var(--font-size-p);
   margin: auto;
 }
 
@@ -352,7 +355,7 @@ p {
   padding: 10px;
   color: var(--blue-text);
   border-radius: 5px;
-  font-size: clamp(.8rem, 1.5cqi + .2rem, 1rem);
+  font-size:var(--font-size-p);
   font-family: var(--font-special);
   font-weight: 600;
   transition: 200ms ease-in-out;
@@ -371,7 +374,7 @@ p {
   font-family: var(--font-body);
   color: var(--tab-color);
   font-weight: 400;
-  font-size: clamp(.8rem, 1.5cqi + .2rem, 1.5rem);
+  font-size: var(--font-size-special);
   margin-top: 30px;
 }
 
@@ -464,7 +467,7 @@ p {
   text-align: center;
   color: var(--blue-text);
   font-family: var(--font-head);
-  font-size: clamp(20px, 4vw, 35px);
+  font-size: var(--font-size-h3);
 }
 
 .left-about img {
@@ -486,7 +489,7 @@ p {
   text-align: center;
   font-family: var(--font-special);
   font-weight: 600;
-  font-size: clamp(1rem, 1.5cqi + .3rem, 1.2rem);
+  font-size: var(--font-size-p);
   color: var(--tab-color);
 }
 
@@ -498,7 +501,7 @@ p {
   font-weight: 500;
   letter-spacing: -0.5px;
   word-spacing: 2px;
-  font-size: clamp(1rem, 1.5cqi + .3rem, 1.2rem);
+  font-size: var(--font-size-p);
   line-height: 1.5;
   width: min(95%, 1200px);
   margin: auto;
@@ -532,7 +535,7 @@ p {
   font-weight: 700;
   padding: 10px 5px;
   border-radius: 5px;
-  font-size: clamp(14px, 4vw, 16px);
+  font-size: var(--font-size-p);
   color: var(--blue-text);
   text-decoration: none;
   border: 1px solid var(--blue-text);
@@ -558,7 +561,7 @@ p {
   text-align: center;
   color: var(--blue-text);
   font-family: var(--font-head);
-  font-size: clamp(20px, 4vw, 35px);
+  font-size: var(--font-size-h3);
 }
 
 .skills {
@@ -596,6 +599,7 @@ p {
 .skills div p {
   font-family: var(--font-special);
   font-weight: 900;
+  font-size: var(--font-size-p);
   color: var(--tab-color);
 }
 
@@ -617,20 +621,20 @@ p {
   text-align: center;
   color: var(--blue-text);
   font-family: var(--font-head);
-  font-size: clamp(20px, 4vw, 35px);
+  font-size: var(--font-size-h3);
 }
 
 .projects h4 {
   color: var(--tab-color);
   font-family: var(--font-head);
-  font-size: clamp(18px, 4vw, 25px);
+  font-size: var(--font-size-p);
 }
 
 .projects p {
   color: var(--tab-color);
   font-family: var(--font-special);
   font-weight: 400;
-  font-size: clamp(16px, 4vw, 20px);
+  font-size: var(--font-size-p);
   padding: 10px 10px 10px 0;
 }
 
@@ -745,7 +749,7 @@ p {
   padding: 15px 40px;
   border-radius: 5px;
   color: var(--blue-text);
-  font-size: clamp(16px, 4vw, 20px);
+  font-size:var(--font-size-p);
   background: none;
   border: 1px solid var(--blue-text);
   transition: 200ms ease-out;
@@ -783,30 +787,36 @@ p {
   width: min(95%, 800px);
   margin: auto;
   text-align: center;
-  padding: 3rem 1.5rem;
+  padding: 3rem 0rem;
 }
 
 .about-project h2 {
-  font-size: clamp(20px, 4vw, 35px);
+  font-size: var(--font-size-h3);
   color: var(--tab-color);
   font-family: var(--font-head);
   margin-bottom: 30px;
 }
 
 .preview .about-project p {
-  font-size: clamp(16px, 4vw, 20px);
+  font-size: var(--font-size-p);
   font-family: var(--font-body);
   color: var(--tab-color);
   text-align: center;
   margin-bottom: 40px;
   line-height: 1.5;
 }
+.live-btns{
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(2, 1fr);
+}
 
-.about-project button {
-  padding: 15px 50px;
+.preview button {
+  width: 100%;
+  padding: 15px;
   border-radius: 5px;
   color: var(--blue-text);
-  font-size: clamp(16px, 4vw, 20px);
+  font-size: var(--font-size-p);
   background: none;
   border: 1px solid var(--blue-text);
   transition: 200ms ease-out;
@@ -822,7 +832,7 @@ p {
 }
 
 .content-project h3 {
-  font-size: clamp(20px, 4vw, 25px);
+  font-size:var(--font-size-h3);
   color: var(--tab-color);
   font-family: var(--font-head);
   margin-bottom: 30px;
@@ -833,7 +843,7 @@ p {
   font-family: var(--font-body);
   line-height: 1.5;
   color: var(--tab-color);
-  font-size: clamp(16px, 4vw, 20px);
+  font-size: var(--font-size-p);
 
 }
 
@@ -855,7 +865,7 @@ p {
   font-family: var(--font-body);
   line-height: 1.5;
   color: var(--tab-color);
-  font-size: clamp(16px, 4vw, 20px);
+  font-size:var(--font-size-p);
 }
 
 .project-preview .preview .fa-times {
@@ -876,19 +886,19 @@ p {
   margin-bottom: 40px;
   display: flex;
   justify-content: start;
-  gap: 1rem;
+  gap: .5rem;
   align-items: center;
   flex-wrap: wrap;
 }
 
 .tools-used span {
   background: var(--nav-shadow);
-  color: var(--tab-color);
+  color: var(--grad-bg);
   padding: 6px 15px;
   border-radius: 5px;
   font-weight: 600;
   font-family: var(--font-special);
-  font-size: clamp(14px, 4vw, 16px);
+  font-size: var(--font-size-p);
 
 }
 
@@ -896,7 +906,7 @@ p {
   padding: 15px 50px;
   border-radius: 5px;
   color: var(--blue-text);
-  font-size: clamp(16px, 4vw, 20px);
+  font-size: var(--font-size-p);
   background: none;
   border: 1px solid var(--blue-text);
   transition: 200ms ease-out;
@@ -905,33 +915,6 @@ p {
 .golive-btn:hover {
   box-shadow: 5px 5px 10px var(--faint-blue);
 }
-
-
-.code-links {
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
-}
-
-.code-links button {
-  width: 100%;
-  padding: 7px;
-  font-size: 14px;
-  color: var(--blue-text);
-  border-radius: 5px;
-  background: var(--primary-color);
-  border: 1px solid var(--blue-text);
-  text-decoration: none;
-  font-weight: 700;
-  transition: 200ms ease-in-out;
-}
-
-.code-links a:hover {
-  box-shadow: 5px 5px 10px var(--faint-blue);
-}
-
-
 
 /* END OF PROJECT STYLING */
 
@@ -946,7 +929,7 @@ p {
   text-align: center;
   color: var(--blue-text);
   font-family: var(--font-head);
-  font-size: clamp(20px, 4vw, 35px);
+  font-size: var(--font-size-h3);
 }
 
 .contact-sec p {
@@ -958,7 +941,7 @@ p {
   width: min(95%, 1200px);
   margin: auto;
   margin-bottom: 20px;
-  font-size: clamp(16px, 4vw, 20px);
+  font-size: var(--font-size-p);
 }
 
 fieldset {
@@ -1011,11 +994,6 @@ fieldset {
   color: var(--tab-color);
 }
 
-/* .upper-form input:focus ~ .upper-form input::placeholder {
-  font-size: 12px;
-  transform: translateY(-10px);
-  transition: 200ms ease-in-out;
-} */
 
 
 .center-form textarea::placeholder {
@@ -1075,7 +1053,7 @@ footer {
 }
 
 footer p {
-  font-size: clamp(12px, 4vw, 14px);
+  font-size: var(--font-size-p);
   font-family: var(--font-body);
   color: var(--tab-color);
   font-weight: 400;
@@ -1083,7 +1061,7 @@ footer p {
 }
 
 .copyright {
-  font-size: 11px;
+  font-size: var(--font-size-special);
 }
 
 .built-with-icons {
@@ -1155,6 +1133,11 @@ footer p {
 }
 
 @media (max-width: 500px) {
+  .live-btns{
+    display: grid;
+    gap: .5rem;
+    grid-template-columns: 1fr;
+  }
   .navbar-brandd {
     height: 55px;
     margin-left: 20px;
