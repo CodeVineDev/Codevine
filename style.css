@@ -591,7 +591,7 @@ p {
   padding: 10px;
 }
 
-.skills .slide .html img {
+.skills .html img {
   width: 90px;
   padding: 13px;
 }
@@ -599,7 +599,7 @@ p {
 .skills .slide p {
   font-family: var(--font-special);
   font-weight: 900;
-  font-size: clamp(.6rem, 3vw, .8rem);
+  font-size: var(--responsive-font-size);
   color: var(--tab-color);
 }
 

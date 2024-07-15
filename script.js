@@ -60,6 +60,25 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 // Contact script
 
+//SKILLS LIST SCRIPT
+document.addEventListener('DOMContentLoaded', function() {
+  function setResponsiveFontSize() {
+      const parents = document.querySelectorAll('.slide');
+      parents.forEach(parent => {
+          const responsiveText = parent.querySelector('.slide p');
+          if (responsiveText) {
+              const parentWidth = parent.offsetWidth;
+              const fontSize = parentWidth * 0.06; // Adjust the multiplier as needed
+              responsiveText.style.setProperty('--responsive-font-size', `${fontSize}px`);
+          }
+      });
+  }
+
+  setResponsiveFontSize();
+  window.addEventListener('resize', setResponsiveFontSize);
+});
+
+
 // PROJECT POP UP SCRIPT
 function openDialog(boxNumber) {
   var dialog = document.getElementById('dialog' + boxNumber);
