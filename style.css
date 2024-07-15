@@ -578,7 +578,7 @@ p {
   animation: vibrate 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
 } */
 
-.skills div {
+.skills .slide {
   text-align: center;
   background: var(--primary-color);
   border-radius: 5px;
@@ -586,20 +586,20 @@ p {
   box-shadow: 6px 6px 10px var(--faint-blue);
 }
 
-.skills div img {
+.skills .slide img {
   width: 100px;
   padding: 10px;
 }
 
-.skills .html img {
+.skills .slide .html img {
   width: 90px;
   padding: 13px;
 }
 
-.skills div p {
+.skills .slide p {
   font-family: var(--font-special);
   font-weight: 900;
-  font-size: inherit;
+  font-size: clamp(.6rem, 3vw, .8rem);
   color: var(--tab-color);
 }
 
