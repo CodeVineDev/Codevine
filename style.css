@@ -311,6 +311,7 @@ p {
 
 .right-hero h1 {
   width: 100%;
+  text-wrap: balance;
   margin: auto;
   padding: 10px;
   font-size: var(--font-size-h1);
@@ -333,6 +334,7 @@ p {
   line-height: 1.5;
   font-size:var(--font-size-p);
   margin: auto;
+  text-wrap: balance;
 }
 
 .socialBtns {
@@ -492,6 +494,7 @@ p {
   font-size: var(--font-size-p);
   color: var(--tab-color);
 }
+
 
 .left-about p:not(.mytitle) {
   padding: 0 5px;

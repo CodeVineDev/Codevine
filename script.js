@@ -1,5 +1,11 @@
+let inputName = document.getElementById('name');
+let inputEmail = document.getElementById('email');
+let inputMessage = document.getElementById('textarea')
 window.addEventListener('load', () => {
   window.scrollTo(0, 0); // Scrolls to the top-left corner of the page
+  inputName.value = "";
+  inputEmail.value = "";
+  inputMessage.value = "";
 });
 // TOGGLE THEMES SCRIPT
 const toggleButton = document.getElementById("toggleButton");
@@ -59,19 +65,41 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 // Contact script
+document.getElementById('myForm').addEventListener('submit', function (event) {
+  event.preventDefault(); // Prevent default form submission
 
-//SKILLS LIST SCRIPT
-document.addEventListener('DOMContentLoaded', function() {
+  const form = event.target;
+  const data = new FormData(form);
+
+  fetch(form.action, {
+    method: form.method,
+    body: data,
+    headers: {
+      'Accept': 'application/json'
+    }
+  }).then(response => {
+    if (response.ok) {
+      window.location.href = "https://codevine.vercel.app/PAGES/thankyou.html"; // Redirect to your custom thank you page
+    } else {
+      alert('There was an error submitting the form.');
+    }
+  }).catch(error => {
+    alert('There was an error submitting the form.');
+  });
+});
+
+//SKILLS FONT-SIZE SCRIPT
+document.addEventListener('DOMContentLoaded', function () {
   function setResponsiveFontSize() {
-      const parents = document.querySelectorAll('.slide');
-      parents.forEach(parent => {
-          const responsiveText = parent.querySelector('.slide p');
-          if (responsiveText) {
-              const parentWidth = parent.offsetWidth;
-              const fontSize = parentWidth * 0.05; // Adjust the multiplier as needed
-              responsiveText.style.setProperty('--responsive-font-size', `${fontSize}px`);
-          }
-      });
+    const parents = document.querySelectorAll('.slide');
+    parents.forEach(parent => {
+      const responsiveText = parent.querySelector('.slide p');
+      if (responsiveText) {
+        const parentWidth = parent.offsetWidth;
+        const fontSize = parentWidth * 0.05; // Adjust the multiplier as needed
+        responsiveText.style.setProperty('--responsive-font-size', `${fontSize}px`);
+      }
+    });
   }
 
   setResponsiveFontSize();
