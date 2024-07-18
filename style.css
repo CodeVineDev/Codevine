@@ -5,7 +5,7 @@
   --font-special: "Poppins", sans-serif;
   --font-size-h1: clamp(2rem, 5vw + 0.5rem, 30rem);
   --font-size-h3: clamp(.7rem, 3vw + .3rem, 1.2rem);
-  --font-size-p: clamp(.5rem, 2vw + .3rem, 1rem);
+  --font-size-p: clamp(.5rem, 2.5vw + .3rem, 1rem);
   --font-size-special: clamp(.3rem, 3vw + .3rem, .7rem);
   --red-border: 2px solid red;
   --line-height-body: 20.8px;
@@ -32,7 +32,7 @@
   --font-special: "Poppins", sans-serif;
   --font-size-h1: clamp(2rem, 5vw + 0.5rem, 30rem);
   --font-size-h3: clamp(.7rem, 3vw + .3rem, 1.2rem);
-  --font-size-p: clamp(.5rem, 3vw + .3rem, 1rem);
+  --font-size-p: clamp(.5rem, 2.5vw + .3rem, 1rem);
   --font-size-special: clamp(.3rem, 3vw + .3rem, .7rem);
   --red-border: 2px solid red;
   --line-height-body: 20.8px;
@@ -491,9 +491,11 @@ p {
   text-align: center;
   font-family: var(--font-special);
   font-weight: 400;
-  font-size: 12px;
-  font-size: var(--font-size-p);
   color: var(--tab-color);
+}
+.left-about p{
+   font-size: 12px;
+  font-size: var(--font-size-p);
 }
 
 
@@ -503,10 +505,6 @@ p {
   color: var(--tab-color);
   font-family: var(--font-body);
   font-weight: 500;
-  letter-spacing: -0.5px;
-  word-spacing: 2px;
-  font-size: 12px;
-  font-size: var(--font-size-p);
   line-height: 1.5;
   width: min(95%, 1200px);
   margin: auto;
