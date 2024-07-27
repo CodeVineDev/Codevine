@@ -336,6 +336,14 @@ p {
   margin: auto;
   text-wrap: balance;
 }
+.occupation a{
+  text-decoration: none;
+  color: var(--tab-color);
+}
+.call-to-action-btn{
+  font-weight: 600;
+
+}
 
 .socialBtns {
   display: grid;
