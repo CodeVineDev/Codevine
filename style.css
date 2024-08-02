@@ -492,7 +492,7 @@ body {
 .mytitle {
   text-align: center;
   font-family: var(--font-body);
-  font-weight: 400;
+  font-weight: 600;
   color: var(--tab-color);
 }
 .left-about p{
@@ -506,7 +506,7 @@ body {
   white-space: inherit;
   color: var(--tab-color);
   font-family: var(--font-body);
-  font-weight: 500;
+  font-weight: 400;
   line-height: 1.5;
   width: min(95%, 1200px);
   margin: auto;
