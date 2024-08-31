@@ -291,7 +291,7 @@ body {
 
 .right-hero {
   text-align: center;
-  height: 100svh;
+  padding-block: max(11.4rem, 4vw);
   width: 100%;
   display: grid;
   place-content: center;
@@ -326,15 +326,17 @@ body {
   color: var(--tab-color);
   width: min(95%, 1200px);
   line-height: 1.5;
-  font-size:var(--font-size-p);
+  font-size: var(--font-size-p);
   margin: auto;
   text-wrap: balance;
 }
-.occupation a{
+
+.occupation a {
   text-decoration: none;
   color: var(--tab-color);
 }
-.call-to-action-btn{
+
+.call-to-action-btn {
   font-weight: 600;
 
 }
@@ -359,7 +361,7 @@ body {
   padding: 10px;
   color: var(--blue-text);
   border-radius: 5px;
-  font-size:var(--font-size-p);
+  font-size: var(--font-size-p);
   font-family: var(--font-special);
   font-weight: 600;
   transition: 200ms ease-in-out;
@@ -495,8 +497,9 @@ body {
   font-weight: 600;
   color: var(--tab-color);
 }
-.left-about p{
-   font-size: 12px;
+
+.left-about p {
+  font-size: 12px;
   font-size: var(--font-size-p);
 }
 
@@ -754,7 +757,7 @@ body {
   padding: 15px 40px;
   border-radius: 5px;
   color: var(--blue-text);
-  font-size:var(--font-size-p);
+  font-size: var(--font-size-p);
   background: none;
   border: 1px solid var(--blue-text);
   transition: 200ms ease-out;
@@ -810,7 +813,8 @@ body {
   margin-bottom: 40px;
   line-height: 1.5;
 }
-.live-btns{
+
+.live-btns {
   display: grid;
   gap: 1rem;
   grid-template-columns: repeat(2, 1fr);
@@ -837,7 +841,7 @@ body {
 }
 
 .content-project h3 {
-  font-size:var(--font-size-h3);
+  font-size: var(--font-size-h3);
   color: var(--tab-color);
   font-family: var(--font-head);
   margin-bottom: 30px;
@@ -870,7 +874,7 @@ body {
   font-family: var(--font-body);
   line-height: 1.5;
   color: var(--tab-color);
-  font-size:var(--font-size-p);
+  font-size: var(--font-size-p);
 }
 
 .project-preview .preview .fa-times {
@@ -1146,11 +1150,12 @@ footer p {
     color: var(--tab-color);
   }
 
-  .live-btns{
+  .live-btns {
     display: grid;
     gap: .5rem;
     grid-template-columns: 1fr;
   }
+
   .navbar-brandd {
     height: 55px;
     margin-left: 20px;
