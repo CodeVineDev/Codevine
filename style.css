@@ -291,7 +291,7 @@ body {
 
 .right-hero {
   text-align: center;
-  padding-block: max(11.5rem, 4vw);
+  padding-block: max(12rem, 4vw);
   width: 100%;
   display: grid;
   place-content: center;
