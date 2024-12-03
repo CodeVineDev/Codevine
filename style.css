@@ -98,7 +98,7 @@ body {
   width: 50px;
   height: 50px;
   border: 5px solid var(--faint-blue, #ccc); /* Default to light gray */
-  border-top: 5px solid #3498db; /* Blue color */
+  border-top: 5px solid --blue-text; /* Blue color */
   border-radius: 50%;
   animation: spin 1s linear infinite;
 }
