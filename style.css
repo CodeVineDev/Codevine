@@ -33,7 +33,7 @@
   --font-size-h1: clamp(2rem, 5vw + 0.5rem, 30rem);
   --font-size-h3: clamp(.7rem, 3vw + .3rem, 1.2rem);
   --font-size-p: clamp(.5rem, 2.5vw + .3rem, 1rem);
-  --font-size-special: clamp(.3rem, 3vw + .3rem, .7rem);
+  --font-size-special: clamp(.3rem, 3vw + .3rem, 1rem);
   --red-border: 2px solid red;
   --line-height-body: 20.8px;
   --line-height-head: 26.4px;
@@ -77,6 +77,40 @@ body {
   position: relative;
   background-attachment: fixed;
   background: var(--linear-bg);
+}
+
+/* Preloader Styles */
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+/* Spinner */
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid var(--faint-blue, #ccc); /* Default to light gray */
+  border-top: 5px solid #3498db; /* Blue color */
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+/* Spinner Animation */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 

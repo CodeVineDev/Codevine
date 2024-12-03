@@ -6,6 +6,13 @@ window.addEventListener('load', () => {
   inputName.value = "";
   inputEmail.value = "";
   inputMessage.value = "";
+  
+  // Hide the preloader
+  document.getElementById("preloader").style.display = "none";
+
+  // Show the main content
+  document.getElementById("content").style.display = "block";
+
 });
 // TOGGLE THEMES SCRIPT
 const toggleButton = document.getElementById("toggleButton");
