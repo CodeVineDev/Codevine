@@ -2,7 +2,7 @@ let inputName = document.getElementById('name');
 let inputEmail = document.getElementById('email');
 let inputMessage = document.getElementById('textarea')
 window.addEventListener('load', () => {
-  window.scrollTo(0, 0); // Scrolls to the top-left corner of the page
+  // window.scrollTo(0, 0); // Scrolls to the top-left corner of the page
   inputName.value = "";
   inputEmail.value = "";
   inputMessage.value = "";
@@ -96,7 +96,7 @@ document.addEventListener('DOMContentLoaded', function () {
       const responsiveText = parent.querySelector('.slide p');
       if (responsiveText) {
         const parentWidth = parent.offsetWidth;
-        const fontSize = parentWidth * 0.05; // Adjust the multiplier as needed
+        const fontSize = parentWidth * 0.06; // Adjust the multiplier as needed
         responsiveText.style.setProperty('--responsive-font-size', `${fontSize}px`);
       }
     });

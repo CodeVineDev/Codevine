@@ -595,6 +595,7 @@ body {
 
 .skills .slide {
   text-align: center;
+ 
   background: var(--primary-color);
   border-radius: 5px;
   padding: 10px;
@@ -604,6 +605,9 @@ body {
 .skills .slide img {
   width: 100px;
   padding: 10px;
+}
+.skills .slide .tailwind-img{
+  margin: 1rem 0;
 }
 
 .skills .html img {
