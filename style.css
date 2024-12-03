@@ -6,7 +6,7 @@
   --font-size-h1: clamp(2rem, 5vw + 0.5rem, 30rem);
   --font-size-h3: clamp(.7rem, 3vw + .3rem, 1.2rem);
   --font-size-p: clamp(.5rem, 2.5vw + .3rem, 1rem);
-  --font-size-special: clamp(.3rem, 3vw + .3rem, .7rem);
+  --font-size-special: clamp(.3rem, 3vw + .3rem, 1rem);
   --red-border: 2px solid red;
   --line-height-body: 20.8px;
   --line-height-head: 26.4px;
@@ -332,7 +332,7 @@ body {
 }
 
 .occupation a {
-  text-decoration: none;
+  text-decoration: underline;
   color: var(--tab-color);
 }
 
@@ -377,6 +377,9 @@ body {
 
 .scroll-down {
   position: relative;
+  width: min(80%, 800px);
+  text-wrap: balance;
+  margin: auto;
   font-family: var(--font-body);
   color: var(--tab-color);
   font-weight: 400;
