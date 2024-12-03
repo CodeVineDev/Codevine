@@ -631,7 +631,8 @@ body {
 /* PROJECT STYLING */
 .projects {
   background: var(--primary-color);
-  box-shadow: 10px 6px 20px var(--faint-blue);
+  box-shadow: 0px 6px 20px -10px var(--faint-blue);
+
   padding: 100px 0;
 }
 
