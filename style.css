@@ -1294,7 +1294,7 @@ footer p {
     grid-template-columns: 1fr;
   }
   contact-field_write-up ul li {
-    font-size: calc(var(--font-size-p) + .1rem);
+    font-size: calc(var(--font-size-p) + .3rem);
 }
 
 @media (max-width: 992px) {
