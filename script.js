@@ -72,28 +72,28 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 // Contact script
-document.getElementById('myForm').addEventListener('submit', function (event) {
-  event.preventDefault(); // Prevent default form submission
+// document.getElementById('myForm').addEventListener('submit', function (event) {
+//   event.preventDefault(); // Prevent default form submission
 
-  const form = event.target;
-  const data = new FormData(form);
+//   const form = event.target;
+//   const data = new FormData(form);
 
-  fetch(form.action, {
-    method: form.method,
-    body: data,
-    headers: {
-      'Accept': 'application/json'
-    }
-  }).then(response => {
-    if (response.ok) {
-      window.location.href = "https://codevine.vercel.app/PAGES/thankyou.html"; // Redirect to your custom thank you page
-    } else {
-      alert('There was an error submitting the form.');
-    }
-  }).catch(error => {
-    alert('There was an error submitting the form.');
-  });
-});
+//   fetch(form.action, {
+//     method: form.method,
+//     body: data,
+//     headers: {
+//       'Accept': 'application/json'
+//     }
+//   }).then(response => {
+//     if (response.ok) {
+//       window.location.href = "https://codevine.vercel.app/PAGES/thankyou.html"; // Redirect to your custom thank you page
+//     } else {
+//       alert('There was an error submitting the form.');
+//     }
+//   }).catch(error => {
+//     alert('There was an error submitting the form.');
+//   });
+// });
 
 //SKILLS FONT-SIZE SCRIPT
 document.addEventListener('DOMContentLoaded', function () {
