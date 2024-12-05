@@ -1295,7 +1295,7 @@ footer p {
   }
   .contact-field_write-up ul li {
     font-size: calc(var(--font-size-p) + .08rem);
-}
+}}
 
 @media (max-width: 992px) {
   .details {
