@@ -4,9 +4,9 @@
   --font-body: "Jost", sans-serif;
   --font-special: "Poppins", sans-serif;
   --font-size-h1: clamp(2rem, 5vw + 0.5rem, 30rem);
-  --font-size-h3: clamp(.7rem, 3vw + .3rem, 1.2rem);
-  --font-size-p: clamp(.5rem, 2.5vw + .3rem, 1rem);
-  --font-size-special: clamp(.3rem, 3vw + .3rem, 1rem);
+  --font-size-h3: clamp(0.7rem, 3vw + 0.3rem, 1.2rem);
+  --font-size-p: clamp(0.5rem, 2.5vw + 0.3rem, 1rem);
+  --font-size-special: clamp(0.3rem, 3vw + 0.3rem, 1rem);
   --red-border: 2px solid red;
   --line-height-body: 20.8px;
   --line-height-head: 26.4px;
@@ -31,9 +31,9 @@
   --font-body: "Jost", sans-serif;
   --font-special: "Poppins", sans-serif;
   --font-size-h1: clamp(2rem, 5vw + 0.5rem, 30rem);
-  --font-size-h3: clamp(.7rem, 3vw + .3rem, 1.2rem);
-  --font-size-p: clamp(.5rem, 2.5vw + .3rem, 1rem);
-  --font-size-special: clamp(.3rem, 3vw + .3rem, 1rem);
+  --font-size-h3: clamp(0.7rem, 3vw + 0.3rem, 1.2rem);
+  --font-size-p: clamp(0.5rem, 2.5vw + 0.3rem, 1rem);
+  --font-size-special: clamp(0.3rem, 3vw + 0.3rem, 1rem);
   --red-border: 2px solid red;
   --line-height-body: 20.8px;
   --line-height-head: 26.4px;
@@ -53,7 +53,6 @@
 
 body,
 html {
-
   margin: 0;
   padding: 0;
   width: 100%;
@@ -113,7 +112,6 @@ body {
   }
 }
 
-
 /* NAVBAR STYLING */
 .myNavbar {
   padding-block: 0.5rem;
@@ -142,7 +140,7 @@ body {
   color: var(--text-head);
   font-family: var(--font-head);
   font-weight: 900;
-  font-size: clamp(1.2rem, 1.5cqi + .3rem, 2rem);
+  font-size: clamp(1.2rem, 1.5cqi + 0.3rem, 2rem);
 }
 
 .sideBar {
@@ -345,13 +343,14 @@ body {
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  background-image: linear-gradient(to right,
-      var(--darker-blue),
-      var(--blue-text),
-      var(--text-head));
+  background-image: linear-gradient(
+    to right,
+    var(--darker-blue),
+    var(--blue-text),
+    var(--text-head)
+  );
   font-family: var(--font-head);
 }
-
 
 .occupation {
   font-family: var(--font-body);
@@ -371,7 +370,6 @@ body {
 
 .call-to-action-btn {
   font-weight: 600;
-
 }
 
 .socialBtns {
@@ -422,7 +420,8 @@ body {
 
 #arrow-down {
   width: 150px;
-  animation: arrow-down 1s cubic-bezier(0.86, 0.06, 0.93, 0.14) infinite forwards alternate;
+  animation: arrow-down 1s cubic-bezier(0.86, 0.06, 0.93, 0.14) infinite
+    forwards alternate;
 }
 
 .goBack-btn {
@@ -440,7 +439,6 @@ body {
   bottom: 40px;
   right: 30px;
   position: fixed;
-
 }
 
 .goBack-btn a i {
@@ -505,7 +503,7 @@ body {
 }
 
 .left-about h3 {
-  margin: 0 0 30px 0;
+  margin: 1rem 0 5rem 0;
   text-align: center;
   color: var(--blue-text);
   font-family: var(--font-head);
@@ -518,7 +516,6 @@ body {
   object-fit: cover; /* Ensures the image fills the area without distortion */
   border-radius: 10px;
 }
-
 
 .myimage {
   width: 300px;
@@ -544,7 +541,6 @@ body {
   font-size: var(--font-size-p);
 }
 
-
 .left-about p:not(.mytitle) {
   padding: 0 5px;
   white-space: inherit;
@@ -564,7 +560,7 @@ body {
 
 .write-up-container {
   display: grid;
-  grid-template-columns: 1fr .5fr;
+  grid-template-columns: 1fr 0.5fr;
   gap: 2rem;
   width: min(95%, 1200px);
   margin: auto;
@@ -598,80 +594,16 @@ body {
 
 /* END OF ABOUT STYLING */
 
-/* SERVICES STYLING */
-.mySkills {
-  padding: 100px 0;
-  width: min(95%, 1200px);
-  margin: auto;
-}
-
-.mySkills h3 {
-  margin: 10px 0 50px 0;
-  text-align: center;
-  color: var(--blue-text);
-  font-family: var(--font-head);
-  font-size: var(--font-size-h3);
-}
-
-.skills {
-  width: min(93%, 1200px);
-  margin: auto;
-
-  display: grid;
-  gap: 1.5rem;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 150px), 1fr));
-}
-
-/* Apply the animation to your element on hover
-.slide:hover {
-  animation: vibrate 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
-} */
-
-.skills .slide {
-  text-align: center;
- 
-  background: var(--primary-color);
-  border-radius: 5px;
-  padding: 10px;
-  box-shadow: 6px 6px 10px var(--faint-blue);
-}
-
-.skills .slide img {
-  width: 100px;
-  padding: 10px;
-}
-.skills .slide .tailwind-img{
-  margin: 1rem 0;
-}
-
-.skills .html img {
-  width: 90px;
-  padding: 13px;
-}
-
-.skills .slide p {
-  font-family: var(--font-special);
-  font-weight: 900;
-  font-size: var(--responsive-font-size);
-  color: var(--tab-color);
-}
-
-.gsap-p {
-  margin-left: 30px;
-}
-
-/*END OF SERVICE STYLING*/
 
 /* PROJECT STYLING */
 .projects {
   background: var(--primary-color);
   box-shadow: 0px 6px 20px -10px var(--faint-blue);
-
   padding: 100px 0;
 }
 
 .projects h3:not(.project-name) {
-  margin: 20px 0 50px 0;
+  margin: 1rem 0 5rem 0;
   text-align: center;
   color: var(--blue-text);
   font-family: var(--font-head);
@@ -807,7 +739,6 @@ body {
   background: none;
   border: 1px solid var(--blue-text);
   transition: 200ms ease-out;
-
 }
 
 .show-card:hover {
@@ -820,7 +751,6 @@ body {
   width: 100%;
   margin: auto;
   border: none;
-
 }
 
 :modal::backdrop {
@@ -834,7 +764,6 @@ body {
   max-width: 100%;
   display: grid;
   grid-template-columns: 1fr;
-
 }
 
 .about-project {
@@ -899,7 +828,6 @@ body {
   line-height: 1.5;
   color: var(--tab-color);
   font-size: var(--font-size-p);
-
 }
 
 .project-preview img {
@@ -941,7 +869,7 @@ body {
   margin-bottom: 40px;
   display: flex;
   justify-content: start;
-  gap: .5rem;
+  gap: 0.5rem;
   align-items: center;
   flex-wrap: wrap;
 }
@@ -954,7 +882,6 @@ body {
   font-weight: 600;
   font-family: var(--font-special);
   font-size: var(--font-size-p);
-
 }
 
 .golive-btn {
@@ -973,29 +900,107 @@ body {
 
 /* END OF PROJECT STYLING */
 
-/* CONTACT STYLING */
-
-.contact-sec {
-  padding: 100px 10px;
+/* SERVICES STYLING */
+.mySkills {
+  padding: 100px 0;
+  width: min(95%, 1200px);
+  margin: auto;
 }
 
-.contact-sec h3 {
-  margin: 20px 0 5px 0;
+.mySkills h3 {
+  margin: 1rem 0 5rem 0;
   text-align: center;
   color: var(--blue-text);
   font-family: var(--font-head);
   font-size: var(--font-size-h3);
 }
 
-.contact-sec p {
+.skills {
+  width: min(93%, 1200px);
+  margin: auto;
+
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 150px), 1fr));
+}
+
+/* Apply the animation to your element on hover
+.slide:hover {
+  animation: vibrate 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+} */
+
+.skills .slide {
+  text-align: center;
+
+  background: var(--primary-color);
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 6px 6px 10px var(--faint-blue);
+}
+
+.skills .slide img {
+  width: 100px;
+  padding: 10px;
+}
+.skills .slide .tailwind-img {
+  margin: 1rem 0;
+}
+
+.skills .html img {
+  width: 90px;
+  padding: 13px;
+}
+
+.skills .slide p {
+  font-family: var(--font-special);
+  font-weight: 900;
+  font-size: var(--responsive-font-size);
+  color: var(--tab-color);
+}
+
+.gsap-p {
+  margin-left: 30px;
+}
+
+
+/* CONTACT STYLING */
+
+.contact-sec {
+  padding-top: 5rem;
+  background: var(--grad-bg);
+}
+
+.contact-sec h3 {
+  margin: 20px 0 0 0;
+  text-align: center;
+  color: var(--blue-text);
+  font-family: var(--font-head);
+  font-size: var(--font-size-h3);
+}
+.contact-field{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  width: min(95%, 1200px);
+  margin: auto; 
+  margin-top: 5rem;
+}
+.contact-sec .contact-field_write-up{
+  margin-bottom: 20px;
+}
+
+.contact-sec .sub-head {
+  color: var(--tab-color);
+  font-family: var(--font-body);
+  font-weight: 600;
+  text-align: center;
+  font-size: var(--font-size-p);
+}
+.contact-sec .sub-text {
   color: var(--tab-color);
   font-family: var(--font-body);
   font-weight: 400;
-  margin: 0 0 50px 0;
-  text-align: center;
-  width: min(95%, 1200px);
-  margin: auto;
-  margin-bottom: 20px;
+  margin-bottom: 1rem;
   font-size: var(--font-size-p);
 }
 
@@ -1014,17 +1019,10 @@ fieldset {
 .contact-sec form {
   padding: 10px;
   width: 100%;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1rem;
 }
 
 .upper-form {
   width: 100%;
-}
-
-.upper-form #name {
-  margin-bottom: 20px;
 }
 
 .upper-form input {
@@ -1049,8 +1047,6 @@ fieldset {
   color: var(--tab-color);
 }
 
-
-
 .center-form textarea::placeholder {
   color: var(--tab-color);
 }
@@ -1062,6 +1058,7 @@ fieldset {
   outline: none;
   color: var(--tab-color);
   padding: 10px;
+  margin-bottom: 1rem;
   background: var(--primary-color);
   width: 100%;
   resize: none;
@@ -1175,9 +1172,11 @@ footer p {
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
-    background-image: linear-gradient(to right,
-        var(--blue-text),
-        var(--text-head));
+    background-image: linear-gradient(
+      to right,
+      var(--blue-text),
+      var(--text-head)
+    );
     font-family: var(--font-head);
   }
 
@@ -1188,17 +1187,16 @@ footer p {
 }
 
 @media (max-width: 500px) {
-
   .skills .slide p {
     font-family: var(--font-special);
     font-weight: 900;
-    font-size: clamp(.6rem, 3vw, .7rem);
+    font-size: clamp(0.6rem, 3vw, 0.7rem);
     color: var(--tab-color);
   }
 
   .live-btns {
     display: grid;
-    gap: .5rem;
+    gap: 0.5rem;
     grid-template-columns: 1fr;
   }
 
@@ -1231,7 +1229,7 @@ footer p {
 @media (max-width: 700px) {
   .write-up-container {
     grid-template-columns: 1fr;
-    gap: .5rem;
+    gap: 0.5rem;
   }
 
   .write-up {
@@ -1446,7 +1444,7 @@ footer p {
 
   .bottom-page-nav div {
     text-align: center;
-    font-size: clamp(.6rem, 1cqi + .3rem, 1rem);
+    font-size: clamp(0.6rem, 1cqi + 0.3rem, 1rem);
   }
 
   .bottom-page-nav a {
