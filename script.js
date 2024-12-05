@@ -78,7 +78,7 @@ document.getElementById('myForm').addEventListener('submit', function (event) {
   const form = event.target;
   const data = new FormData(form);
 
-  // Replace with your Formspree endpoint
+  // Replace the action attribute with your Formspree endpoint
   const formspreeURL = "https://formspree.io/f/xyyqbvbq";
 
   fetch(formspreeURL, {
@@ -87,19 +87,17 @@ document.getElementById('myForm').addEventListener('submit', function (event) {
     headers: {
       'Accept': 'application/json'
     }
-  })
-    .then(response => {
-      if (response.ok) {
-        // Redirect or show success message
-        window.location.href = "https://codevine.vercel.app/PAGES/thankyou.html";
-      } else {
-        alert('There was an error submitting the form.');
-      }
-    })
-    .catch(error => {
-      console.error('Error:', error);
+  }).then(response => {
+    if (response.ok) {
+      // Redirect to a thank you page
+      window.location.href = "https://codevine.vercel.app/PAGES/thankyou.html";
+    } else {
       alert('There was an error submitting the form.');
-    });
+    }
+  }).catch(error => {
+    console.error('Error:', error);
+    alert('There was an error submitting the form.');
+  });
 });
 
 
