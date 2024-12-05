@@ -103,7 +103,7 @@ document.addEventListener('DOMContentLoaded', function () {
       const responsiveText = parent.querySelector('.slide p');
       if (responsiveText) {
         const parentWidth = parent.offsetWidth;
-        const fontSize = parentWidth * 0.06; // Adjust the multiplier as needed
+        const fontSize = parentWidth * 0.07; // Adjust the multiplier as needed
         responsiveText.style.setProperty('--responsive-font-size', `${fontSize}px`);
       }
     });

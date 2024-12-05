@@ -594,7 +594,6 @@ body {
 
 /* END OF ABOUT STYLING */
 
-
 /* PROJECT STYLING */
 .projects {
   background: var(--primary-color);
@@ -952,7 +951,7 @@ body {
 }
 
 .skills .slide p {
-  font-family: var(--font-special);
+  font-family: var(--font-body);
   font-weight: 900;
   font-size: var(--responsive-font-size);
   color: var(--tab-color);
@@ -962,11 +961,10 @@ body {
   margin-left: 30px;
 }
 
-
 /* CONTACT STYLING */
 
 .contact-sec {
-  padding-top: 5rem;
+  padding: 5rem 0;
   background: var(--grad-bg);
 }
 
@@ -977,39 +975,42 @@ body {
   font-family: var(--font-head);
   font-size: var(--font-size-h3);
 }
-.contact-field{
+.contact-field {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
   width: min(95%, 1200px);
-  margin: auto; 
+  margin: auto;
   margin-top: 4rem;
 }
-.contact-sec .contact-field_write-up{
+.contact-sec .contact-field_write-up {
   margin-bottom: 20px;
+  width: min(92%, 1200px);
+  margin: auto;
+  margin-top: 0;
 }
-.contact-field_write-up h4{
+.contact-field_write-up h4 {
   color: var(--tab-color);
   font-family: var(--font-body);
   font-weight: 600;
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
   font-size: var(--font-size-p);
 }
-.contact-field_write-up ul{
+.contact-field_write-up ul {
   list-style: none;
 }
-.contact-field_write-up ul li{
+.contact-field_write-up ul li {
   color: var(--tab-color);
   font-family: var(--font-body);
   font-weight: 400;
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
   font-size: var(--font-size-p);
-  display:flex;
+  display: flex;
   align-items: center;
 }
-.contact-field_write-up ul li img{
-width: 16px;
-margin-right: .5rem;
+.contact-field_write-up ul li img {
+  width: 16px;
+  margin-right: 0.5rem;
 }
 
 .contact-sec .sub-head {
@@ -1106,22 +1107,31 @@ fieldset {
 .bottom-form button:hover {
   box-shadow: 5px 5px 10px var(--faint-blue);
 }
-
-.contact-sec legend {
-  margin-left: 48%;
+.contact-socials {
+  padding-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
 }
-
-.contact-sec legend img {
-  width: 30px;
-  perspective: 300%;
-  animation: smiley-face 1s ease infinite alternate;
+.contact-socials i {
+  font-size: 1.5rem;
+  color: var(--blue-text);
 }
-
+.contact-socials a {
+  text-decoration: none;
+  font-size: 1.3rem;
+  padding-right: 0.3rem;
+}
+.contact-socials span {
+  font-weight: 500;
+  font-family: var(--font-body);
+}
 /* END OF CONTACT STYLING */
 
 /* FOOTER STYLING */
 footer {
-  padding: 10px;
+  padding-top: 5rem;
+  /* padding: 10px; */
   width: 100%;
   text-align: center;
   background-color: var(--primary-color);
@@ -1279,7 +1289,7 @@ footer p {
   .myprojects {
     grid-template-columns: 1fr;
   }
-  .contact-field{
+  .contact-field {
     grid-template-columns: 1fr;
   }
 }
