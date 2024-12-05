@@ -1118,6 +1118,7 @@ fieldset {
   color: var(--blue-text);
 }
 .contact-socials a {
+  color: var(--blue-text);
   text-decoration: none;
   font-size: 1.3rem;
   padding-right: 0.3rem;
@@ -1292,6 +1293,8 @@ footer p {
   .contact-field {
     grid-template-columns: 1fr;
   }
+  contact-field_write-up ul li {
+    font-size: calc(var(--font-size-p) + .1rem);
 }
 
 @media (max-width: 992px) {
