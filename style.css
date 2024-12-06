@@ -529,7 +529,7 @@ body {
   border-radius: 10px;
   margin-top: 0;
   margin-bottom: 1rem;
-  box-shadow:   var(--box-shadow);
+  box-shadow: var(--box-shadow);
   ;
 }
 
@@ -593,7 +593,7 @@ body {
 }
 
 .about-social-buttons button:hover {
-  box-shadow:   var(--box-shadow);
+  box-shadow: var(--box-shadow);
   ;
 }
 
@@ -638,7 +638,7 @@ body {
   cursor: pointer;
   transition: 200ms ease-in-out;
   padding: 1rem;
-  box-shadow:var(--box-shadow);
+  box-shadow: var(--box-shadow);
   display: grid;
   gap: 3rem;
   grid-template-columns: repeat(2, 1fr);
@@ -906,11 +906,11 @@ body {
 /* SERVICES STYLING */
 .my-service {
   background: var(--grad-bg);
-  padding:1rem 0 5rem 0;
+  padding: 1rem 0 5rem 0;
 }
 
 .my-service-content {
-  width: min(95%, 1200px);
+  width: min(91%, 1200px);
   margin: auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
@@ -923,15 +923,42 @@ body {
   text-align: center;
   padding: max(2rem, 1vw);
   text-wrap: balance;
-  /* padding: max(1rem, 1vw); */
+  overflow: hidden;
+  z-index: 1;
+  position: relative;
 }
-.service-card h4{
+
+.service-card .icon::before {
+  position: absolute;
+  content: "";
+  z-index: -1;
+  width: 1rem;
+  height: 1rem;
+  transform-origin:center ;
+  border-radius: 20px;
+  background: var(--blue-text);
+  transition: 200ms ease;
+}
+
+
+.service-card:hover .icon::before {
+  transition: 200ms ease;
+scale: 40;
+}
+
+.service-card:hover :is(.service-card h4, .service-card p) {
+  color: var(--grad-bg);
+  transition: 200ms ease;
+}
+
+.service-card h4 {
   padding: 0 0 1rem 0;
   color: var(--blue-text);
   font-family: var(--font-head);
   font-size: var(--font-size-h3);
 }
-.service-card p{
+
+.service-card p {
   padding: 0 0 1rem 0;
   font-family: var(--font-body);
   line-height: 1.5;
@@ -1169,7 +1196,7 @@ fieldset {
 }
 
 .bottom-form button:hover {
-  box-shadow:var(--box-shadow);
+  box-shadow: var(--box-shadow);
 }
 
 .contact-socials {
