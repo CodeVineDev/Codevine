@@ -431,7 +431,7 @@ body {
 }
 
 .goBack-btn a {
-  z-index: 1;
+  z-index: 10;
   background: var(--grad-bg);
   width: 40px;
   height: 40px;
@@ -566,12 +566,12 @@ body {
   display: grid;
   grid-template-columns: 1fr 0.5fr;
   gap: 2rem;
-  width: min(95%, 1200px);
+  width: min(93%, 1200px);
   margin: auto;
 }
 
 .about-social-buttons {
-  width: min(95%, 1150px);
+  width: min(96%, 1140px);
   margin: auto;
   margin-top: 1rem;
   display: grid;
@@ -602,8 +602,8 @@ body {
 /* PROJECT STYLING */
 .projects {
   background: var(--primary-color);
-  box-shadow: var(--box-shadow);
-  padding: 100px 0;
+  box-shadow: 1px 1px 1px var(--faint-blue);
+  padding: 5rem 0 1rem 0;
 }
 
 .projects h3:not(.project-name) {
@@ -629,11 +629,12 @@ body {
 }
 
 .myprojects {
-  width: min(93%, 1200px);
+  width: min(95%, 1200px);
   margin: auto;
 }
 
 .project-card {
+  width: min(95%, 1200px);
   margin: auto;
   cursor: pointer;
   transition: 200ms ease-in-out;
@@ -905,12 +906,14 @@ body {
 
 /* SERVICES STYLING */
 .my-service {
-  background: var(--grad-bg);
-  padding: 1rem 0 5rem 0;
+  background: none;
+  padding: 5rem 0 5rem 0;
+  width: min(95%, 1200px);
+  margin: auto;
 }
 
 .my-service-content {
-  width: min(91%, 1200px);
+  width: min(95%, 1200px);
   margin: auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
@@ -919,7 +922,8 @@ body {
 
 .my-service-content .service-card {
   box-shadow: var(--box-shadow);
-  border-radius: 1rem;
+  border-radius: 5px;
+  background: var(--grad-bg);
   text-align: center;
   padding: max(2rem, 1vw);
   text-wrap: balance;
@@ -934,7 +938,7 @@ body {
   z-index: -1;
   width: 1rem;
   height: 1rem;
-  transform-origin:center ;
+  transform-origin: center;
   border-radius: 20px;
   background: var(--blue-text);
   transition: 200ms ease;
@@ -943,7 +947,7 @@ body {
 
 .service-card:hover .icon::before {
   transition: 200ms ease;
-scale: 40;
+  scale: 40;
 }
 
 .service-card:hover :is(.service-card h4, .service-card p) {
@@ -1275,7 +1279,7 @@ footer p {
 
 @media (max-width: 370px) {
   .about-social-buttons {
-    padding: 0 5px;
+    padding: 0 5px;;
   }
 
   .myimage {
@@ -1369,7 +1373,7 @@ footer p {
   }
 
   .about-social-buttons {
-    width: min(95%, 1200px);
+    width: min(90%, 1200px);
     margin: auto;
     display: grid;
     grid-template-columns: 1fr;
