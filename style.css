@@ -913,7 +913,7 @@ body {
 }
 
 .my-service-content {
-  width: min(95%, 1200px);
+  width: min(96%, 1200px);
   margin: auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
