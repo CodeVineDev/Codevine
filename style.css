@@ -1042,7 +1042,7 @@ body {
 
 .skills .slide p {
   font-family: var(--font-body);
-  font-weight: 900;
+  font-weight: 600;
   font-size: var(--responsive-font-size);
   color: var(--tab-color);
 }
