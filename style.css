@@ -927,7 +927,7 @@ body {
   text-align: center;
   padding: max(2rem, 1vw);
   text-wrap: balance;
-  overflow: hidden;
+ overflow: hidden;
   z-index: 1;
   position: relative;
 }
@@ -938,6 +938,7 @@ body {
   z-index: -1;
   width: 1rem;
   height: 1rem;
+  
   transform-origin: center;
   border-radius: 20px;
   background: var(--blue-text);
@@ -947,7 +948,7 @@ body {
 
 .service-card:hover .icon::before {
   transition: 200ms ease;
-  scale: 40;
+  scale: 100;
 }
 
 .service-card:hover :is(.service-card h4, .service-card p) {
