@@ -1270,7 +1270,7 @@ fieldset {
 
 /* FOOTER STYLING */
 footer {
-  padding-top: 5rem;
+  padding:4rem 0 2rem 0;
   /* padding: 10px; */
   width: 100%;
   text-align: center;
