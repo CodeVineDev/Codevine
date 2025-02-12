@@ -6,7 +6,7 @@ window.addEventListener('load', () => {
   inputName.value = "";
   inputEmail.value = "";
   inputMessage.value = "";
-  
+
   // Hide the preloader
   document.getElementById("preloader").style.display = "none";
 
@@ -99,6 +99,84 @@ document.getElementById('myForm').addEventListener('submit', function (event) {
     alert('There was an error submitting the form.');
   });
 });
+
+
+
+
+// MY SERVICES HOVER FOLLOW EFFECT SCRIPT
+document.querySelectorAll('.service-card').forEach(box => {
+  const rootStyles = getComputedStyle(document.documentElement);
+  const blueTextColor = rootStyles.getPropertyValue('--blue-text').trim();
+
+  box.addEventListener('mouseenter', (e) => {
+    const rect = box.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+
+    let translateX = '0', translateY = '0';
+
+    // Determine the entry side
+    if (x < rect.width / 2 && Math.abs(x - rect.width / 2) > Math.abs(y - rect.height / 2)) {
+      translateX = '-100%'; // Entering from left
+    } else if (x > rect.width / 2 && Math.abs(x - rect.width / 2) > Math.abs(y - rect.height / 2)) {
+      translateX = '100%'; // Entering from right
+    } else if (y < rect.height / 2) {
+      translateY = '-100%'; // Entering from top
+    } else {
+      translateY = '100%'; // Entering from bottom
+    }
+
+    // Set the entry position
+    box.style.setProperty('--translate-x', translateX);
+    box.style.setProperty('--translate-y', translateY);
+
+    // Apply transform dynamically
+    const beforeElement = document.createElement('div');
+    beforeElement.classList.add('hover-overlay');
+    beforeElement.style.position = 'absolute';
+    beforeElement.style.top = '0';
+    beforeElement.style.left = '0';
+    beforeElement.style.width = '100%';
+    beforeElement.style.height = '100%';
+    beforeElement.style.backgroundColor = blueTextColor;
+    beforeElement.style.transform = `translate(${translateX}, ${translateY})`;
+    beforeElement.style.transition = 'transform 0.3s ease-in-out';
+    beforeElement.style.zIndex = '-1';
+
+    box.appendChild(beforeElement);
+
+    // Trigger the entry animation
+    setTimeout(() => {
+      beforeElement.style.transform = 'translate(0, 0)';
+    }, 10);
+
+    // Handle mouse leave to exit in the correct direction
+    box.addEventListener('mouseleave', (leaveEvent) => {
+      const leaveX = leaveEvent.clientX - rect.left;
+      const leaveY = leaveEvent.clientY - rect.top;
+
+      let exitX = '0', exitY = '0';
+
+      if (leaveX < rect.width / 2 && Math.abs(leaveX - rect.width / 2) > Math.abs(leaveY - rect.height / 2)) {
+        exitX = '-100%'; // Exiting left
+      } else if (leaveX > rect.width / 2 && Math.abs(leaveX - rect.width / 2) > Math.abs(leaveY - rect.height / 2)) {
+        exitX = '100%'; // Exiting right
+      } else if (leaveY < rect.height / 2) {
+        exitY = '-100%'; // Exiting top
+      } else {
+        exitY = '100%'; // Exiting bottom
+      }
+
+      // Apply exit animation
+      beforeElement.style.transform = `translate(${exitX}, ${exitY})`;
+
+      setTimeout(() => {
+        beforeElement.remove();
+      }, 300); // Remove after animation
+    }, { once: true }); // Ensure event only runs once per hover
+  });
+});
+
 
 
 //SKILLS FONT-SIZE SCRIPT

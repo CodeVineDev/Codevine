@@ -588,7 +588,8 @@ body {
   font-weight: bold;
   text-decoration: none;
 }
-.left-about p .about-links{
+
+.left-about p .about-links {
   color: var(--blue-text);
   text-decoration: underline;
 }
@@ -625,7 +626,7 @@ body {
 
 .about-contact button {
   background: var(--primary-color);
-  font-weight: 700;
+  font-weight: 600;
   padding: 10px 5px;
   width: 100%;
   border-radius: 5px;
@@ -961,7 +962,6 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
   gap: 1rem;
-  position: relative;
 }
 
 .my-service-content .service-card {
@@ -977,42 +977,6 @@ body {
   transition: opacity 0.3s ease-in-out;
 }
 
-.my-service-content .service-card:hover {
-  z-index: 2;
-}
-
-.my-service-content:hover .service-card {
-  opacity: 0.5;
-}
-
-.my-service-content .service-card:hover {
-  opacity: 1;
-}
-.service-card .icon::before {
-  position: absolute;
-  content: "";
-  z-index: -1;
-  width: 3rem;
-  margin-left: -1.5rem;
-  height: 3rem;
-
-  transform-origin: center;
-  border-radius: 20px;
-  background: var(--blue-text);
-  transition: 200ms ease-in-out;
-}
-
-
-.service-card:hover .icon::before {
-  transition: 200ms ease-in-out;
-  scale: 100;
-}
-
-.service-card:hover :is(.service-card h4, .service-card p) {
-  color: var(--grad-bg);
-  transition: 200ms ease-in-out;
-}
-
 .service-card h4 {
   padding: 0 0 1rem 0;
   color: var(--blue-text);
@@ -1026,6 +990,23 @@ body {
   line-height: 1.5;
   color: var(--tab-color);
   font-size: var(--font-size-p);
+}
+
+.service-card:hover :is(h4, p) {
+  color: var(--grad-bg);
+  transition: 200ms ease-in-out;
+}
+
+.my-service-content .service-card:hover {
+  z-index: 2;
+}
+
+.my-service-content:hover .service-card {
+  opacity: 0.5;
+}
+
+.my-service-content .service-card:hover {
+  opacity: 1;
 }
 
 .service-card .icon {
@@ -1269,7 +1250,7 @@ fieldset {
 }
 
 .contact-socials i {
-  font-size: 1.5rem;
+  font-size: 2rem;
   color: var(--blue-text);
 }
 
