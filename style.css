@@ -961,6 +961,7 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
   gap: 1rem;
+  position: relative;
 }
 
 .my-service-content .service-card {
@@ -973,8 +974,20 @@ body {
   overflow: hidden;
   z-index: 1;
   position: relative;
+  transition: opacity 0.3s ease-in-out;
 }
 
+.my-service-content .service-card:hover {
+  z-index: 2;
+}
+
+.my-service-content:hover .service-card {
+  opacity: 0.5;
+}
+
+.my-service-content .service-card:hover {
+  opacity: 1;
+}
 .service-card .icon::before {
   position: absolute;
   content: "";
