@@ -492,7 +492,7 @@ body {
   border-radius: 5px;
   background: var(--primary-color);
   box-shadow: var(--box-shadow);
-  
+
 }
 
 .floating-socials a {
@@ -515,12 +515,14 @@ body {
   box-shadow: var(--box-shadow);
 }
 
-.floating-socials a i{
+.floating-socials a i {
   font-size: 2rem;
 }
-.floating-socials a .mid-icon{
+
+.floating-socials a .mid-icon {
   font-size: 1.8rem;
 }
+
 .bottom-page-nav {
   display: none;
 }
@@ -580,6 +582,17 @@ body {
   font-size: var(--font-size-p);
 }
 
+.left-about p a,
+.left-about p .about-links {
+  color: var(--tab-color);
+  font-weight: bold;
+  text-decoration: none;
+}
+.left-about p .about-links{
+  color: var(--blue-text);
+  text-decoration: underline;
+}
+
 .left-about p:not(.mytitle) {
   padding: 0 5px;
   white-space: inherit;
@@ -594,7 +607,7 @@ body {
 
 .left-about p span:not(.mytitle, .myimage) {
   display: block;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 
 .write-up-container {
@@ -605,31 +618,26 @@ body {
   margin: auto;
 }
 
-.about-social-buttons {
-  width: min(96%, 1140px);
-  margin: auto;
-  margin-top: 1rem;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
+.about-contact {
+  width: 40%;
+  margin-left: 1.5rem;
 }
 
-.about-social-buttons button {
+.about-contact button {
   background: var(--primary-color);
   font-weight: 700;
   padding: 10px 5px;
+  width: 100%;
   border-radius: 5px;
   font-size: var(--font-size-p);
   color: var(--blue-text);
   text-decoration: none;
   border: 1px solid var(--blue-text);
   transition: 200ms ease-in-out;
-  width: 100%;
 }
 
-.about-social-buttons button:hover {
+.about-contact button:hover {
   box-shadow: var(--box-shadow);
-  ;
 }
 
 /* END OF ABOUT STYLING */
@@ -1397,12 +1405,10 @@ footer p {
 }
 
 @media (max-width: 700px) {
-
-
-  .write-up {
-    order: 2;
+  .about-contact {
+    width: 40%;
+    margin-left: 1rem;
   }
-
 
   .about-social-buttons {
     width: min(90%, 1200px);
@@ -1434,6 +1440,7 @@ footer p {
   .floating-socials {
     display: none;
   }
+
   .write-up-container {
     grid-template-columns: 1fr;
     gap: 0.5rem;
