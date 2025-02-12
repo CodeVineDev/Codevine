@@ -325,7 +325,7 @@ body {
 
 .right-hero {
   text-align: center;
-  padding-block: max(12rem, 4vw);
+  height: 100dvh;
   width: 100%;
   display: grid;
   place-content: center;
@@ -1431,6 +1431,24 @@ footer p {
 }
 
 @media (max-width: 992px) {
+  .service-card:hover p {
+    color: var(--tab-color);
+  }
+  .service-card:hover h4{
+    color: var(--blue-text);
+  }
+
+  .my-service-content .service-card:hover {
+    z-index: 1;
+  }
+  
+  .my-service-content:hover .service-card {
+    opacity: 1;
+  }
+  
+  .my-service-content .service-card:hover {
+    opacity: 1;
+  }
   .floating-socials {
     display: none;
   }

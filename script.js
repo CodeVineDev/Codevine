@@ -104,11 +104,17 @@ document.getElementById('myForm').addEventListener('submit', function (event) {
 
 
 // MY SERVICES HOVER FOLLOW EFFECT SCRIPT
+// MY SERVICES HOVER FOLLOW EFFECT SCRIPT
 document.querySelectorAll('.service-card').forEach(box => {
   const rootStyles = getComputedStyle(document.documentElement);
   const blueTextColor = rootStyles.getPropertyValue('--blue-text').trim();
 
   box.addEventListener('mouseenter', (e) => {
+    // Check if the screen width is less than 992px
+    if (window.innerWidth < 992) {
+      return; // Exit the function if the screen width is less than 992px
+    }
+
     const rect = box.getBoundingClientRect();
     const x = e.clientX - rect.left;
     const y = e.clientY - rect.top;
