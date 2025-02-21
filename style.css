@@ -1354,10 +1354,7 @@ footer p {
 }
 
 @media (max-width: 500px) {
-  .skills {
-    gap: 1rem;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 100px), 1fr));
-  }
+  
   .skills .slide p {
     font-family: var(--font-special);
     font-weight: 900;
