@@ -1059,7 +1059,7 @@ body {
 }
 
 .skills .slide img {
-  width: 100%;
+  width: clamp(100px, 3vw, 100%);
   padding: 10px;
 }
 
@@ -1068,7 +1068,7 @@ body {
 }
 
 .skills .html img {
-  width: 90px;
+  width: clamp(90px, 3vw, 100%);
   padding: 13px;
 }
 
@@ -1355,6 +1355,7 @@ footer p {
 
 @media (max-width: 500px) {
   .skills {
+    gap: 1rem;
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 100px), 1fr));
   }
   .skills .slide p {
@@ -1419,10 +1420,6 @@ footer p {
     grid-template-columns: 1fr;
   }
 
-  .contact-field {
-    grid-template-columns: 1fr;
-  }
-
   .contact-field_write-up ul li {
     font-size: calc(var(--font-size-p) + .08rem);
   }
@@ -1459,6 +1456,9 @@ footer p {
   .myimage {
     /* order: 1; */
     display: none;
+  }
+  .contact-field {
+    grid-template-columns: 1fr;
   }
 
   .details {
