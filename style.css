@@ -1049,11 +1049,6 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 150px), 1fr));
 }
 
-/* Apply the animation to your element on hover
-.slide:hover {
-  animation: vibrate 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
-} */
-
 .skills .slide {
   text-align: center;
 
@@ -1359,10 +1354,13 @@ footer p {
 }
 
 @media (max-width: 500px) {
+  .skills {
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 100px), 1fr));
+  }
   .skills .slide p {
     font-family: var(--font-special);
     font-weight: 900;
-    font-size: clamp(0.6rem, 3vw, 0.7rem);
+    font-size: clamp(0.6rem, 3vw, 0.8rem);
     color: var(--tab-color);
   }
 

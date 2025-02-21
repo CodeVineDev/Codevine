@@ -14,6 +14,11 @@ window.addEventListener('load', () => {
   document.getElementById("content").style.display = "block";
 
 });
+
+
+
+
+
 // TOGGLE THEMES SCRIPT
 const toggleButton = document.getElementById("toggleButton");
 const iconElement = document.getElementById("iconElement");
@@ -55,6 +60,9 @@ toggleButton.addEventListener("click", () => {
   }
 });
 
+
+
+
 // Navbar script
 document.addEventListener("DOMContentLoaded", function () {
   var sidebarBtn = document.querySelector(".sidebarBtn");
@@ -71,6 +79,16 @@ document.addEventListener("DOMContentLoaded", function () {
     sidebarBtn.classList.toggle("toggle");
   });
 });
+
+const contactButton = document.querySelector(".boldContact");
+const circleContact = document.querySelector(".goBack-btn a:nth-child(2)");
+
+
+
+
+
+
+
 // Contact script
 document.getElementById('myForm').addEventListener('submit', function (event) {
   event.preventDefault(); // Prevent default form submission
@@ -103,7 +121,7 @@ document.getElementById('myForm').addEventListener('submit', function (event) {
 
 
 
-// MY SERVICES HOVER FOLLOW EFFECT SCRIPT
+
 // MY SERVICES HOVER FOLLOW EFFECT SCRIPT
 document.querySelectorAll('.service-card').forEach(box => {
   const rootStyles = getComputedStyle(document.documentElement);
@@ -185,6 +203,9 @@ document.querySelectorAll('.service-card').forEach(box => {
 
 
 
+
+
+
 //SKILLS FONT-SIZE SCRIPT
 document.addEventListener('DOMContentLoaded', function () {
   function setResponsiveFontSize() {
@@ -204,6 +225,10 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
+
+
+
+
 // PROJECT POP UP SCRIPT
 function openDialog(boxNumber) {
   var dialog = document.getElementById('dialog' + boxNumber);
@@ -216,7 +241,12 @@ function closeDialog(boxNumber) {
 }
 
 
-// Scroll script
+
+
+
+
+
+// Smooth Scroll script
 document.addEventListener("DOMContentLoaded", function () {
   const scroll = new SmoothScroll('a[href*="#"]', {
     speed: 500, // Adjust the scroll speed as needed
@@ -239,167 +269,5 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// Animation script
-const contactButton = document.querySelector(".boldContact");
-const circleContact = document.querySelector(".goBack-btn a:nth-child(2)");
 
-// Define the GSAP animation timeline
-const tl = gsap.timeline({ repeat: -1 });
 
-tl.to(contactButton, {
-  duration: 0.1,
-  x: 5,
-  ease: "power1.inOut",
-})
-  .to(contactButton, {
-    duration: 0.1,
-    x: -9,
-    ease: "power1.inOut",
-  })
-  .to(contactButton, {
-    duration: 0.1,
-    x: 9,
-    ease: "power1.inOut",
-  })
-  .to(contactButton, {
-    duration: 0.1,
-    x: -9,
-    ease: "power1.inOut",
-  })
-  .to(contactButton, {
-    duration: 0.1,
-    x: 0,
-    ease: "power1.inOut",
-  })
-  .to({}, { duration: 5 }); // Pause for 5 seconds
-
-// Start the animation
-tl.play();
-
-tl.to(circleContact, {
-  duration: 0.1,
-  x: 5,
-  ease: "power1.inOut",
-})
-  .to(circleContact, {
-    duration: 0.1,
-    x: -9,
-    ease: "power1.inOut",
-  })
-  .to(circleContact, {
-    duration: 0.1,
-    x: 9,
-    ease: "power1.inOut",
-  })
-  .to(circleContact, {
-    duration: 0.1,
-    x: -9,
-    ease: "power1.inOut",
-  })
-  .to(circleContact, {
-    duration: 0.1,
-    x: 0,
-    ease: "power1.inOut",
-  })
-  .to({}, { duration: 5 }); // Pause for 5 seconds
-
-// Start the animation
-tl.play();
-
-const timeLine = gsap.timeline({
-  defaults: {
-    duration: .3
-  }
-});
-
-timeLine
-  .fromTo(
-    ".myNavbar",
-    {
-      y: "-100%",
-    },
-    {
-      y: 0,
-      ease: "bounce",
-    }
-  )
-  .fromTo(
-    ".navbar-brandd p",
-    {
-      opacity: 0,
-    },
-    {
-      opacity: 1,
-    }
-  )
-
-  .fromTo(
-    ".sidebarBtn .span",
-    {
-      x: "-100px",
-    },
-    {
-      x: 0,
-      ease: "bounce",
-      stagger: 0.5,
-    }
-  )
-  .fromTo(
-    ".centerNav a",
-    {
-      y: "-500px",
-    },
-    {
-      y: 0,
-      ease: "power2.in",
-      stagger: 0.1,
-    }
-  )
-  .fromTo(
-    ".display-theme",
-    {
-      scale: 0,
-    },
-    {
-      ease: "bounce",
-      scale: 1,
-    }
-  )
-  .fromTo(
-    ".navBtns a",
-    {
-      scale: 0,
-    },
-    {
-      stagger: 0.2,
-      ease: "bounce",
-      scale: 1,
-    }
-  )
-  .fromTo(
-    " .bottom-page-nav ",
-    {
-      y: "100%",
-    },
-    {
-      y: 0,
-    }
-  )
-  .fromTo(
-    " .bottom-page-nav div",
-    {
-      opacity: 0,
-    },
-    {
-      opacity: 1,
-    }
-  )
-  .fromTo(
-    ".goBack-btn a",
-    {
-      opacity: 0,
-    },
-    {
-      opacity: 1,
-    }
-  );
