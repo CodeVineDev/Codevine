@@ -1354,7 +1354,14 @@ footer p {
 }
 
 @media (max-width: 500px) {
+  .about-contact {
+    width: 90%;
+  }
   
+  .about-contact button {
+    padding: 1rem;
+   
+  } 
   .skills .slide p {
     font-family: var(--font-special);
     font-weight: 900;
@@ -1396,7 +1403,6 @@ footer p {
 
 @media (max-width: 700px) {
   .about-contact {
-    width: 40%;
     margin-left: 1rem;
   }
 
