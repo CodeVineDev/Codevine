@@ -20,8 +20,8 @@ window.addEventListener('load', () => {
 
 
 // TOGGLE THEMES SCRIPT
-const toggleButton = document.getElementById("toggleButton");
-const iconElement = document.getElementById("iconElement");
+const toggleButton = document.getElementById("theme-toggle__btn");
+const iconElement = document.getElementById("theme-toggle__icon");
 
 // Function to enable dark mode
 const enableDarkMode = () => {
@@ -65,9 +65,9 @@ toggleButton.addEventListener("click", () => {
 
 // Navbar script
 document.addEventListener("DOMContentLoaded", function () {
-  var sidebarBtn = document.querySelector(".sidebarBtn");
-  var sideBar = document.querySelector(".sideBar");
-  var centerNav = document.querySelector(".centerNav");
+  var sidebarBtn = document.querySelector(".navbar__burger-menu");
+  var sideBar = document.querySelector(".side-navbar");
+  var centerNav = document.querySelector(".navbar-links__center");
 
   centerNav.addEventListener("click", function () {
     sideBar.classList.toggle("active");
@@ -80,8 +80,8 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-const contactButton = document.querySelector(".boldContact");
-const circleContact = document.querySelector(".goBack-btn a:nth-child(2)");
+const contactButton = document.querySelector(".navbar__contact");
+const circleContact = document.querySelector(".back-to a:nth-child(2)");
 
 
 
@@ -271,3 +271,20 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
+
+
+// THANK YOU PAGE SCRIPT
+// Function to start the confetti animation
+function startConfettiAnimation() {
+  let confetti_container = document.querySelector(".thank-you");
+  let animItem = bodymovin.loadAnimation({
+    wrapper: confetti_container,
+    animType: "svg",
+    loop: false,
+    autoplay: false,
+    path: "https://lottie.host/6dc5f5b5-8697-4e9d-b781-127bc2c459fd/Crhu8Rzi3M.json",
+  });
+
+  // Play the animation
+  animItem.play();
+}

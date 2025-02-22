@@ -95,7 +95,7 @@ body {
 }
 
 /* Spinner */
-.spinner {
+.preloader__spinner {
   width: 50px;
   height: 50px;
   border: 5px solid var(--faint-blue, #ccc);
@@ -118,7 +118,7 @@ body {
 }
 
 /* NAVBAR STYLING */
-.myNavbar {
+.navbar {
   padding-block: 1.2rem;
   background: var(--primary-color);
   box-shadow: var(--box-shadow);
@@ -127,14 +127,14 @@ body {
   z-index: 10;
 }
 
-.navCon {
+.navbar__container {
   width: 100%;
   position: relative;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
 
-.navbar-brandd p {
+.navbar__logo p {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -145,19 +145,19 @@ body {
   font-size: clamp(1.2rem, 1.5cqi + 0.3rem, 2rem);
 }
 
-.sideBar {
+.side-navbar {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-column: 2/4;
 }
 
-.centerNav {
+.navbar-links__center {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
 }
 
-.centerNav a {
+.navbar-links__center a {
   text-decoration: none;
   padding: 10px;
   font-family: var(--font-body);
@@ -166,15 +166,15 @@ body {
   color: var(--blue-text);
 }
 
-.centerNav a:hover {
+.navbar-links__center a:hover {
   color: var(--text-head);
 }
 
-.hidden-link {
+.side-navbar__hidden{
   display: none;
 }
 
-.display-theme {
+.theme-toggle {
   background: none;
   display: block;
   width: 40px;
@@ -187,7 +187,7 @@ body {
   align-items: center;
 }
 
-.display-theme button {
+.theme-toggle button {
   width: 30px;
   height: 30px;
   border-radius: 50%;
@@ -202,30 +202,30 @@ body {
   align-items: center;
 }
 
-.display-theme button:hover {
+.theme-toggle button:hover {
   box-shadow: var(--box-shadow);
 }
 
-.display-theme button i {
+.theme-toggle button i {
   font-size: 22px;
   color: var(--blue-text);
 }
 
-.navBtns {
+.navbar-links__right {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
 }
 
-.navBtns button {
+.navbar-links__right button {
   font-family: var(--font-special);
   font-weight: 600;
   margin: 5px;
   padding: 10px 30px;
 }
 
-.myCv {
+.navbar__resume {
   transition: 200ms ease;
   border-radius: 5px;
   text-decoration: none;
@@ -235,11 +235,11 @@ body {
   padding: 5px 15px;
 }
 
-.myCv:hover {
+.navbar__resume:hover {
   box-shadow: var(--box-shadow);
 }
 
-.boldContact {
+.navbar__contact {
   transition: 200ms ease;
   position: relative;
   border-radius: 5px;
@@ -250,12 +250,12 @@ body {
   padding: 5px 15px;
 }
 
-.boldContact:hover {
-  box-shadow: 5px 5px 5px 2px #ff14912d;
+.navbar__contact:hover {
+  box-shadow: var(--box-shadow);
   animation: vibrate 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
 }
 
-.boldContact::after {
+.navbar__contact::after {
   content: "";
   position: absolute;
   top: -5px;
@@ -292,29 +292,30 @@ body {
   }
 }
 
-.sidebarBtn {
+.navbar__burger-menu {
   display: none;
   position: relative;
 }
 
-.social-icons {
+.side-navbar__socials {
   display: none;
 }
 
-.social-icons button {
+.side-navbar__socials button {
   border: none;
   transition: 200ms ease-in-out;
   box-shadow: var(--box-shadow);
   background: var(--primary-color);
 }
 
-.social-icons button i {
+.side-navbar__socials button i {
   color: var(--tab-color);
   font-size: 20px;
+  transition: 200ms ease-in-out;
 }
 
-.social-icons button:hover {
-  box-shadow: 5px 5px 10px var(--pink);
+.side-navbar__socials button:hover i{
+  color: var(--blue-text);
 }
 
 /*END OF NAVBAR STYLING */
@@ -323,7 +324,7 @@ body {
   position: relative;
 }
 
-.right-hero {
+.home__content {
   text-align: center;
   height: 100dvh;
   width: 100%;
@@ -337,7 +338,7 @@ body {
   margin-bottom: 10px;
 }
 
-.right-hero h1 {
+.home__content h1 {
   width: 100%;
   margin: auto;
   padding: 10px;
@@ -352,7 +353,7 @@ body {
   font-family: var(--font-head);
 }
 
-.occupation {
+.home__subtext {
   font-family: var(--font-body);
   font-weight: 400;
   color: var(--tab-color);
@@ -363,26 +364,17 @@ body {
   text-wrap: balance;
 }
 
-.occupation a {
-  text-decoration: underline;
-  color: var(--tab-color);
-}
-
-.call-to-action-btn {
-  font-weight: 600;
-}
-
-.socialBtns {
+.call-to-action {
   margin: auto;
   width: min(90%, 300px);
   margin-top: 1rem;
 }
 
-.socialBtns div {
+.call-to-action div {
   width: 100%;
 }
 
-.socialBtns a button {
+.call-to-action a button {
   width: 100%;
   background: transparent;
   border: 1px solid var(--blue-text);
@@ -395,12 +387,8 @@ body {
   transition: 200ms ease-in-out;
 }
 
-.socialBtns a button:hover {
+.call-to-action a button:hover {
   box-shadow: var(--box-shadow);
-}
-
-.socialBtns a button i {
-  font-size: 16px;
 }
 
 .scroll-down {
@@ -420,11 +408,11 @@ body {
   animation: arrow-down 1s cubic-bezier(0.86, 0.06, 0.93, 0.14) infinite forwards alternate;
 }
 
-.goBack-btn {
+.back-to {
   display: flex;
 }
 
-.goBack-btn a {
+.back-to a {
   z-index: 10;
   background: var(--grad-bg);
   width: 40px;
@@ -437,27 +425,27 @@ body {
   position: fixed;
 }
 
-.goBack-btn a i {
+.back-to a i {
   color: var(--blue-text);
   font-size: 25px;
 }
 
-.bottom-page-nav .home-bottom-nav a {
+.bottom-navbar .bottom-navbar__home a {
   display: block;
 }
 
-.goBack-btn a:nth-child(1) {
+.back-to a:nth-child(1) {
   display: block;
   width: 50px;
   height: 50px;
   padding: 12px;
 }
 
-.goBack-btn a:nth-child(2) {
+.back-to a:nth-child(2) {
   display: none;
 }
 
-.goBack-btn a:nth-child(2)::after {
+.back-to a:nth-child(2)::after {
   content: "";
   position: absolute;
   top: -2px;
@@ -476,12 +464,12 @@ body {
   animation: heartbeat-2 3s linear infinite;
 }
 
-.goBack-btn i {
+.back-to i {
   color: var(--primary-color);
   font-size: 30px;
 }
 
-.floating-socials {
+.home__socials {
   position: absolute;
   left: 0;
   top: 14.6rem;
@@ -495,7 +483,7 @@ body {
 
 }
 
-.floating-socials a {
+.home__socials a {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -511,19 +499,19 @@ body {
   transition: 200ms ease-in-out;
 }
 
-.floating-socials a:hover {
+.home__socials a:hover {
   box-shadow: var(--box-shadow);
 }
 
-.floating-socials a i {
+.home__socials a i {
   font-size: 2rem;
 }
 
-.floating-socials a .mid-icon {
+.home__socials a .mid-icon {
   font-size: 1.8rem;
 }
 
-.bottom-page-nav {
+.bottom-navbar {
   display: none;
 }
 
@@ -682,7 +670,7 @@ body {
   margin: auto;
   cursor: pointer;
   transition: 200ms ease-in-out;
-  padding: 1rem;
+  padding: 2rem;
   box-shadow: var(--box-shadow);
   display: grid;
   gap: 3rem;
@@ -704,7 +692,7 @@ body {
 }
 
 .right-info {
-  padding: 1rem;
+ 
 }
 
 .details {
@@ -1328,15 +1316,15 @@ footer p {
     box-shadow: var(--box-shadow);
   }
 
-  .socialBtns {
+  .call-to-action {
     grid-template-columns: 1fr;
   }
 
-  .socialBtns a button {
+  .call-to-action a button {
     padding: 8px;
   }
 
-  .right-hero h1 {
+  .home__content h1 {
     width: 94%;
     -webkit-background-clip: text;
     background-clip: text;
@@ -1347,7 +1335,7 @@ footer p {
     font-family: var(--font-head);
   }
 
-  .right-hero {
+  .home__content {
     text-align: center;
     width: 100%;
   }
@@ -1375,7 +1363,7 @@ footer p {
     grid-template-columns: 1fr;
   }
 
-  .navbar-brandd {
+  .navbar__logo {
     height: 55px;
     margin-left: 20px;
   }
@@ -1384,11 +1372,11 @@ footer p {
     padding-block: 20%;
   }
 
-  .display-theme {
+  .theme-toggle {
     right: 80px;
   }
 
-  .sideBar {
+  .side-navbar {
     position: absolute;
     top: 100%;
     right: -650px;
@@ -1414,7 +1402,7 @@ footer p {
     gap: 1.5rem;
   }
 
-  .right-hero {
+  .home__content {
     text-align: center;
     width: 100%;
   }
@@ -1447,7 +1435,7 @@ footer p {
   .my-service-content .service-card:hover {
     opacity: 1;
   }
-  .floating-socials {
+  .home__socials {
     display: none;
   }
 
@@ -1475,63 +1463,63 @@ footer p {
     text-align: center;
   }
 
-  .display-theme {
+  .theme-toggle {
     right: 80px;
     top: 10px;
   }
 
-  .hidden-link {
+  .side-navbar__hidden{
     display: block;
   }
 
-  .centerNav {
+  .navbar-links__center {
     display: flex;
     align-items: flex-start;
     flex-direction: column;
   }
 
-  .centerNav a {
+  .navbar-links__center a {
     width: 100%;
   }
 
-  .navBtns a {
+  .navbar-links__right a {
     width: 100%;
   }
 
-  .navBtns button {
+  .navbar-links__right button {
     margin-bottom: 20px;
     width: 100%;
   }
 
-  .social-icons {
+  .side-navbar__socials {
     display: block;
     display: flex;
     justify-content: space-evenly;
   }
 
-  .social-icons button {
+  .side-navbar__socials button {
     width: 50px;
     height: 50px;
     border-radius: 50%;
     padding: 10px;
   }
 
-  .navbar-brandd {
+  .navbar__logo {
     height: 55px;
   }
 
-  .navbar-brandd p {
+  .navbar__logo p {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100%;
   }
 
-  .navBtns a:nth-child(2) {
+  .navbar-links__right a:nth-child(2) {
     display: none;
   }
 
-  .sideBar {
+  .side-navbar {
     position: absolute;
     top: 60px;
     right: -650px;
@@ -1543,7 +1531,7 @@ footer p {
     flex-direction: column;
   }
 
-  .sidebarBtn {
+  .navbar__burger-menu {
     border: none;
     background: none;
     display: block;
@@ -1555,7 +1543,7 @@ footer p {
     overflow: hidden;
   }
 
-  .sidebarBtn .span {
+  .burger-menu__span {
     position: relative;
     background: var(--text-head);
     display: block;
@@ -1566,7 +1554,7 @@ footer p {
     transition: 0.3s;
   }
 
-  .sidebarBtn .span::before {
+  .burger-menu__span::before {
     content: "";
     position: absolute;
     top: -8px;
@@ -1577,7 +1565,7 @@ footer p {
     transition: 0.3s;
   }
 
-  .sidebarBtn .span::after {
+  .burger-menu__span::after {
     content: "";
     position: absolute;
     top: 8px;
@@ -1593,34 +1581,34 @@ footer p {
     right: 0;
   }
 
-  .sidebarBtn.toggle span {
+  .navbar__burger-menu.toggle span {
     background: transparent;
   }
 
-  .sidebarBtn.toggle span::before {
+  .navbar__burger-menu.toggle span::before {
     top: 0;
     transform: rotate(45deg);
   }
 
-  .sidebarBtn.toggle span::after {
+  .navbar__burger-menu.toggle span::after {
     top: 0;
     transform: rotate(-45deg);
   }
 
-  .goBack-btn a:nth-child(1) {
+  .back-to a:nth-child(1) {
     display: none;
   }
 
-  .home-bottom-nav a {
+  .bottom-navbar__home a {
     display: none;
   }
 
-  .goBack-btn a:nth-child(2) {
+  .back-to a:nth-child(2) {
     display: block;
     bottom: 6rem;
   }
 
-  .bottom-page-nav {
+  .bottom-navbar {
     position: fixed;
 
     width: 100%;
@@ -1639,18 +1627,18 @@ footer p {
     align-items: center;
   }
 
-  .bottom-page-nav div {
+  .bottom-navbar div {
     text-align: center;
     font-size: clamp(0.6rem, 1cqi + 0.3rem, 1rem);
   }
 
-  .bottom-page-nav a {
+  .bottom-navbar a {
     color: var(--blue-text);
     text-decoration: none;
     font-family: var(--font-body);
   }
 
-  .bottom-page-nav a:hover {
+  .bottom-navbar a:hover {
     color: var(--text-head);
   }
 
@@ -1705,4 +1693,74 @@ footer p {
   to {
     transform: translateX(0) translateY(5px);
   }
+}
+
+
+
+
+
+
+/* THANK YOU PAGE STYLING */
+.thank-you {
+  width: min(90%, 450px);
+  margin: auto;
+  padding-block: 30px;
+  padding: 30px;
+  margin-block: calc(190px - 30px);
+  border-radius: 5px;
+  background: var(--primary-color);
+  box-shadow: 10px 6px 20px var(--faint-blue);
+
+  position: relative;
+}
+
+.hidden {
+  overflow: hidden;
+}
+
+.thank-you h3 {
+  font-family: var(--font-head);
+  font-size: clamp(30px, 4vw, 40px);
+  color: var(--blue-text);
+  margin-bottom: 20px;
+}
+
+.thank-you .appreciate {
+  font-family: var(--font-body);
+  margin-bottom: 20px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--tab-color);
+}
+
+.thank-you .warm {
+  font-family: var(--font-special);
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-head);
+  margin-bottom: 20px;
+}
+
+.thank-you button {
+  font-family:var(--font-special);
+  border: 1px solid var(--blue-text);
+  font-weight: bold;
+  padding: 10px;
+  color: var(--blue-text);
+  border-radius: 5px;
+  background: none;
+  transition: 200ms ease;
+  width: 100%;
+}
+
+.thank-you button:hover {
+  box-shadow: 5px 5px 5px var(--faint-blue);
+}
+.confetti {
+  position: absolute;
+  z-index: 10;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
