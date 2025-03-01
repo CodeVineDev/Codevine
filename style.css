@@ -1242,46 +1242,74 @@ fieldset {
 
 /* FOOTER STYLING */
 footer {
-  padding:4rem 0 2rem 0;
-  /* padding: 10px; */
+  padding: 5rem 3rem 0 3rem;
   width: 100%;
   text-align: center;
-  background-color: var(--primary-color);
+  background-color: var(--grad-bg);
+}
+.footer {
+  width: min(95%, 1200px);
+  margin: auto;
 }
 
-footer p {
+.footer__container {
+  border-bottom: 1px solid var(--tab-color);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  padding: 2rem 0;
+}
+
+.footer__content {
+  text-align: left;
+}
+
+.footer__content h3 {
+  font-size: var(--font-size-h3);
+  color: var(--tab-color);
+  font-family: var(--font-head);
+  margin-bottom: 30px;
+}
+
+.footer__content p {
   font-size: var(--font-size-p);
   font-family: var(--font-body);
   color: var(--tab-color);
   font-weight: 400;
-  padding: 10px;
+  margin-bottom: 1rem;
+
+}
+
+.footer__socials {
+  font-size: 2rem;
+  text-align: right;
+}
+
+.footer__socials a {
+  color: var(--blue-text);
+  margin-left: 1rem;
+}
+
+.footer__socials h4 {
+  color: var(--tab-color);
+  margin-bottom: 1rem;
+  font-family: var(--font-head);
+  font-size: var(--font-size-h3);
+}
+
+.footer__copyright {
+  padding: 2rem 1rem;
+}
+
+.footer__copyright p {
+  font-size: var(--font-size-p);
+  color: var(--tab-color);
+  font-family: var(--font-body);
+
 }
 
 .copyright {
   font-size: var(--font-size-special);
-}
-
-.built-with-icons {
-  display: flex;
-  justify-content: center;
-}
-
-.built-with-icons div {
-  margin-inline: 3px;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  box-shadow: var(--box-shadow);
-}
-
-.built-with-icons .small-html,
-.built-with-icons .small-gsap {
-  width: 19px;
-}
-
-.built-with-icons img {
-  margin-block: 9px;
-  width: 25px;
 }
 
 /* END OF FOOTER STYLING */
@@ -1379,6 +1407,9 @@ footer p {
 }
 
 @media (max-width: 700px) {
+  footer {
+    padding: 5rem 1rem 0 1rem;
+  }
   .about-contact {
     margin-left: 1rem;
   }
@@ -1406,6 +1437,18 @@ footer p {
 }
 
 @media (max-width: 992px) {
+  .footer__container {
+    grid-template-columns: 1fr;
+  }
+
+  .footer__socials {
+    text-align: left;
+  }
+
+  .footer__socials a {
+    margin-right: 1rem;
+    margin-left: 0;
+  }
   .service-card:hover p {
     color: var(--tab-color);
   }
