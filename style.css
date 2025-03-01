@@ -1359,6 +1359,10 @@ footer {
 }
 
 @media (max-width: 500px) {
+  .home__content h1 {
+    font-size: var(--font-size-h3);
+  }
+  
   .about-contact {
     width: 90%;
   }
