@@ -1107,14 +1107,6 @@ body {
   margin-right: 0.5rem;
 }
 
-.contact-sec .sub-head {
-  color: var(--tab-color);
-  font-family: var(--font-body);
-  font-weight: 600;
-  text-align: center;
-  font-size: var(--font-size-p);
-}
-
 .contact-sec .sub-text {
   color: var(--tab-color);
   font-family: var(--font-body);
