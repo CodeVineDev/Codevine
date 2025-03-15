@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   // Clear input fields on page load
   ["name", "email", "textarea"].forEach(id => document.getElementById(id).value = "");
-  
+
   // Hide preloader and show main content
   document.getElementById("preloader").style.display = "none";
   document.getElementById("content").style.display = "block";
@@ -56,17 +56,17 @@ document.addEventListener("DOMContentLoaded", () => {
         x: x < rect.width / 2 ? "-100%" : "100%",
         y: y < rect.height / 2 ? "-100%" : "100%"
       };
-      
+
       const overlay = document.createElement("div");
       Object.assign(overlay.style, {
         position: "absolute", top: "0", left: "0", width: "100%", height: "100%",
         backgroundColor: blueTextColor, transform: `translate(${translate.x}, ${translate.y})`,
         transition: "transform 0.3s ease-in-out", zIndex: "-1"
       });
-      
+
       card.appendChild(overlay);
       setTimeout(() => overlay.style.transform = "translate(0, 0)", 10);
-      
+
       card.addEventListener("mouseleave", leaveEvent => {
         const leaveX = leaveEvent.clientX - rect.left, leaveY = leaveEvent.clientY - rect.top;
         const exit = {
