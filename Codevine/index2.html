@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bouncing Hamburger to X</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #111;
+      color: white;
+    }
+
+    .navbar {
+      position: relative;
+      background-color: #111;
+      height: 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+      color: white;
+    }
+
+    .hamburger {
+      width: 30px;
+      height: 30px;
+      position: relative;
+      cursor: pointer;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row;
+      align-items: center;
+      flex-wrap: nowrap;
+    }
+
+    .dot {
+      width: 8px;
+      height: 8px;
+      background-color: white;
+      border-radius: 50%;
+      transition: all 0.3s ease;
+    }
+
+    /* Bouncing animation for the dots */
+    .dot1 {
+      animation: bounce 0.8s 0.2s infinite alternate;
+    }
+
+    .dot2 {
+      animation: bounce 0.8s 0.4s infinite alternate;
+    }
+
+    .dot3 {
+      animation: bounce 0.8s 0.6s infinite alternate;
+    }
+
+    @keyframes bounce {
+      0% {
+        transform: translateY(0);
+      }
+      100% {
+        transform: translateY(-5px);
+      }
+    }
+
+    /* Stop animation when the hamburger is open */
+    .hamburger.open .dot1,
+    .hamburger.open .dot2,
+    .hamburger.open .dot3 {
+      animation: none;
+    }
+
+    .mobile-menu {
+      display: none;
+      background-color: #111;
+      position: absolute;
+      top: 50px;
+      right: 0;
+      width: 100%;
+      height: 0;
+      overflow: hidden;
+      transition: height 0.5s ease-in-out;
+    }
+
+    .mobile-menu.open {
+      display: block;
+      height: 200px;
+    }
+
+    .menu-item {
+      padding: 15px;
+      color: white;
+      text-decoration: none;
+      display: block;
+      text-align: center;
+    }
+
+    .menu-item:hover {
+      background-color: #444;
+    }
+
+    /* Hamburger to X animation */
+    .hamburger.open .dot1 {
+      transform: rotate(45deg);
+      position: absolute;
+      border-radius: 2px;
+      width: 30px;
+      height: 4px;
+      top: 50%;
+      left: 0;
+    }
+
+    .hamburger.open .dot2 {
+      opacity: 0;
+    }
+
+    .hamburger.open .dot3 {
+      height: 4px;
+      transform: rotate(-45deg);
+      position: absolute;
+      border-radius: 2px;
+      width: 30px;
+      top: 50%;
+      right: 0;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="navbar">
+    <div class="hamburger" id="hamburger">
+      <div class="dot dot1"></div>
+      <div class="dot dot2"></div>
+      <div class="dot dot3"></div>
+    </div>
+    <div id="mobileMenu" class="mobile-menu">
+      <a href="#" class="menu-item">Home</a>
+      <a href="#" class="menu-item">About</a>
+      <a href="#" class="menu-item">Services</a>
+      <a href="#" class="menu-item">Contact</a>
+    </div>
+  </div>
+
+  <script>
+    const hamburger = document.getElementById("hamburger");
+    const mobileMenu = document.getElementById("mobileMenu");
+
+    hamburger.addEventListener("click", () => {
+      mobileMenu.classList.toggle("open");
+      hamburger.classList.toggle("open");
+    });
+  </script>
+
+</body>
+</html>
