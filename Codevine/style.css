@@ -91,7 +91,7 @@ body {
   gap: 0.5rem;
 }
 .navbar__logo img {
-  width: calc(var(--two-rem) + 0.4rem);
+  width: 2.4rem;
   border-radius: 50%;
 }
 .navbar__logo p {
@@ -407,13 +407,7 @@ body {
   }
 }
 @media (max-width: 480px) {
-  :root {
-    --dot-eight-rem: 0.8rem;
-    --one-rem: .9rem;
-    --two-rem: 1rem;
-    --three-rem: 1.5rem;
-    --four-rem: 2rem;
-    --five-rem: 3rem;
-    --transition-ani: 300ms ease-out;
-  }
+  .home__content {
+  padding: 2rem;
+}
 }
