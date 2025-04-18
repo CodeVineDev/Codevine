@@ -3,7 +3,7 @@
   --black: rgb(12, 12, 12);
   --white: rgb(248, 248, 248);
   --grey: rgb(138, 138, 138);
-  --white-blur: rgba(248, 248, 248, 0.922);
+  --white-blur: rgba(248, 248, 248, 0.5);
   --red-border: 2px solid red;
   --grey-border: 1px solid rgb(214, 214, 214);
   --box-shadow: 0 3px 7px rgba(170, 170, 170, 0.4);
@@ -69,21 +69,21 @@ body {
 .navbar__container {
   container-type: inline-size;
   position: fixed;
-  top: 0;
   z-index: 8;
   width: min(70%, 600px);
-  top: var(--two-rem);
+  top: 2rem;
   left: 50%;
   transform: translateX(-50%);
   display: grid;
   align-items: center;
   grid-template-columns: repeat(2, 1fr);
-  background: var(--white-blur);
-  backdrop-filter: blur(10px);
+  background: var(--white-blur); /* Semi-transparent background */
+  backdrop-filter: blur(10px); /* Apply blur to content behind */
   border: var(--grey-border);
-  padding: 0.6rem var(--one-rem);
-  border-radius: var(--three-rem);
+  padding: 1rem;
+  border-radius: 3rem;
 }
+
 .navbar__logo {
   display: flex;
   justify-content: start;
@@ -110,6 +110,7 @@ body {
   padding: 0.25rem 0.6rem;
 }
 .navbar__links li:nth-child(3) {
+  background: var(--white);
   border: var(--grey-border);
   border-radius: var(--one-rem);
   box-shadow: var(--box-shadow);
@@ -303,13 +304,10 @@ body {
   .home__sub-header {
     font-size: var(--one-rem);
   }
-  .navbar__container {
-    position: relative;
-  }
   .navlinks__cont {
     position: absolute;
     width: min(100%, 400px);
-    background-color: var(--white-blur);
+    background: var(--white-blur); /* Semi-transparent background */
     backdrop-filter: blur(10px);
     border-radius: 1rem;
     top: 110%;
