@@ -317,7 +317,7 @@ body {
   }
   .hamburger {
     width: 26.5px;
-    height: 25px;
+    height: 26.5px;
     position: relative;
     cursor: pointer;
     display: flex;
@@ -325,8 +325,8 @@ body {
     flex-direction: row;
     position: absolute;
     right: 1rem;
-    top: 50%;
-    transform: translateY(-50%);
+    top: 60%;
+    transform: translateY(-60%);
     align-items: center;
     flex-wrap: nowrap;
   }
