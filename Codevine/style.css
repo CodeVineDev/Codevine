@@ -71,7 +71,7 @@ body {
   position: fixed;
   top: 0;
   z-index: 8;
-  width: min(60%, 600px);
+  width: min(70%, 600px);
   top: var(--two-rem);
   left: 50%;
   transform: translateX(-50%);
@@ -316,8 +316,8 @@ body {
     transform: translateX(-50%);
   }
   .hamburger {
-    width: 25px;
-    height: 30px;
+    width: 26.5px;
+    height: 25px;
     position: relative;
     cursor: pointer;
     display: flex;
