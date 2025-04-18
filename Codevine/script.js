@@ -4,22 +4,28 @@ let mouseX = 0;
 let mouseY = 0;
 let currentX = 0;
 let currentY = 0;
-const speed = 0.1; // delay/smoothness factor
+const speed = 0.1;
+let animationActive = window.innerWidth >= 1024;
 
 window.addEventListener("mousemove", (e) => {
+  if (!animationActive) return;
   mouseX = e.clientX;
   mouseY = e.clientY;
 });
 
+window.addEventListener("resize", () => {
+  animationActive = window.innerWidth >= 1024;
+  if (!animationActive) {
+    circle.style.transform = "translate3d(-100px, -100px, 0)";
+  }
+});
+
 function animate() {
-  currentX += (mouseX - currentX) * speed;
-  currentY += (mouseY - currentY) * speed;
-
-  // Adjust by half the size of the circle (center it)
-  circle.style.transform = `translate3d(${currentX - 7.5}px, ${
-    currentY - 7.5
-  }px, 0)`;
-
+  if (animationActive) {
+    currentX += (mouseX - currentX) * speed;
+    currentY += (mouseY - currentY) * speed;
+    circle.style.transform = `translate3d(${currentX - 7.5}px, ${currentY - 7.5}px, 0)`;
+  }
   requestAnimationFrame(animate);
 }
 
