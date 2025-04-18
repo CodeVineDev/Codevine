@@ -307,7 +307,7 @@ body {
   .navlinks__cont {
     position: absolute;
     width: min(100%, 400px);
-    background: var(--white-blur); /* Semi-transparent background */
+    background: var(--white); /* Semi-transparent background */
     backdrop-filter: blur(10px);
     border-radius: 1rem;
     top: 110%;
@@ -409,5 +409,6 @@ body {
 @media (max-width: 480px) {
   .home__content {
     padding: 1rem;
+    padding-top: 3rem;
   }
 }
