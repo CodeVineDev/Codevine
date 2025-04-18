@@ -116,7 +116,6 @@ body {
 }
 .navlinks__cont {
   width: 100%;
-
 }
 .navbar__links {
   font-size: calc(var(--one-rem) - 0.1rem);
@@ -268,6 +267,9 @@ body {
   left: 20px;
 }
 @media (max-width: 1024px) {
+  .cursor-circle {
+    display: none;
+  }
   .home__right {
     position: relative;
     left: 5%;
@@ -292,7 +294,7 @@ body {
   }
   .navbar__links li:nth-child(3) {
     width: 100%;
-    padding: .6rem;
+    padding: 0.6rem;
     text-align: center;
   }
   .home__header {
