@@ -14,7 +14,7 @@
   --three-rem: 3rem;
   --four-rem: 4rem;
   --five-rem: 5rem;
-  --transition-ani: 300ms ease-out;
+  --transition-ani: 200ms ease-out;
 }
 html {
   width: 100%;
@@ -71,7 +71,7 @@ body {
   position: fixed;
   top: 0;
   z-index: 8;
-  width: min(50%, 600px);
+  width: min(60%, 600px);
   top: var(--two-rem);
   left: 50%;
   transform: translateX(-50%);
@@ -325,7 +325,8 @@ body {
     flex-direction: row;
     position: absolute;
     right: 1rem;
-    top: 10px;
+    top: 50%;
+    transform: translateY(-50%);
     align-items: center;
     flex-wrap: nowrap;
   }
@@ -369,12 +370,12 @@ body {
 
 /* Hamburger to X animation */
   .hamburger.open .dot1 {
-    transform: rotate(45deg);
+    transform: rotate(45deg) translateY(-50%);
     position: absolute;
     border-radius: 2px;
     width: 20px;
     height: 3px;
-    top: 30%;
+    top: 50%;
     left: 2.5px;
   }
 
@@ -384,11 +385,11 @@ body {
 
   .hamburger.open .dot3 {
     height: 3px;
-    transform: rotate(-45deg);
+    transform: rotate(-45deg) translateY(-50%);
     position: absolute;
     border-radius: 2px;
     width: 20px;
-    top: 30%;
+    top: 50%;
     right: 2.5px;
   }
 
@@ -408,6 +409,6 @@ body {
 }
 @media (max-width: 480px) {
   .home__content {
-  padding: 2rem;
+  padding: 1rem;
 }
 }
