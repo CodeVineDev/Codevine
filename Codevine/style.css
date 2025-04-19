@@ -314,6 +314,30 @@ body {
   font-size: 1rem;
   color: var(--grey);
 }
+.project__cont{
+  width: var(--width-1080px);
+  margin: auto;
+  border-left: var(--grey-border);
+  border-right: var(--grey-border);
+  padding: 7rem 2rem;
+}
+.projects{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 400px), 1fr));
+  gap: 2rem;
+}
+.projects div{
+ overflow: hidden;
+}
+.project__cont h2{
+  font-size: var(--four-rem);
+margin-bottom: 4rem;
+font-weight: 500;
+}
+.projects img{
+  width: 100%;
+  border-radius: 1rem;
+}
 @media (max-width: 1024px) {
   .cursor-circle {
     display: none;
@@ -451,6 +475,12 @@ body {
   .navbar__container :where(ul) {
     flex-direction: column;
     align-items: start;
+  }
+  .clients-con {
+    padding-left: 1rem;
+  }
+  .home__content {
+    padding-bottom: 4rem;
   }
 }
 @media (max-width: 480px) {
