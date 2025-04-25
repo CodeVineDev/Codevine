@@ -2,7 +2,7 @@ let inputName = document.getElementById('name');
 let inputEmail = document.getElementById('email');
 let inputMessage = document.getElementById('textarea')
 window.addEventListener('load', () => {
-  // window.scrollTo(0, 0); // Scrolls to the top-left corner of the page
+
   inputName.value = "";
   inputEmail.value = "";
   inputMessage.value = "";

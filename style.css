@@ -1261,7 +1261,7 @@ footer {
 }
 
 .footer__copyright {
-  padding: 2rem 1rem;
+  padding: 2rem 0;
 }
 
 .footer__copyright p {
