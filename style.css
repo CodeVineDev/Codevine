@@ -3,7 +3,7 @@
   --font-head: "Montserrat", serif;
   --font-body: "Jost", sans-serif;
   --font-special: "Poppins", sans-serif;
-  --font-size-h1: 4.5rem;
+  --font-size-h1: clamp(3rem, 6vw, 4.5rem);
   --font-size-h2: 4rem;
   --font-size-h3: 1.5rem;
   --font-size-p: 1.3rem;
@@ -317,15 +317,16 @@ body {
   width: 100%;
   display: grid;
   place-content: center;
+  padding: 0 2rem;
 }
 
 .home__content h1 {
-  width: var(--width-1200px);
-  margin: auto;
   font-size: var(--font-size-h1);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+  margin-bottom: 2rem;
+  line-height: 1.2;
   background-image: linear-gradient(
     to right,
     var(--darker-blue),
@@ -339,18 +340,15 @@ body {
   font-family: var(--font-body);
   font-weight: 400;
   color: var(--tab-color);
-  width: var(--width-1200px);
   line-height: 1.5;
   font-size: var(--font-size-p);
-  margin: auto;
   font-weight: 600;
-  
+  margin-bottom: 2rem;
 }
 
 .call-to-action {
   margin: auto;
   width: min(97%, 400px);
-  margin-top: 1rem;
 }
 
 .call-to-action div {
@@ -376,9 +374,6 @@ body {
 
 .scroll-down {
   position: relative;
-  width: min(80%, 800px);
-  
-  margin: auto;
   font-family: var(--font-body);
   color: var(--tab-color);
   font-weight: 400;
@@ -511,7 +506,7 @@ body {
 
 .about__content img {
   width: 100%;
-  height:100%;
+  height: 100%;
   object-fit: cover;
   /* Ensures the image fills the area without distortion */
   border-radius: 10px;
@@ -924,7 +919,7 @@ body {
   background: var(--grad-bg);
   text-align: center;
   padding: max(2rem, 1vw);
-  
+
   overflow: hidden;
   z-index: 1;
   position: relative;
@@ -1018,7 +1013,7 @@ body {
 }
 
 .skills .slide .tailwind-img {
-  margin: .5rem 0;
+  margin: 0.5rem 0;
 }
 
 .skills .html img {
@@ -1282,130 +1277,14 @@ footer {
 /* END OF FOOTER STYLING */
 
 /* MEDIA QUERY */
-@media (max-width: 480px) {
-  .about-social-buttons {
-    padding: 0 5px;
-  }
-
-  .about__image {
-    width: 285px;
-    padding: 20px;
-    background: var(--primary-color);
-    margin: auto;
-    display: block;
-    border-radius: 10px;
-    margin-bottom: 30px;
-    box-shadow: var(--box-shadow);
-  }
-
-  .call-to-action {
-    grid-template-columns: 1fr;
-  }
-
-  .call-to-action a button {
-    padding: 8px;
-  }
-
-  .home__content h1 {
-    width: 94%;
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    background-image: linear-gradient(
-      to right,
-      var(--blue-text),
-      var(--text-head)
-    );
-    font-family: var(--font-head);
-  }
-
-  .home__content {
-    text-align: left;
-    width: 100%;
-  }
-  .home__content h1 {
-    font-size: var(--font-size-h1);
-  }
-
-  .about-contact {
-    width: 90%;
-  }
-
-  .about-contact button {
-    padding: 1rem;
-  }
-  .skills .slide p {
-    font-family: var(--font-special);
-    font-weight: 900;
-    font-size: clamp(0.6rem, 3vw, 0.8rem);
-    color: var(--tab-color);
-  }
-
-  .live-btns {
-    display: grid;
-    gap: 0.5rem;
-    grid-template-columns: 1fr;
-  }
-
-  .navbar__logo {
-    height: 55px;
-    margin-left: 20px;
-  }
-
-  .about__content {
-    padding-block: 20%;
-  }
-
-  .theme-toggle {
-    right: 80px;
-  }
-
-  .side-navbar {
-    position: absolute;
-    top: 100%;
-    right: -650px;
-    width: 100vw !important;
-    height: 600vh !important;
-    background: var(--primary-color);
-    padding: 100px 20px;
-    display: flex;
-    flex-direction: column;
-  }
-}
-
-@media (max-width: 700px) {
+@media (max-width: 992px) {
   :root {
-    --font-size-h1: 3rem;
+    --font-size-h1: 2.5rem;
     --font-size-h2: 1.5rem;
     --font-size-h3: 1rem;
     --font-size-p: 1rem;
     --font-size-special: 1rem;
   }
-  footer {
-    padding: 5rem 1rem 0 1rem;
-  }
-  .about-contact {
-    margin-left: 1rem;
-  }
-
-  .about-social-buttons {
-    width: var(--width-1200px);
-    margin: auto;
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
-
-  .myprojects {
-    grid-template-columns: 1fr;
-  }
-
-  .contact-field_write-up ul li {
-    font-size: calc(var(--font-size-p) + 0.08rem);
-  }
-}
-
-@media (max-width: 992px) {
   .footer__container {
     grid-template-columns: 1fr;
   }
@@ -1607,6 +1486,122 @@ footer {
   footer {
     margin-bottom: 60px;
   }
+  @media (max-width: 700px) {
+    :root {
+      --font-size-h1: 2rem;
+      --font-size-h2: 1.5rem;
+      --font-size-h3: 1rem;
+      --font-size-p: 1rem;
+      --font-size-special: 1rem;
+    }
+    footer {
+      padding: 5rem 1rem 0 1rem;
+    }
+    .about-contact {
+      margin-left: 1rem;
+    }
+
+    .about-social-buttons {
+      width: var(--width-1200px);
+      margin: auto;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    .myprojects {
+      grid-template-columns: 1fr;
+    }
+
+    .contact-field_write-up ul li {
+      font-size: calc(var(--font-size-p) + 0.08rem);
+    }
+  }
+}
+@media (max-width: 480px) {
+  .about-social-buttons {
+    padding: 0 5px;
+  }
+  .call-to-action {
+    grid-template-columns: 1fr;
+  }
+
+  .call-to-action a button {
+    padding: 8px;
+  }
+
+  .home__content h1 {
+    width: 94%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    background-image: linear-gradient(
+      to right,
+      var(--blue-text),
+      var(--text-head)
+    );
+    font-family: var(--font-head);
+  }
+
+  .home__content {
+    text-align: left;
+    width: 100%;
+  }
+  .home__content h1 {
+    font-size: var(--font-size-h1);
+  }
+
+  .about-contact {
+    width: 90%;
+  }
+
+  .about-contact button {
+    padding: 1rem;
+  }
+  .skills .slide p {
+    font-family: var(--font-special);
+    font-weight: 900;
+    font-size: clamp(0.6rem, 3vw, 0.8rem);
+    color: var(--tab-color);
+  }
+
+  .live-btns {
+    display: grid;
+    gap: 0.5rem;
+    grid-template-columns: 1fr;
+  }
+
+  .navbar__logo {
+    height: 55px;
+    margin-left: 20px;
+  }
+
+  .about__content {
+    padding-block: 20%;
+  }
+
+  .theme-toggle {
+    right: 80px;
+  }
+
+  .side-navbar {
+    position: absolute;
+    top: 100%;
+    right: -650px;
+    width: 100vw !important;
+    height: 600vh !important;
+    background: var(--primary-color);
+    padding: 100px 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  /* :root {
+    --font-size-h1: 1.5rem;
+    --font-size-h2: 1.2rem;
+    --font-size-h3: 1rem;
+    --font-size-p: 1rem;
+    --font-size-special: 1rem;
+  } */
 }
 
 /* ANIMATIONS */
