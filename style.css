@@ -13,7 +13,7 @@
   --seventeen-px: 17px;
   --two-rem: 27px;
   --three-rem: 32px;
-  --four-rem: 64px;
+  --four-rem: 70px;
   --transition-ani: 200ms ease-out;
 }
 html {
@@ -441,7 +441,7 @@ a {
   height: 1px;
   background: var(--black);
   transition: var(--transition-ani);
-}
+/* }
 @media (max-width: 1024px) {
   .cursor-circle {
     display: none;
@@ -453,25 +453,20 @@ a {
     padding: 1rem;
     margin-top: 6rem;
   }
-  .home__header {
-    font-size: var(--five-rem);
-  }
+
   .home__sub-header {
     font-size: calc(var(--seventeen-px) + 0.1rem);
   }
   .home__cta-btn {
-    
 
   }
-}
+} */
 @media (max-width: 768px) {
   :root {
-    --seventeen-px: 0.8rem;
-    --seventeen-px: 0.9rem;
-    --two-rem: 1rem;
-    --three-rem: 2rem;
-    --four-rem: 3rem;
-    --five-rem: 4rem;
+    --seventeen-px: 16px;
+    --two-rem: 20px;
+    --three-rem: 28px;
+    --four-rem: 48px;
     --transition-ani: 300ms ease-out;
   }
   .project__cont {
