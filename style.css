@@ -441,7 +441,7 @@ a {
   height: 1px;
   background: var(--black);
   transition: var(--transition-ani);
-/* }
+ }/*
 @media (max-width: 1024px) {
   .cursor-circle {
     display: none;
