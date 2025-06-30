@@ -622,5 +622,7 @@ a {
   }
 }
 @media (max-width: 480px) {
- 
+  .home__content {
+    padding: 6rem 1rem 7rem 1rem;
+  }
 }
