@@ -29,14 +29,15 @@ html {
 }
 body {
   background: var(--white);
-  font-family: var(--inter-font);
-  text-wrap: balance;
+  font-family: var(--manrope-font);
+ 
 }
 h1,
 h2,
 h3,
 h4 {
   font-family: var(--figtree-font);
+  text-wrap: balance;
 }
 p,
 a {
@@ -154,9 +155,7 @@ a {
 }
 .home__content {
   width: 100%;
-  margin-top: 5rem;
-  padding: 3rem;
-  padding-bottom: 7rem;
+  padding: 10rem 3rem 7rem 3rem;
   display: grid;
   gap: 2rem;
   text-align: center;
@@ -623,7 +622,5 @@ a {
   }
 }
 @media (max-width: 480px) {
-  .home__content {
-    padding: 3rem 1rem 7rem 1rem;
-  }
+ 
 }
