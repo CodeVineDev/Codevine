@@ -64,12 +64,16 @@ hamburger.addEventListener("click", () => {
   mobileMenu.classList.toggle("open");
   hamburger.classList.toggle("open");
 });
-
 const moreProject = document.getElementById("extend");
 const addProject = document.getElementById("extension");
-const icon = document.getElementById("icon");
+const iconElement = document.getElementById("icon");
+
 moreProject.addEventListener("click", () => {
-  // alert("SUCESS")
-  moreProject.innerHTML = "See Less" + icon.innerHTML  ;
   addProject.classList.toggle("active");
+
+  const isActive = addProject.classList.contains("active");
+
+  // Update button text based on state
+  moreProject.innerHTML =
+    (isActive ? "See Less" : "See More") + iconElement.outerHTML;
 });
