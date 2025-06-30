@@ -402,6 +402,12 @@ body .slider-wrapper:hover body .cursor-circle {
   position: relative;
   box-shadow: var(--box-shadow);
 }
+#extension{
+  display: none;
+}
+#extension.active{
+  display: block;
+}
 .project-details {
   position: absolute;
   top: -101%;
@@ -674,6 +680,7 @@ body .slider-wrapper:hover body .cursor-circle {
   }
   .services--left h2 {
     font-size: var(--sixty-px);
+    margin-top: 0;
   }
   .services {
     grid-template-columns: 1fr;
@@ -769,4 +776,7 @@ body .slider-wrapper:hover body .cursor-circle {
   .home__content {
     padding: 10rem 1rem 7rem 1rem;
   }
+  .projects { 
+  gap: 3rem;
+}
 }
