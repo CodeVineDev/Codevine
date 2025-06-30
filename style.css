@@ -9,7 +9,7 @@
   --grey-border: 1px solid rgb(214, 214, 214);
   --box-shadow: 0 3px 7px rgba(170, 170, 170, 0.4);
   --width-1080px: min(97%, 1080px);
-  --fifteen-px: 15px;
+  --fifteen-px: 13px;
   --seventeen-px: 17px;
   --two-rem: 27px;
   --three-rem: 32px;
@@ -590,7 +590,7 @@ a {
     left: 2.5px;
   }
   .home__cta-btn {
-   width: 100%;
+   width: 80%;
    justify-content: center;
 }
 
