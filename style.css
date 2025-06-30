@@ -3,7 +3,7 @@
   --figtree-font: "Figtree", sans-serif;
   --black: rgb(12, 12, 12);
   --white: rgb(248, 248, 248);
-  --grey: rgb(108, 108, 108);
+  --grey: rgb(120, 120, 120);
   --white-blur: rgba(248, 248, 248, 0.5);
   --red-border: 2px solid red;
   --grey-border: 1px solid rgb(214, 214, 214);
@@ -81,7 +81,7 @@ a {
 .navbar__container {
   position: fixed;
   z-index: 8;
-  width: min(70%, 600px);
+  width: min(80%, 600px);
   top: 2rem;
   left: 50%;
   transform: translateX(-50%);
@@ -589,6 +589,10 @@ a {
     top: 40%;
     left: 2.5px;
   }
+  .home__cta-btn {
+   width: 100%;
+   justify-content: center;
+}
 
   .hamburger.open .dot2 {
     opacity: 0;
