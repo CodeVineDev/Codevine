@@ -156,6 +156,27 @@ li {
 .hamburger {
   display: none;
 }
+.bottom-blur {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  pointer-events: none;
+  z-index: 9999;
+
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+
+  /* Optional: fade the blur smoothly to transparent at the bottom */
+  mask-image: linear-gradient(to top, black 0%, transparent 100%);
+  -webkit-mask-image: linear-gradient(
+    to top,
+    rgb(255, 6, 6) 0%,
+    transparent 100%
+  );
+}
+
 .home__cont {
   background-origin: padding-box;
   width: var(--width-1080px);
@@ -529,12 +550,11 @@ body .slider-wrapper:hover body .cursor-circle {
   text-wrap: balance;
 }
 .single-review .img {
-  width: 3rem;
-  height: 3rem;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   overflow: hidden;
   object-fit: cover;
-  object-position: center;
 }
 .single-review h4 {
   color: var(--black);
@@ -687,6 +707,73 @@ border-radius: 20px;
   color: var(--black);
   font-weight: 800;
 }
+.testimonial {
+  width: var(--width-1080px);
+  margin: auto;
+  padding: 7rem 2rem;
+  border-left: var(--grey-border);
+  border-right: var(--grey-border);
+}
+.testimonial h2 {
+  font-size: var(--sixty-px);
+  color: var(--grey);
+  margin-bottom: 3rem;
+}
+.testimonial span {
+  color: var(--black);
+}
+.testimonial--con {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+  gap: 2rem;
+}
+.testimony {
+  padding: 1.5rem;
+  border-radius: 20px;
+  box-shadow: var(--box-shadow);
+}
+.testimony .top {
+  margin-bottom: 3rem;
+}
+.testimony p {
+  font-size: 16px;
+  color: var(--black);
+  letter-spacing: -5%;
+  text-wrap: wrap;
+  font-weight: 600;
+}
+.testimony img {
+  width: 50px;
+  height: 50px;
+}
+.testimonial--profile {
+  gap: 0.6rem;
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.testimonial--profile .img {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  overflow: hidden;
+  object-fit: cover;
+  object-position: center;
+}
+.testimonial--profile h4 {
+  color: var(--black);
+  font-size: var(--seventeen-px);
+}
+.testimonial--profile p {
+  color: var(--grey);
+  font-weight: 600;
+  font-size: var(--fifteen-px);
+}
+.testimonial--profile img {
+  width: 100%;
+  object-fit: cover;
+}
 
 @media (max-width: 1000px) {
   .services--right li {
@@ -763,7 +850,6 @@ border-radius: 20px;
   }
   .about--con {
     grid-template-columns: 1fr;
-    
   }
   .about {
     padding: 7rem 1rem;
