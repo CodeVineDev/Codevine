@@ -1261,6 +1261,7 @@ footer {
   }
   .home__content {
     padding: 10rem 1rem 7rem 1rem;
+    text-align: left;
   }
   .projects {
     gap: 3rem;
