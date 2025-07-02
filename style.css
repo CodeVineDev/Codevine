@@ -96,7 +96,7 @@ li {
 .navbar__container {
   position: fixed;
   z-index: 8;
-  width: min(80%, 600px);
+  width: min(50%, 600px);
   top: 2rem;
   left: 50%;
   transform: translateX(-50%);
@@ -135,7 +135,7 @@ li {
 .navbar__links li {
   padding: 0.25rem 0.6rem;
 }
-.navbar__links li:nth-child(2) {
+.navbar__links li:nth-child(3) {
   background: var(--white);
   border: var(--grey-border);
   border-radius: var(--sixteen-px);
@@ -907,8 +907,10 @@ body .slider-wrapper:hover body .cursor-circle {
 }
 .faqs-section .faqs-container__lower .accordion-content p {
   border-top: var(--grey-border);
-  font-size: var(--sixteen-px);
+  font-size: var(--fifteen-px);
   color: var(--black);
+  font-weight: 700;
+  text-wrap: wrap;
   padding: 1.5rem 0;
   margin: 0;
 }
@@ -1105,12 +1107,12 @@ footer {
     font-size: clamp(20px, 16vw, 300px);
   }
   .take--action {
-    padding: 1rem;
+    padding: 7rem 1rem;
   }
   .project__cont {
     padding: 7rem 1rem;
   }
-  .navbar__links li:nth-child(2) {
+  .navbar__links li:nth-child(3) {
     width: 100%;
     padding: 0.6rem;
     text-align: center;
@@ -1238,7 +1240,7 @@ footer {
   .mobile-menu.open {
     display: block;
     padding: 2rem 1rem;
-    height: 150px;
+    height: 180px;
     border: var(--grey-border);
   }
   .navbar__container :where(ul) {
@@ -1260,9 +1262,15 @@ footer {
     bottom: -50px;
   }
   .home__content {
-    padding: 10rem 1rem 7rem 1rem;
+    padding: 10rem 1rem 5rem 1rem;
     text-align: left;
   }
+  .home__accent-txt {
+  margin: 0 0 2rem 0;
+}
+.home__cta-btn {
+  margin: 0 0 1rem 0;
+}
   .projects {
     gap: 3rem;
   }
