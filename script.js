@@ -24,8 +24,8 @@ function animateCursor() {
   if (animationActive) {
     currentX += (mouseX - currentX) * cursorSpeed;
     currentY += (mouseY - currentY) * cursorSpeed;
-    circle.style.transform = `translate3d(${currentX - 7.5}px, ${
-      currentY - 7.5
+    circle.style.transform = `translate3d(${currentX - 25}px, ${
+      currentY - .10
     }px, 0)`;
   }
   requestAnimationFrame(animateCursor);
@@ -76,4 +76,27 @@ moreProject.addEventListener("click", () => {
   // Update button text based on state
   moreProject.innerHTML =
     (isActive ? "See Less" : "See More") + iconElement.outerHTML;
+});
+
+document.querySelectorAll('.accordion-header').forEach(header => {
+  header.addEventListener('click', () => {
+    const activeHeader = document.querySelector('.accordion-header.active');
+
+    // Close the previously active accordion if it's not the current one
+    if (activeHeader && activeHeader !== header) {
+      activeHeader.classList.remove('active');
+      activeHeader.nextElementSibling.style.maxHeight = '0px';
+    }
+
+    // Toggle the clicked header's active state
+    header.classList.toggle('active');
+
+    // Toggle the content's max-height based on active state
+    const accordionContent = header.nextElementSibling;
+    if (header.classList.contains('active')) {
+      accordionContent.style.maxHeight = accordionContent.scrollHeight + 'px';
+    } else {
+      accordionContent.style.maxHeight = '0px';
+    }
+  });
 });
