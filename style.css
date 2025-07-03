@@ -866,6 +866,7 @@ body .slider-wrapper:hover body .cursor-circle {
    display: grid;
   grid-template-columns: 1fr;
 }
+
 .faqs-section .faqs-container__top h2 {
   font-size: var(--sixty-px);
   color: var(--black);
@@ -1013,7 +1014,7 @@ footer {
   font-weight: 700;
   font-size: var(--sixteen-px);
 }
-.footer--con .top span {
+.footer--con .top .span {
   color: var(--grey);
 }
 .socials--con {

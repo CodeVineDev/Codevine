@@ -33,28 +33,34 @@ function animateCursor() {
 
 animateCursor();
 
-// SLIDER LOGIC
-const sliderTrack = document.getElementById("sliderTrack");
-const slides = Array.from(sliderTrack.children);
+document.addEventListener("DOMContentLoaded", () => {
+  const sliderTrack = document.getElementById("sliderTrack");
+  if (!sliderTrack) {
+    console.log("Slider not found on this page.");
+    return; // Exit if there's no slider
+  }
 
-// Duplicate slides once for seamless loop
-slides.forEach((slide) => {
-  const clone = slide.cloneNode(true);
-  sliderTrack.appendChild(clone);
+  const slides = Array.from(sliderTrack.children);
+
+  // Duplicate slides once for seamless loop
+  slides.forEach((slide) => {
+    const clone = slide.cloneNode(true);
+    sliderTrack.appendChild(clone);
+  });
+
+  let position = 0;
+  const sliderSpeed = 0.5;
+
+  function animateSlider() {
+    position -= sliderSpeed;
+    const trackWidth = sliderTrack.scrollWidth / 2; // half since we cloned once
+    if (Math.abs(position) >= trackWidth) position = 0;
+    sliderTrack.style.transform = `translateX(${position}px)`;
+    requestAnimationFrame(animateSlider);
+  }
+
+  animateSlider();
 });
-
-let position = 0;
-const sliderSpeed = 0.5;
-
-function animateSlider() {
-  position -= sliderSpeed;
-  const trackWidth = sliderTrack.scrollWidth / 2; // half since we cloned once
-  if (Math.abs(position) >= trackWidth) position = 0;
-  sliderTrack.style.transform = `translateX(${position}px)`;
-  requestAnimationFrame(animateSlider);
-}
-
-animateSlider();
 
 // HAMBURGER LOGIC
 const hamburger = document.getElementById("hamburger");
@@ -99,4 +105,26 @@ document.querySelectorAll('.accordion-header').forEach(header => {
       accordionContent.style.maxHeight = '0px';
     }
   });
+});
+document.addEventListener("DOMContentLoaded", () => {
+  let count = -1; // start with -1
+  const initText = "create";  // initial text
+  const wordsArray = ["produce", "craft", "deliver"]; // your words
+
+  const wordEl = document.getElementById("word");
+  wordEl.textContent = initText;
+
+  // Delay before starting interval
+  setTimeout(() => {
+    setInterval(() => {
+      count++;
+      // Fade out
+      wordEl.style.opacity = 0;
+      setTimeout(() => {
+        wordEl.textContent = wordsArray[count % wordsArray.length];
+        // Fade in
+        wordEl.style.opacity = 1;
+      }, 400); // match fadeOut duration
+    }, 1500); // interval time
+  }, 2000); // initial delay
 });
