@@ -68,15 +68,15 @@ const moreProject = document.getElementById("extend");
 const addProject = document.getElementById("extension");
 const iconElement = document.getElementById("icon");
 
-moreProject.addEventListener("click", () => {
-  addProject.classList.toggle("active");
+// moreProject.addEventListener("click", () => {
+//   addProject.classList.toggle("active");
 
-  const isActive = addProject.classList.contains("active");
+//   const isActive = addProject.classList.contains("active");
 
-  // Update button text based on state
-  moreProject.innerHTML =
-    (isActive ? "See Less" : "See More") + iconElement.outerHTML;
-});
+//   // Update button text based on state
+//   moreProject.innerHTML =
+//     (isActive ? "See Less" : "See More") + iconElement.outerHTML;
+// });
 
 document.querySelectorAll('.accordion-header').forEach(header => {
   header.addEventListener('click', () => {
