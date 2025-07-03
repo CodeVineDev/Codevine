@@ -47,6 +47,7 @@ h4 {
 }
 a {
   cursor: pointer;
+  text-decoration: none;
 }
 p,
 a {
@@ -438,18 +439,26 @@ body .slider-wrapper:hover body .cursor-circle {
   width: 100%;
   border-radius: 10px;
   transition: var(--transition-ani);
-  height: 20%;
-  background: linear-gradient( #ffffff00, #000000e7);
+  height: 18%;
+}
+.projects .con:nth-child(1)::after{
+ background: linear-gradient( #00000000,  rgb(255, 84, 113));
+}
+.projects .con:nth-child(2)::after{
+ background: linear-gradient( #00000000, rgb(76, 76, 255));
 }
 .projects .con:nth-child(3)::after{
  background: linear-gradient( #00000000, #7c7c7ce7);
+}
+.projects .con:nth-child(4)::after{
+ background: linear-gradient( #00000000, rgb(76, 76, 255));
 }
 .project-details {
   position: absolute;
   top: 0;
   width: 100%;
   height: 100%;
-  padding: .3rem;
+  padding: .5rem;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
@@ -480,7 +489,7 @@ body .slider-wrapper:hover body .cursor-circle {
 .project-name p {
   display: flex;
   align-items: center;
-  padding: 0.6rem 1rem;
+  padding: 0.4rem 1rem;
   border: none;
   width: max-content;
   font-weight: 800;
@@ -488,10 +497,10 @@ body .slider-wrapper:hover body .cursor-circle {
   transition: var(--transition-ani);
   color: var(--white);
 }
-.projects div:hover img {
+.projects a:hover img {
   scale: 1.05;
 }
-.projects div:hover .project-details {
+.projects a:hover .project-details {
   opacity: 0;
 }
 .projects .con:hover::after{
@@ -852,6 +861,10 @@ body .slider-wrapper:hover body .cursor-circle {
   border-left: var(--grey-border);
   border-right: var(--grey-border);
   padding: 7rem 2rem;
+}
+.action__work{
+   display: grid;
+  grid-template-columns: 1fr;
 }
 .faqs-section .faqs-container__top h2 {
   font-size: var(--sixty-px);
