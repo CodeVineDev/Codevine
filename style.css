@@ -427,8 +427,8 @@ body .slider-wrapper:hover body .cursor-circle {
   aspect-ratio: 7/5;
   border-radius: 1rem;
   position: relative;
+  border: var(--grey-border);
   overflow: hidden;
-  box-shadow: var(--box-shadow);
   transition: var(--transition-ani);
 }
 .projects .con::after {
@@ -441,24 +441,27 @@ body .slider-wrapper:hover body .cursor-circle {
   transition: var(--transition-ani);
   height: 18%;
 }
-.projects .con:nth-child(1)::after{
- background: linear-gradient( #00000000,  rgb(255, 84, 113));
+.projects .con:nth-child(1)::after {
+  background: linear-gradient(#00000000, #ff599e);
 }
-.projects .con:nth-child(2)::after{
- background: linear-gradient( #00000000, rgb(76, 76, 255));
+.projects .con:nth-child(2)::after {
+  background: linear-gradient(#00000000, #2563eb);
 }
-.projects .con:nth-child(3)::after{
- background: linear-gradient( #00000000, #7c7c7ce7);
+.projects .con:nth-child(3)::after {
+  background: linear-gradient(#00000000, #7c7c7ce7);
 }
-.projects .con:nth-child(4)::after{
- background: linear-gradient( #00000000, rgb(76, 76, 255));
+.projects .con:nth-child(4)::after {
+  background: linear-gradient(#00000000, #1549f3);
+}
+.projects .con:nth-child(5)::after {
+  background: linear-gradient(#00000000, #1495ff);
 }
 .project-details {
   position: absolute;
   top: 0;
   width: 100%;
   height: 100%;
-  padding: .5rem;
+  padding: 0.5rem;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
@@ -503,7 +506,7 @@ body .slider-wrapper:hover body .cursor-circle {
 .projects a:hover .project-details {
   opacity: 0;
 }
-.projects .con:hover::after{
+.projects .con:hover::after {
   display: none;
 }
 .project__cont h2 {
@@ -660,7 +663,7 @@ body .slider-wrapper:hover body .cursor-circle {
   border-radius: 50%;
   background: linear-gradient(to bottom, #ffffff33, #00000011), var(--black);
   box-shadow: inset 0 2px 5px rgba(170, 170, 170),
-    inset 0 -2px 4px rgba(0, 0, 0, 0.2); /* Bubble shadow */
+    inset 0 -2px 4px rgba(0, 0, 0, 0.2), var(--box-shadow); /* Bubble shadow */
 }
 .about--wrap {
   border-top: var(--grey-border);
@@ -805,6 +808,7 @@ body .slider-wrapper:hover body .cursor-circle {
   padding: 1.5rem;
   border-radius: 20px;
   box-shadow: var(--box-shadow);
+  border: var(--grey-border);
 }
 .testimony .top {
   margin-bottom: 3rem;
@@ -862,9 +866,10 @@ body .slider-wrapper:hover body .cursor-circle {
   border-right: var(--grey-border);
   padding: 7rem 2rem;
 }
-.action__work{
-   display: grid;
+.action__work {
+  display: grid;
   grid-template-columns: 1fr;
+  text-align: center;
 }
 
 .faqs-section .faqs-container__top h2 {
@@ -939,8 +944,9 @@ body .slider-wrapper:hover body .cursor-circle {
 }
 .book--call {
   border-radius: 20px;
-  box-shadow: var(--box-shadow);
+  border: var(--grey-border);
   padding: 2rem;
+  box-shadow: var(--box-shadow);
 }
 .book--call img {
   width: 60px;
@@ -1077,6 +1083,63 @@ footer {
   bottom: -100px;
   right: 0;
   position: absolute;
+}
+.work--hero__wrap{
+  border-top: var(--grey-border);
+  border-bottom: var(--grey-border);
+}
+.work--hero{
+  border-left: var(--grey-border);
+  border-right: var(--grey-border);
+  padding: 10rem 2rem 5rem 2rem;
+  width: var(--width-1080px);
+  margin: auto;
+  text-align: center;
+}
+.work--hero h1{
+  font-size: var(--sixty-px);
+  color: var(--black);
+  margin-bottom: 1rem;
+}
+.work--hero p{
+  font-size: var(--sixteen-px);
+  color: var(--black);
+  font-weight: 600;
+}
+
+.work__clients {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+}
+
+.work__clients div:not(:nth-child(1)) {
+  margin-left: -1rem;
+}
+.work__clients .clients-num{
+  height: 50px;
+  overflow: hidden;
+}
+.work__clients img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.work__clients a {
+  text-decoration: none;
+  color: var(--black);
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.work__clients .icon {
+  font-size: var(--sixteen-px);
+}
+.work__clients p {
+  font-weight: 800;
+  font-size: var(--fifteen-px);
+  color: var(--grey);
 }
 
 @media (max-width: 1000px) {
