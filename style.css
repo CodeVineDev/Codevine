@@ -958,9 +958,11 @@ body .slider-wrapper:hover body .cursor-circle {
   font-size: 30px;
   color: var(--grey);
   margin-bottom: 1rem;
+  
 }
 .book--call span {
   color: var(--black);
+  text-wrap: balance;
 }
 .book--call p {
   color: var(--black);
