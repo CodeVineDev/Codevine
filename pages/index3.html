@@ -1,57 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Fixed Duration Typewriter Effect</title>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bottom Nav on Scroll</title>
   <style>
-    body { font-family: sans-serif; }
-    section { min-height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+    }
+
+    .home__cont {
+      height: 800px; /* example height to scroll past */
+      background: #f0f0f0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .home__cont h1 {
+      font-size: 2rem;
+      color: #333;
+    }
+
+    .content {
+      height: 2000px;
+      background: linear-gradient(white, #ddd);
+    }
+
+    .bottom-nav {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%) translateY(100%);
+      background: rgba(0, 0, 0, 0.8);
+      color: white;
+      border-radius: 25px;
+      padding: 0.8rem 2rem;
+      display: flex;
+      gap: 2rem;
+      opacity: 0;
+      transition: all 0.5s ease;
+      z-index: 99;
+    }
+
+    .bottom-nav a {
+      text-decoration: none;
+      color: white;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    .bottom-nav a:hover {
+      color: #ddd;
+    }
+
+    .bottom-nav.show {
+      transform: translateX(-50%) translateY(0);
+      opacity: 1;
+    }
   </style>
 </head>
 <body>
 
-  <section style="background: #f0f0f0;">
-    <h1>Scroll down to see typewriter with fixed duration 👇</h1>
+  <section class="home__cont">
+    <h1>Scroll past this section to see the bottom nav appear</h1>
   </section>
 
-  <section style="background: #e0e0e0;">
-    <h1 class="js-typewriter">Websites That Deliver Results.</h1>
+  <section class="content">
+    <p style="padding: 20px;">Scroll more content...</p>
   </section>
 
-  <section style="background: #d0d0d0;">
-    <p class="js-typewriter">I build everything your brand needs to attract customers and turn clicks into sales.</p>
-  </section>
+  <div class="bottom-nav" id="bottomNav">
+    <a href="#work">Work</a>
+    <a href="#contact">Contact</a>
+  </div>
 
-  <!-- GSAP + ScrollTrigger from CDN -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
   <script>
-    gsap.registerPlugin(ScrollTrigger);
+    const bottomNav = document.getElementById("bottomNav");
+    const homeCont = document.querySelector(".home__cont");
 
-    function typeWriterFixedDuration(element, text, totalDuration = 100) {
-      let index = 0;
-      const perLetterDelay = Math.max(totalDuration / text.length, 1); // avoid 0ms delay
-      
-      function type() {
-        element.textContent = text.substring(0, index);
-        index++;
-        if (index <= text.length) {
-          setTimeout(type, perLetterDelay);
-        }
+    window.addEventListener("scroll", () => {
+      const scrollPosition = window.scrollY;
+      const homeHeight = homeCont.offsetHeight;
+
+      if (scrollPosition > homeHeight) {
+        bottomNav.classList.add("show");
+      } else {
+        bottomNav.classList.remove("show");
       }
-      type();
-    }
-
-    document.querySelectorAll('.js-typewriter').forEach(el => {
-      const originalText = el.textContent.trim();
-      el.textContent = ''; // clear text initially
-      ScrollTrigger.create({
-        trigger: el,
-        start: 'top 80%',
-        once: true,
-        onEnter: () => typeWriterFixedDuration(el, originalText, 100), // 500ms total
-      });
     });
   </script>
+
 </body>
 </html>

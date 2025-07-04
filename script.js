@@ -5,7 +5,10 @@ const testimonySection = document.querySelector("#testimony");
 const projectLinks = document.querySelectorAll("#project"); // or ".project-link"
 
 // Animate the cursor even if no sections exist
-let mouseX = 0, mouseY = 0, currentX = 0, currentY = 0;
+let mouseX = 0,
+  mouseY = 0,
+  currentX = 0,
+  currentY = 0;
 const cursorSpeed = 0.1;
 let animationActive = window.innerWidth >= 1024;
 
@@ -26,7 +29,9 @@ function animateCursor() {
   if (animationActive && circle) {
     currentX += (mouseX - currentX) * cursorSpeed;
     currentY += (mouseY - currentY) * cursorSpeed;
-    circle.style.transform = `translate3d(${currentX - 25}px, ${currentY - 0.1}px, 0)`;
+    circle.style.transform = `translate3d(${currentX - 25}px, ${
+      currentY - 0.1
+    }px, 0)`;
   }
   requestAnimationFrame(animateCursor);
 }
@@ -46,7 +51,7 @@ if (testimonySection && circle && cursorText) {
 
 // ✅ Add hover effect for project links (if they exist)
 if (projectLinks.length && circle && cursorText) {
-  projectLinks.forEach(project => {
+  projectLinks.forEach((project) => {
     project.addEventListener("mouseenter", () => {
       circle.classList.add("expand");
       cursorText.textContent = "view project";
@@ -95,19 +100,6 @@ hamburger.addEventListener("click", () => {
   mobileMenu.classList.toggle("open");
   hamburger.classList.toggle("open");
 });
-const moreProject = document.getElementById("extend");
-const addProject = document.getElementById("extension");
-const iconElement = document.getElementById("icon");
-
-// moreProject.addEventListener("click", () => {
-//   addProject.classList.toggle("active");
-
-//   const isActive = addProject.classList.contains("active");
-
-//   // Update button text based on state
-//   moreProject.innerHTML =
-//     (isActive ? "See Less" : "See More") + iconElement.outerHTML;
-// });
 
 document.querySelectorAll(".accordion-header").forEach((header) => {
   header.addEventListener("click", () => {
@@ -152,4 +144,17 @@ document.addEventListener("DOMContentLoaded", () => {
       }, 400); // match fadeOut duration
     }, 1500); // interval time
   }, 2000); // initial delay
+});
+const bottomNav = document.getElementById("bottomNav");
+const homeCont = document.querySelector(".home__cont");
+
+window.addEventListener("scroll", () => {
+  const scrollPosition = window.scrollY;
+  const homeHeight = homeCont.offsetHeight;
+
+  if (scrollPosition > homeHeight) {
+    bottomNav.classList.add("show");
+  } else {
+    bottomNav.classList.remove("show");
+  }
 });
