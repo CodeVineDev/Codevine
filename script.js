@@ -158,3 +158,42 @@ window.addEventListener("scroll", () => {
     bottomNav.classList.remove("show");
   }
 });
+  gsap.registerPlugin(ScrollTrigger, CustomEase);
+const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
+if (!isIOS) {
+  let e = (e) => {
+      let t = e.textContent.split(" "),
+        n = t.map(
+          (e, n) =>
+            `<span class="word-wrapper"><span class="word">${
+              n === t.length - 1 ? e : `${e} `
+            }</span></span>`
+        );
+      e.innerHTML = n.join("");
+    },
+    t = document.querySelectorAll(".js-split");
+  t.forEach((t) => {
+    e(t);
+    let n = t.querySelectorAll(".word");
+    gsap.set(n, { yPercent: 100, opacity: 0, filter: "blur(10px)" }),
+      gsap.to(n, {
+        scrollTrigger: {
+          trigger: t,
+          start: "top 98%",
+          end: "top 98%",
+          toggleActions: "play none none none",
+          once: !0,
+        },
+        yPercent: 0,
+        opacity: 1,
+        filter: "blur(0px)",
+        duration: 0.5,
+        ease: CustomEase.create(
+          "custom",
+          "M0,0 C0.402,0 0.238,0.39 0.428,0.7 0.574,0.938 0.818,1.001 1,1"
+        ),
+        stagger: { amount: 0.1, ease: "power3.out" },
+      });
+  }),
+    ScrollTrigger.refresh();
+}
