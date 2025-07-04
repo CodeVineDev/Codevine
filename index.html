@@ -18,6 +18,15 @@
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script defer src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/CustomEase.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
     <script src="https://code.iconify.design/iconify-icon/1.0.8/iconify-icon.min.js"></script>
 </head>
 
@@ -51,7 +60,7 @@
         </nav>
         <!-- NAVBAR END -->
     </header>
-    <main>
+    <main  class="js-section-1">
         <!-- HERO SECTION START -->
         <section>
             <div class="bottom-blur"></div>
@@ -62,7 +71,7 @@
                             <div class="status-pulse-complete"></div>
                             <p>Available for July'25</p>
                         </div>
-                        <h1 class="home__header">
+                        <h1 class="home__header ">
                             <span>Websites That</span> Deliver Results.
                         </h1>
                         <p class="home__sub-header">
@@ -71,8 +80,8 @@
                                 brand
                                 needs to attract customers and turn clicks into sales.</span>
                         </p>
-                        <a href="mailto:codevine2023@" class="home__cta-btn" data-aos="fade-up"
-                            data-aos-offset="-300"><button><img src="media/my-img.jpg">Book a Call With Me
+                        <a href="mailto:codevine2023@" class="home__cta-btn"><button><img src="media/my-img.jpg">Book a
+                                Call With Me
                             </button></a>
                     </div>
                     <div class="home__right">
@@ -91,8 +100,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="fade-left"></div>
-                            <div class="fade-right"></div>
+                            <div class="slider-wrapper__fade-left"></div>
+                            <div class="slider-wrapper__fade-right"></div>
                         </div>
                     </div>
                 </div>
@@ -101,10 +110,14 @@
                 <div class="clients-con">
                     <a href="#testimonial">
                         <div class="clients-img">
-                            <div><img src="media/IMG-20250511-WA0049.jpg" loading="lazy" alt="client image"></div>
-                            <div><img src="media/IMG-20250419-WA0037.jpg" loading="lazy" alt="client image"></div>
-                            <div><img src="media/3P3A9595 (1).jpg" loading="lazy" alt="client image"></div>
-                            <div><img src="media/IMG-20250408-WA0019.webp" loading="lazy" alt="client image"></div>
+                            <div data-aos="fade-right" data-aos-delay="0"><img src="media/IMG-20250511-WA0049.jpg"
+                                    loading="lazy" alt="client image"></div>
+                            <div data-aos="fade-right" data-aos-delay="25"><img src="media/IMG-20250419-WA0037.jpg"
+                                    loading="lazy" alt="client image"></div>
+                            <div data-aos="fade-right" data-aos-delay="70"><img src="media/3P3A9595 (1).jpg"
+                                    loading="lazy" alt="client image"></div>
+                            <div data-aos="fade-right" data-aos-delay="125"><img src="media/IMG-20250408-WA0019.webp"
+                                    loading="lazy" alt="client image"></div>
                         </div>
                         <div class="clients-num">
                             <div>
@@ -153,7 +166,8 @@
                             </div>
                         </div>
                     </a>
-                    <a href="pages/project-4.html" class="con"><img src="media/alister-project.jpeg" alt="project image">
+                    <a href="pages/project-4.html" class="con"><img src="media/alister-project.jpeg"
+                            alt="project image">
                         <div class="project-details">
                             <p class="project-type">Finance</p>
                             <div class="project-name">
@@ -162,18 +176,10 @@
                             </div>
                         </div>
                     </a>
-                    <!-- <a href="pages/project-5.html" class="con" id="extension"><img src="media/p-project.jpeg" alt="project image">
-                        <div class="project-details">
-                            <p class="project-type">Personal</p>
-                            <div class="project-name">
-                                <p>Portfolify</p>
-                                <p><iconify-icon icon="ep:top-right" class="icon"></iconify-icon>View project</p>
-                            </div>
-                        </div>
-                    </a> -->
                 </div>
                 <div class="projects__view-all">
-                    <a href="work.html">View all my projects<iconify-icon icon="ep:top-right" id="icon" class="icon"></iconify-icon></a>
+                    <a href="work.html">View all my projects<iconify-icon icon="ep:top-right" id="icon"
+                            class="icon"></iconify-icon></a>
                 </div>
             </div>
         </section>
@@ -200,16 +206,20 @@
                     <div class="tech-stack">
                         <p>My Tech Stack</p>
                         <div class="stack--con">
-                            <div class="stack"><iconify-icon class="icon" icon="flowbite:html-solid"></iconify-icon>
+                            <div class="stack" data-aos="fade-right" data-aos-delay="0"><iconify-icon class="icon"
+                                    icon="flowbite:html-solid"></iconify-icon>
                             </div>
-                            <div class="stack"><iconify-icon width="24" height="24" class="icon"
-                                    icon="bi:css"></iconify-icon></div>
-                            <div class="stack"><iconify-icon class="icon" icon="ri:javascript-fill"></iconify-icon>
+                            <div class="stack" data-aos="fade-right" data-aos-delay="30"><iconify-icon width="24"
+                                    height="24" class="icon" icon="bi:css"></iconify-icon></div>
+                            <div class="stack" data-aos="fade-right" data-aos-delay="90"><iconify-icon class="icon"
+                                    icon="ri:javascript-fill"></iconify-icon>
                             </div>
-                            <div class="stack"><iconify-icon class="icon" icon="mdi:git"></iconify-icon></div>
-                            <div class="stack"><iconify-icon class="icon" icon="mdi:github"></iconify-icon></div>
-                            <div class="stack"><iconify-icon width="24" height="24" class="icon"
-                                    icon="arcticons:openai-chatgpt"></iconify-icon></div>
+                            <div class="stack" data-aos="fade-right" data-aos-delay="120"><iconify-icon class="icon"
+                                    icon="mdi:git"></iconify-icon></div>
+                            <div class="stack" data-aos="fade-right" data-aos-delay="150"><iconify-icon class="icon"
+                                    icon="mdi:github"></iconify-icon></div>
+                            <div class="stack" data-aos="fade-right" data-aos-delay="200"><iconify-icon width="24"
+                                    height="24" class="icon" icon="arcticons:openai-chatgpt"></iconify-icon></div>
                         </div>
                     </div>
                 </div>
@@ -302,7 +312,7 @@
                     <span>clients have to say.</span>
                 </h2>
                 <div class="testimonial--con">
-                    <div class="testimony">
+                    <div class="testimony" data-aos="fade-right">
                         <div class="top">
                             <p>Loooooove my site! You paid attention to details and brought my vision to life . It was
                                 really nice working with you, Codevine. Definitely recommending. Thank you!!</p>
@@ -326,7 +336,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="testimony">
+                    <div class="testimony" data-aos="fade-right" data-aos-delay="150">
                         <div class="top">
                             <p>Working with Codevine felt like having a seasoned dev partner who truly understood our
                                 vision for MC Crypto Base and brought it to life in ways we hadn't even imagined.</p>
@@ -421,7 +431,8 @@
                                             </div>
                                         </div>
                                         <div class="accordion-content">
-                                            <p>Yes, while I’m not a professional designer, I can handle simple design needs,
+                                            <p>Yes, while I’m not a professional designer, I can handle simple design
+                                                needs,
                                                 or I’m happy to work with your designer or recommend one. My strength is
                                                 making sure your website not only looks good but works perfectly across
                                                 all devices.</p>
@@ -484,6 +495,13 @@
 
         </div>
     </footer>
+    <script>
+        AOS.init({
+            once: true,
+            easing: 'ease-out',
+        });
+    </script>
+
 </body>
 
 </html>

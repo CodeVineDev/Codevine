@@ -25,7 +25,7 @@ function animateCursor() {
     currentX += (mouseX - currentX) * cursorSpeed;
     currentY += (mouseY - currentY) * cursorSpeed;
     circle.style.transform = `translate3d(${currentX - 25}px, ${
-      currentY - .10
+      currentY - 0.1
     }px, 0)`;
   }
   requestAnimationFrame(animateCursor);
@@ -84,31 +84,31 @@ const iconElement = document.getElementById("icon");
 //     (isActive ? "See Less" : "See More") + iconElement.outerHTML;
 // });
 
-document.querySelectorAll('.accordion-header').forEach(header => {
-  header.addEventListener('click', () => {
-    const activeHeader = document.querySelector('.accordion-header.active');
+document.querySelectorAll(".accordion-header").forEach((header) => {
+  header.addEventListener("click", () => {
+    const activeHeader = document.querySelector(".accordion-header.active");
 
     // Close the previously active accordion if it's not the current one
     if (activeHeader && activeHeader !== header) {
-      activeHeader.classList.remove('active');
-      activeHeader.nextElementSibling.style.maxHeight = '0px';
+      activeHeader.classList.remove("active");
+      activeHeader.nextElementSibling.style.maxHeight = "0px";
     }
 
     // Toggle the clicked header's active state
-    header.classList.toggle('active');
+    header.classList.toggle("active");
 
     // Toggle the content's max-height based on active state
     const accordionContent = header.nextElementSibling;
-    if (header.classList.contains('active')) {
-      accordionContent.style.maxHeight = accordionContent.scrollHeight + 'px';
+    if (header.classList.contains("active")) {
+      accordionContent.style.maxHeight = accordionContent.scrollHeight + "px";
     } else {
-      accordionContent.style.maxHeight = '0px';
+      accordionContent.style.maxHeight = "0px";
     }
   });
 });
 document.addEventListener("DOMContentLoaded", () => {
   let count = -1; // start with -1
-  const initText = "create";  // initial text
+  const initText = "create"; // initial text
   const wordsArray = ["produce", "craft", "deliver"]; // your words
 
   const wordEl = document.getElementById("word");
@@ -128,3 +128,5 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 1500); // interval time
   }, 2000); // initial delay
 });
+
+
