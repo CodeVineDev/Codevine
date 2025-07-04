@@ -94,8 +94,36 @@ li {
   backdrop-filter: invert(1) blur(6px);
   -webkit-backdrop-filter: invert(1) blur(6px);
   mix-blend-mode: difference;
-  transition: background 0.1s ease;
+  transition: width 0.4s ease, height 0.4s ease; /* smooth size changes */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 12px;
+  overflow: hidden; /* hide text when not expanded */
 }
+
+.cursor-circle .cursor-text {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  white-space: nowrap; /* keep text on one line */
+  pointer-events: none;
+}
+
+.cursor-circle.expand {
+  width: auto; /* allow expanding */
+  padding: 0 15px; /* gives space around text */
+ height: 30px;/* taller circle for text */
+  border-radius: 20px; /* keep rounded ends when expanded */
+}
+
+.cursor-circle.expand .cursor-text {
+  opacity: 1;
+  font-size: var(--fifteen-px);
+  color: var(--white);
+  font-weight: 800;
+}
+
 
 .navbar__container {
   position: fixed;
@@ -461,7 +489,7 @@ body .slider-wrapper:hover body .cursor-circle {
   top: 0;
   width: 100%;
   height: 100%;
-  padding: 0.5rem;
+  padding: 0.8rem;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
@@ -492,7 +520,6 @@ body .slider-wrapper:hover body .cursor-circle {
 .project-name p {
   display: flex;
   align-items: center;
-  padding: 0.4rem 1rem;
   border: none;
   width: max-content;
   font-weight: 800;

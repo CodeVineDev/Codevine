@@ -33,7 +33,11 @@
 <body>
     <header>
         <div class="curtain"></div>
-        <div class="cursor-circle"></div>
+        <div class="cursor-circle">
+            <span class="cursor-text"></span> <!-- text on top -->
+        </div>
+
+
         <!-- NAVBAR START -->
         <nav>
             <div class="navbar__container">
@@ -60,7 +64,7 @@
         </nav>
         <!-- NAVBAR END -->
     </header>
-    <main  class="js-section-1">
+    <main class="js-section-1">
         <!-- HERO SECTION START -->
         <section>
             <div class="bottom-blur"></div>
@@ -108,16 +112,19 @@
             </div>
             <div class="satisfied-clients">
                 <div class="clients-con">
-                    <a href="#testimonial">
-                        <div class="clients-img" >
-                            <div data-aos="fade-right" data-aos-delay="0" data-aos-offset="-100"><img src="media/IMG-20250511-WA0049.jpg"
-                                    loading="lazy" alt="client image" data-aos-offset="-100"></div>
-                            <div data-aos="fade-right" data-aos-delay="25" data-aos-offset="-100"><img src="media/IMG-20250419-WA0037.jpg"
-                                    loading="lazy" alt="client image" data-aos-offset="-100"></div>
-                            <div data-aos="fade-right" data-aos-delay="70" data-aos-offset="-100"><img src="media/3P3A9595 (1).jpg"
-                                    loading="lazy" alt="client image" data-aos-offset="-100"></div>
-                            <div data-aos="fade-right" data-aos-delay="125" data-aos-offset="-100"><img src="media/IMG-20250408-WA0019.webp"
-                                    loading="lazy" alt="client image"></div>
+                    <a href="#testimonial" id="testimony">
+                        <div class="clients-img">
+                            <div data-aos="fade-right" data-aos-delay="0" data-aos-offset="-100"><img
+                                    src="media/IMG-20250511-WA0049.jpg" loading="lazy" alt="client image"
+                                    data-aos-offset="-100"></div>
+                            <div data-aos="fade-right" data-aos-delay="25" data-aos-offset="-100"><img
+                                    src="media/IMG-20250419-WA0037.jpg" loading="lazy" alt="client image"
+                                    data-aos-offset="-100"></div>
+                            <div data-aos="fade-right" data-aos-delay="70" data-aos-offset="-100"><img
+                                    src="media/3P3A9595 (1).jpg" loading="lazy" alt="client image"
+                                    data-aos-offset="-100"></div>
+                            <div data-aos="fade-right" data-aos-delay="125" data-aos-offset="-100"><img
+                                    src="media/IMG-20250408-WA0019.webp" loading="lazy" alt="client image"></div>
                         </div>
                         <div class="clients-num">
                             <div>
@@ -139,7 +146,7 @@
             <div class="project__cont">
                 <h2>Latest Projects</h2>
                 <div class="projects">
-                    <a href="pages/project-1.html" class="con"><img src="media/eni-project.jpeg" alt="project image">
+                    <a href="pages/project-1.html" class="con" id="project"><img src="media/eni-project.jpeg" alt="project image">
                         <div class="project-details">
                             <p class="project-type">Portfolio Site</p>
                             <div class="project-name">
@@ -148,7 +155,7 @@
                             </div>
                         </div>
                     </a>
-                    <a href="pages/project-2.html" class="con"><img src="media/jude-project.jpeg" alt="project image">
+                    <a href="pages/project-2.html" class="con" id="project"><img src="media/jude-project.jpeg" alt="project image">
                         <div class="project-details">
                             <p class="project-type">Portfolio Site</p>
                             <div class="project-name">
@@ -157,7 +164,7 @@
                             </div>
                         </div>
                     </a>
-                    <a href="pages/project-3.html" class="con"><img src="media/pulse-project.jpeg" alt="project image">
+                    <a href="pages/project-3.html" class="con" id="project"><img src="media/pulse-project.jpeg" alt="project image">
                         <div class="project-details">
                             <p class="project-type">Branding</p>
                             <div class="project-name">
@@ -166,7 +173,7 @@
                             </div>
                         </div>
                     </a>
-                    <a href="pages/project-4.html" class="con"><img src="media/alister-project.jpeg"
+                    <a href="pages/project-4.html" class="con" id="project"><img src="media/alister-project.jpeg"
                             alt="project image">
                         <div class="project-details">
                             <p class="project-type">Finance</p>

@@ -1,37 +1,62 @@
 // CURSOR LOGIC
 const circle = document.querySelector(".cursor-circle");
-let mouseX = 0,
-  mouseY = 0,
-  currentX = 0,
-  currentY = 0;
+const cursorText = document.querySelector(".cursor-text");
+const testimonySection = document.querySelector("#testimony");
+const projectLinks = document.querySelectorAll("#project"); // or ".project-link"
+
+// Animate the cursor even if no sections exist
+let mouseX = 0, mouseY = 0, currentX = 0, currentY = 0;
 const cursorSpeed = 0.1;
 let animationActive = window.innerWidth >= 1024;
 
 window.addEventListener("mousemove", (e) => {
-  if (!animationActive) return;
+  if (!animationActive || !circle) return;
   mouseX = e.clientX;
   mouseY = e.clientY;
 });
 
 window.addEventListener("resize", () => {
   animationActive = window.innerWidth >= 1024;
-  if (!animationActive) {
+  if (!animationActive && circle) {
     circle.style.transform = "translate3d(-100px, -100px, 0)";
   }
 });
 
 function animateCursor() {
-  if (animationActive) {
+  if (animationActive && circle) {
     currentX += (mouseX - currentX) * cursorSpeed;
     currentY += (mouseY - currentY) * cursorSpeed;
-    circle.style.transform = `translate3d(${currentX - 25}px, ${
-      currentY - 0.1
-    }px, 0)`;
+    circle.style.transform = `translate3d(${currentX - 25}px, ${currentY - 0.1}px, 0)`;
   }
   requestAnimationFrame(animateCursor);
 }
-
 animateCursor();
+
+// ✅ Add hover effect for testimony section (if it exists)
+if (testimonySection && circle && cursorText) {
+  testimonySection.addEventListener("mouseenter", () => {
+    circle.classList.add("expand");
+    cursorText.textContent = "testimonials";
+  });
+  testimonySection.addEventListener("mouseleave", () => {
+    circle.classList.remove("expand");
+    cursorText.textContent = "";
+  });
+}
+
+// ✅ Add hover effect for project links (if they exist)
+if (projectLinks.length && circle && cursorText) {
+  projectLinks.forEach(project => {
+    project.addEventListener("mouseenter", () => {
+      circle.classList.add("expand");
+      cursorText.textContent = "view project";
+    });
+    project.addEventListener("mouseleave", () => {
+      circle.classList.remove("expand");
+      cursorText.textContent = "";
+    });
+  });
+}
 
 document.addEventListener("DOMContentLoaded", () => {
   const sliderTrack = document.getElementById("sliderTrack");
@@ -128,5 +153,3 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 1500); // interval time
   }, 2000); // initial delay
 });
-
-
