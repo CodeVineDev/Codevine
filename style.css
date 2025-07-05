@@ -16,6 +16,7 @@
   --sixteen-px: 16px;
   --twentyone-px: 21px;
   --sixty-px: 60px;
+  --fifty-px: 50px;
   --two-rem: 27px;
   --three-rem: 32px;
   --four-rem: 70px;
@@ -1231,6 +1232,82 @@ footer {
   font-size: var(--fifteen-px);
   color: var(--grey);
 }
+.project--hero {
+  width: var(--width-1080px);
+  margin: auto;
+  border-left: var(--grey-border);
+  border-right: var(--grey-border);
+  padding: 10rem 3rem 5rem 3rem;
+  /* text-align: center; */
+}
+.project--hero__con {
+  width: var(--width-800px);
+  margin: auto;
+}
+.project--hero h2 {
+  font-size: var(--fifty-px);
+  color: var(--black);
+  margin-bottom: 2rem;
+  font-weight: 600;
+}
+.project--hero img {
+  width: 100%;
+  border: var(--grey-border);
+  border-radius: 20px;
+}
+.project--about {
+  width: var(--width-800px);
+  margin: auto;
+  border-left: var(--grey-border);
+  border-right: var(--grey-border);
+}
+.project--timeline{
+  display: flex;
+  gap: 2rem;
+  font-size: var(--fifteen-px);
+  font-weight: 700;
+  color: var(--black);
+  margin-bottom: 2rem;
+}
+.project--timeline span{
+  color: var(--grey);
+}
+.project--problem{
+  margin-bottom: 2rem;
+  color: var(--black);
+  font-size: var(--sixteen-px);
+  line-height: 1.5;
+  font-weight: 600;
+}
+.view-live {
+  width: max-content;
+  gap: 0.5rem;
+  transition: var(--transition-ani);
+  margin-bottom: 3rem;
+  display: flex;
+  position: relative;
+}
+.view-live a {
+  text-decoration: none;
+  font-size: 1.3rem;
+  color: var(--black);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+}
+.view-live:hover::before {
+  width: 100%;
+}
+.view-live::before {
+  content: "";
+  position: absolute;
+  top: 115%;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--black);
+  transition: var(--transition-ani);
+}
 
 @media (max-width: 1000px) {
   .take--action {
@@ -1257,6 +1334,7 @@ footer {
     --three-rem: 28px;
     --four-rem: 48px;
     --sixty-px: 35px;
+    --fifty-px: 30px;
     --transition-ani: 300ms ease-out;
   }
   .cursor-circle {
