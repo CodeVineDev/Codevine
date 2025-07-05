@@ -1375,32 +1375,37 @@ footer {
   border-left: var(--grey-border);
   border-right: var(--grey-border);
 }
-.more--projects h2{
+.more--projects h2 {
   font-size: var(--sixty-px);
   margin-bottom: 3rem;
   color: var(--black);
 }
-.more--projects .left{
-  border: var(--red-border);
+.more--projects .left {
   border: var(--grey-border);
   border-radius: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
-text-align: center;
-gap: 2rem;
+  text-align: center;
+  gap: 2rem;
   flex-direction: column;
 }
-.more--projects__con .icon-con{
-  background: var(--grey);
- border-radius: 20px;
- width: 80px;
- height: 80px;
- display: flex;
- align-items: center;
- justify-content: center;
+.more--projects .left p{
+  font-size: var(--sixteen-px);
+  line-height: 1.5;
+  color: var(--black);
+  font-weight: 600;
 }
-.more--projects__con .icon{
+.more--projects__con .icon-con {
+  background: var(--grey);
+  border-radius: 20px;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.more--projects__con .icon-con .icon {
   font-size: var(--three-rem);
   color: var(--white);
 }
@@ -1409,13 +1414,16 @@ gap: 2rem;
   border-radius: 20px;
   position: relative;
   overflow: hidden;
-border: var(--grey-border);
+  border: var(--grey-border);
 }
 .more--projects__con .right .cont .project-details {
   width: 100%;
   height: 100%;
-  position:absolute;
+  position: absolute;
   transition: var(--transition-ani);
+}
+.more--projects__con .right:hover .project-details{
+opacity: 0;
 }
 .more--projects__con .project-details::after {
   content: "";
@@ -1426,6 +1434,9 @@ border: var(--grey-border);
   z-index: -1;
   height: 18%;
   background: linear-gradient(#00000000, #1495ff);
+}
+.more--projects__con .project-name p{
+  font-size: var(--sixteen-px);
 }
 .more--projects .right img {
   width: 100%;
@@ -1634,6 +1645,12 @@ border: var(--grey-border);
   }
   .clients-con {
     padding: 2rem 1rem;
+  }
+  .more--projects .left {
+    order: 2;
+  }
+  .more--projects__con .right {
+    order: 1;
   }
 }
 @media (max-width: 480px) {
