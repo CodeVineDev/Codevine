@@ -1278,6 +1278,28 @@ footer {
   font-size: var(--sixteen-px);
   line-height: 1.5;
   font-weight: 600;
+  text-wrap: wrap;
+}
+.scope--work{
+  margin-bottom: 2rem;
+}
+.scope--work h3{
+  font-size: var(--sixteen-px);
+  margin-bottom: 1rem;
+  color: var(--black);
+}
+.scope--work ul{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.scope--work li{
+  border: var(--grey-border);
+  padding: .5rem .8rem;
+  border-radius: 20px;
+  color: var(--black);
+  font-size: var(--fifteen-px);
+  font-weight: 600;
 }
 .view-live {
   width: max-content;
