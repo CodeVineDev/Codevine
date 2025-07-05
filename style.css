@@ -211,7 +211,6 @@ li {
   );
 }
 
-
 .home__cont {
   background-origin: padding-box;
   width: var(--width-1080px);
@@ -434,6 +433,9 @@ body .slider-wrapper:hover body .cursor-circle {
 }
 .clients-num .icon {
   font-size: 1rem;
+}
+.hold {
+  white-space: nowrap;
 }
 .clients-num p {
   font-weight: 600;
@@ -1127,7 +1129,7 @@ footer {
   border-radius: 50px;
   padding: 0.8rem;
   display: flex;
-  gap: .5rem;
+  gap: 0.5rem;
   opacity: 0;
   transition: all 0.5s ease;
   z-index: 99;
@@ -1158,11 +1160,10 @@ footer {
   white-space: nowrap;
 }
 
-.bottom-nav:hover a{
+.bottom-nav:hover a {
   color: var(--white);
   width: 120px;
   border-radius: 20px;
-
 }
 
 .bottom-nav:hover span {
