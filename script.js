@@ -158,31 +158,38 @@ window.addEventListener("scroll", () => {
     bottomNav.classList.remove("show");
   }
 });
-  gsap.registerPlugin(ScrollTrigger, CustomEase);
-const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
-if (!isIOS) {
-  let e = (e) => {
-      let t = e.textContent.split(" "),
-        n = t.map(
-          (e, n) =>
-            `<span class="word-wrapper"><span class="word">${
-              n === t.length - 1 ? e : `${e} `
-            }</span></span>`
-        );
-      e.innerHTML = n.join("");
-    },
-    t = document.querySelectorAll(".js-split");
-  t.forEach((t) => {
-    e(t);
-    let n = t.querySelectorAll(".word");
-    gsap.set(n, { yPercent: 100, opacity: 0, filter: "blur(10px)" }),
-      gsap.to(n, {
+gsap.registerPlugin(ScrollTrigger, CustomEase);
+
+try {
+  // Check if ScrollTrigger is supported (basic feature detection)
+  if (
+    typeof ScrollTrigger !== "undefined" &&
+    ScrollTrigger.isTouch !== undefined
+  ) {
+    let splitText = (element) => {
+      let words = element.textContent.split(" ");
+      let wrapped = words.map(
+        (word, index) =>
+          `<span class="word-wrapper"><span class="word">${
+            index === words.length - 1 ? word : `${word} `
+          }</span></span>`
+      );
+      element.innerHTML = wrapped.join("");
+    };
+
+    let splitElements = document.querySelectorAll(".js-split");
+    splitElements.forEach((el) => {
+      splitText(el);
+      let words = el.querySelectorAll(".word");
+
+      gsap.set(words, { yPercent: 100, opacity: 0, filter: "blur(10px)" });
+      gsap.to(words, {
         scrollTrigger: {
-          trigger: t,
+          trigger: el,
           start: "top 98%",
           end: "top 98%",
           toggleActions: "play none none none",
-          once: !0,
+          once: true,
         },
         yPercent: 0,
         opacity: 1,
@@ -194,6 +201,14 @@ if (!isIOS) {
         ),
         stagger: { amount: 0.1, ease: "power3.out" },
       });
-  }),
+    });
+
     ScrollTrigger.refresh();
+  }
+} catch (err) {
+  console.warn(
+    "GSAP animations skipped due to unsupported browser or error:",
+    err
+  );
+  // Optional: fallback behavior if you want to show static text etc.
 }
