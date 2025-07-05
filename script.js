@@ -146,7 +146,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }, 2000); // initial delay
 });
 const bottomNav = document.getElementById("bottomNav");
-const homeCont = document.querySelector(".home__cont");
+const homeCont = document.querySelector("#homecont");
 
 window.addEventListener("scroll", () => {
   const scrollPosition = window.scrollY;
