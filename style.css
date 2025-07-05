@@ -11,7 +11,7 @@
   --grey-border: 1px solid rgb(214, 214, 214);
   --box-shadow: 0 3px 7px rgba(170, 170, 170, 0.4);
   --width-1080px: min(97%, 1080px);
-  --width-800px: min(90%, 800px);
+  --width-800px: min(97%, 800px);
   --fifteen-px: 13px;
   --sixteen-px: 16px;
   --twentyone-px: 21px;
@@ -1340,6 +1340,9 @@ footer {
   .cursor-circle {
     display: none;
   }
+  .project--hero {
+  padding: 10rem 1rem 5rem 1rem;
+}
   .footer--con .bottom {
     height: 100px;
   }
