@@ -18,6 +18,9 @@
         rel="stylesheet">
     <link rel="stylesheet" href="../style.css">
     <script defer src="../script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/CustomEase.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="https://code.iconify.design/iconify-icon/1.0.8/iconify-icon.min.js"></script>
 </head>
 
@@ -55,10 +58,10 @@
         </nav>
         <!-- NAVBAR END -->
     </header>
-    <section class="work--hero__wrap" id="homecont">
+    <section class="work--hero__wrap js-section-1" id="homecont">
         <div class="work--hero">
-            <h1>My most <br> recent work</h1>
-            <p>a collection of projects where I’ve applied creativity</p>
+            <h1><span class="js-split">My most</span> <br><span class="js-split">recent work</span></h1>
+            <p class="js-split">a collection of projects where I’ve applied creativity</p>
         </div>
         <div class="bottom-nav" id="bottomNav">
             <a href="#work"><iconify-icon icon="heroicons-solid:mail" width="24" height="24"></iconify-icon>

@@ -480,7 +480,7 @@ body .slider-wrapper:hover body .cursor-circle {
   background: linear-gradient(#00000000, #2563eb);
 }
 .projects .con:nth-child(3)::after {
-  background: linear-gradient(#00000000, #7c7c7ce7);
+  background: linear-gradient(#00000000, #4a4a4a);
 }
 .projects .con:nth-child(4)::after {
   background: linear-gradient(#00000000, #1549f3);
@@ -837,7 +837,7 @@ body .slider-wrapper:hover body .cursor-circle {
 }
 .testimonial--con {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 350px), 1fr));
   gap: 2rem;
 }
 .testimony {
@@ -845,9 +845,11 @@ body .slider-wrapper:hover body .cursor-circle {
   border-radius: 20px;
   box-shadow: var(--box-shadow);
   border: var(--grey-border);
-}
-.testimony .top {
-  margin-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 3rem;
+  justify-content: space-between;
 }
 .testimony p {
   font-size: 16px;
@@ -911,7 +913,7 @@ body .slider-wrapper:hover body .cursor-circle {
 .faqs-section .faqs-container__top h2 {
   font-size: var(--sixty-px);
   color: var(--black);
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 }
 
 .faqs-section .faqs-container__lower .accordion {
@@ -1391,7 +1393,7 @@ footer {
   flex-direction: column;
   width: 100%;
   height: 100%;
-  padding: 2rem;
+  padding: 3rem;
 }
 .more--projects .left p{
   font-size: var(--sixteen-px);
@@ -1428,7 +1430,7 @@ footer {
 .more--projects__con .right:hover .project-details{
 opacity: 0;
 }
-.more--projects__con .project-details::after {
+.more--projects__con .pulse-project::after {
   content: "";
   position: absolute;
   left: 0;
@@ -1436,7 +1438,7 @@ opacity: 0;
   width: 100%;
   z-index: -1;
   height: 18%;
-  background: linear-gradient(#00000000, #1495ff);
+  background: linear-gradient(#00000000, #4a4a4a);
 }
 .more--projects__con .project-name p{
   font-size: var(--sixteen-px);

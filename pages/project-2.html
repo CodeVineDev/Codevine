@@ -18,6 +18,9 @@
         rel="stylesheet">
     <link rel="stylesheet" href="../style.css">
     <script defer src="../script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/CustomEase.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="https://code.iconify.design/iconify-icon/1.0.8/iconify-icon.min.js"></script>
 </head>
 
@@ -56,16 +59,169 @@
         <!-- NAVBAR END -->
     </header>
     <section class="work--hero__wrap">
-        <div class="work--hero">
-            <h1>This page is still in progress</h1>
-            <p>STAY TUNED</p>
-        </div>
         <div class="bottom-nav" id="bottomNav">
             <a href="#work"><iconify-icon icon="heroicons-solid:mail" width="24" height="24"></iconify-icon>
                 <span>Contact</span></a>
             <a href="#contact"><iconify-icon icon="lets-icons:date-today" width="24" height="24"></iconify-icon>
                 <span>Book a call</span></a>
         </div>
+    </section>
+    <section class="project--hero__wrap">
+        <div class="project--hero">
+            <div class="project--hero__con">
+                <h2>Building a standout digital identity for Tech with MJ.</h2>
+
+                <div class="project--timeline" id="homecont">
+                    <div>
+                        <p><span>Client</span> : MaryJude Ngwoke</p>
+                    </div>
+                    <div>
+                        <P><span>Year</span>: 2025</P>
+                    </div>
+                </div>
+                <p class="project--problem">
+                    MaryJude Ngwoke — Social Media Manager and CEO of “TechwithMJ”. Wanted to elevate his brand to the
+                    next level. He needed a professional website that could represent him even during his downtime,
+                    showcasing his expertise and converting visitors into loyal clients by directing them straight to
+                    his DMs.
+                </p>
+                <div class="scope--work">
+                    <h3>Scope of work</h3>
+                    <ul>
+                        <li>Planning</li>
+                        <li>Layout</li>
+                        <li>Development</li>
+                        <li>Domain Setup</li>
+                        <li>Seo Basics</li>
+                        <li>Support</li>
+                    </ul>
+                </div>
+                <div class="view-live">
+                    <a href="https://www.techwithmj.com">View Live Site<iconify-icon icon="ep:top-right" id="icon"
+                            class="icon"></iconify-icon></a>
+                </div>
+                <img src="../media/jude-project.jpeg" alt="project image">
+                <div class="scope--work">
+                    <h3>Tech Stack Used</h3>
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JAVASCRIPT</li>
+                        <li>GIT</li>
+                    </ul>
+                </div>
+                <div class="project--goal">
+                    <h3>My Goal</h3>
+                    <p class="project--problem">My goal was to create something far better than what he previously had,
+                        a website that showcases his experience, expertise, and achievements — and that’s exactly what I
+                        delivered. The professional site clearly communicates his brand, sets his business apart, and
+                        helps turn visitors into paying clients, which is essential for growing his business.</p>
+                </div>
+                <div class="project--process">
+                    <h3>Process</h3>
+                    <ol>
+                        <li><strong>Discovery:</strong> Discussed his goals, brand vision, and what he
+                            wanted their website to achieve.</li>
+                        <li><strong>Planning:</strong> Outlined the site structure and features needed for a
+                            seamless user experience.</li>
+                        <li><strong>Design Inspiration:</strong> Collected references and agreed on a style
+                            direction based on the his preferences.</li>
+                        <li><strong>Development:</strong> Built a clean, responsive, and fast-loading website with
+                            HTML, CSS, and JavaScript.</li>
+                        <li><strong>Testing:</strong> Checked performance, responsiveness, and browser compatibility
+                            before launch.</li>
+                        <li><strong>Delivery:</strong> Deployed the site, shared it with him, and made final
+                            tweaks based on feedback.</li>
+                    </ol>
+                </div>
+                <div class="project-obstacles">
+                    <h3>Obstacles & Solutions</h3>
+                    <div class="obstacle">
+                        <h4>Lack of Initial Design Direction</h4>
+                        <p><strong>Obstacle:</strong> Mary Jude didn’t have a clear idea of what he wanted visually
+                            for the site.</p>
+                        <p><strong>Solution:</strong> I researched professional websites in her niche and created design
+                            mockups she could easily pick from, which helped speed up decision-making.</p>
+                    </div>
+
+                    <div class="obstacle">
+                        <h4>Limited Client Input</h4>
+                        <p><strong>Obstacle:</strong> Mary Jude wasn’t always available to provide details or feedback
+                            on time.</p>
+                        <p><strong>Solution:</strong> I kept communication clear and proactive, sending concise updates
+                            and reminders so we stayed on track.</p>
+                    </div>
+                </div>
+                <div class="project--results">
+                    <h3>Results</h3>
+                    <ul>
+                        <li><strong>30% Increase in Conversions:</strong> The redesigned website led to significantly
+                            more inquiries and sales opportunities within the first two weeks of launch.</li>
+                        <li><strong>Improved Engagement:</strong> Visitors spent more time on the site thanks to a
+                            cleaner layout and faster load times, reducing bounce rates by 40%.</li>
+                        <li><strong>Professional Online Presence:</strong> The client received positive feedback from
+                            her audience and industry peers, enhancing her credibility and brand image.</li>
+                    </ul>
+                </div>
+
+                <div class="scope--work">
+                    <h3>Features</h3>
+                    <ul>
+                        <li>Web Development</li>
+                        <li>Responsive Development</li>
+                        <li>Performance Optimisation</li>
+                        <li>Interactive features</li>
+                        <li>Seo Basics</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="single-review--wrap">
+        <div class="single-review">
+            <blockquote>”I connected with Divine on LinkedIn, and <b class="js-split">he delivered beyond my expectations</b><span class="js-split">. The website he built looks
+                amazing, clean, fast, and professional. Working with him was easy, he listened, kept me updated, and
+                quickly made any adjustments I needed. Divine is skilled, professional, and a pleasure to work with. I
+                100% recommend him!</span>
+            </blockquote>
+            <div class="single-review__profile">
+                <div class="img">
+                    <img src="../media/3P3A9595 (1).jpg" alt="client image">
+                </div>
+                <div>
+                    <h4>MaryJude Ngwoke</h4>
+                    <p>Social Media Manager</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="more--projects">
+            <h2>More Projects</h2>
+            <div class="more--projects__con">
+                <div class="left">
+                    <div class="icon-con"><iconify-icon class="icon" icon="tabler:plus"></iconify-icon></div>
+                    <p>Got a cool idea? This spot is <br> waiting for your success story.</p>
+                </div>
+                <div class="right">
+                    <a href="project-3.html" class="cont" id="project"><img src="../media/pulse-project.jpeg"
+                            alt="project image">
+                        <div class="project-details pulse-project">
+                            <p class="project-type">Branding</p>
+                            <div class="project-name">
+                                <p>Brand Pulse</p>
+                                <p><iconify-icon icon="ep:top-right" class="icon"></iconify-icon>View project</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="projects__view-all">
+                <a href="work.html">View all my projects<iconify-icon icon="ep:top-right" id="icon"
+                        class="icon"></iconify-icon></a>
+            </div>
+        </div>
+
     </section>
     <section class="take--action__con">
         <div class="take--action action__work">
