@@ -1440,6 +1440,19 @@ opacity: 0;
   height: 18%;
   background: linear-gradient(#00000000, #4a4a4a);
 }
+.more--projects__con .alister-project::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: -1;
+  height: 18%;
+  background: linear-gradient(#00000000, #1549f3);
+}
+.more--projects__wrap{
+  border-top:var(--grey-border) ;
+}
 .more--projects__con .project-name p{
   font-size: var(--sixteen-px);
 }
