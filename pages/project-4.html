@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project-4</title>
+    <title>Project-3</title>
     <link class="favi-img" rel="apple-touch-icon" sizes="180x180" href="../media/apple-touch-icon.png">
     </link>
     <link class="favi-img" rel="icon" type="image/png" sizes="32x32" href="../media/favicon-32x32.png">
@@ -18,6 +18,9 @@
         rel="stylesheet">
     <link rel="stylesheet" href="../style.css">
     <script defer src="../script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/CustomEase.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="https://code.iconify.design/iconify-icon/1.0.8/iconify-icon.min.js"></script>
 </head>
 
@@ -55,17 +58,108 @@
         </nav>
         <!-- NAVBAR END -->
     </header>
-    <section class="work--hero__wrap">
-        <div class="work--hero">
-            <h1>This page is still in progress</h1>
-            <p>STAY TUNED</p>
-        </div>
+    <section class="work--hero__wrap js-section-1">
         <div class="bottom-nav" id="bottomNav">
             <a href="#work"><iconify-icon icon="heroicons-solid:mail" width="24" height="24"></iconify-icon>
                 <span>Contact</span></a>
             <a href="#contact"><iconify-icon icon="lets-icons:date-today" width="24" height="24"></iconify-icon>
                 <span>Book a call</span></a>
         </div>
+    </section>
+    <section class="project--hero__wrap">
+        <div class="project--hero">
+            <div class="project--hero__con">
+                <h2 class="js-split">Built a demo fintech site - Alister Bank</h2>
+
+                <div class="project--timeline" id="homecont">
+                    <div>
+                        <p><span>Client</span> :Me (A Personal Project)</p>
+                    </div>
+                    <div>
+                        <P><span>Year</span>: 2024</P>
+                    </div>
+                </div>
+                <p class="project--problem js-split">
+                    Alister Bank is a fictional banking platform designed to deliver a modern, secure, and
+                    user-friendly online experience. A front-end project to showcase a fintech brand’s expertise and
+                    elevate their digital
+                    presence.
+                </p>
+                <div class="scope--work">
+                    <h3 class="js-split">Scope of work</h3>
+                    <ul>
+                        <li>Planning</li>
+                        <li>Layout</li>
+                        <li>Development</li>
+                    </ul>
+                </div>
+                <div class="view-live">
+                    <a href="https://alister-bank.vercel.app">View Live Site<iconify-icon icon="ep:top-right" id="icon"
+                            class="icon"></iconify-icon></a>
+                </div>
+                <img src="../media/alister-project.jpeg" alt="project image">
+                <div class="scope--work">
+                    <h3 class="js-split">Tech Stack Used</h3>
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JAVASCRIPT</li>
+                        <li>GIT</li>
+                    </ul>
+                </div>
+                <div class="project--goal">
+                    <h3 class="js-split">My Goal</h3>
+                    <p class="project--problem js-split">My goal was focused on crafting a
+                        polished
+                        interface that prioritizes accessibility, security, and seamless usability.</p>
+                </div>
+                <div class="project--process">
+                    <h3 class="js-split">Process</h3>
+                    <ol>
+                        <li><strong>Discovery:</strong> Did deep research on what I wanted to achieve then gathered the
+                            resources</li>
+                        <li><strong>Planning:</strong> Outlined the site structure and features needed for a
+                            seamless user experience.</li>
+                        <li><strong>Design Inspiration:</strong> Collected references on a style
+                            based on my preferences.</li>
+                        <li><strong>Development:</strong> Built a clean, responsive, and fast-loading website with
+                            HTML, CSS, and JavaScript.</li>
+                        <li><strong>Testing:</strong> Checked performance, responsiveness, and browser compatibility
+                            before launch.</li>
+                        <li><strong>Delivery:</strong> Deployed the site.</li>
+                    </ol>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section class="more--projects__wrap">
+        <div class="more--projects">
+            <h2 class="js-split">More Projects</h2>
+            <div class="more--projects__con">
+                <div class="left">
+                    <div class="icon-con"><iconify-icon class="icon" icon="tabler:plus"></iconify-icon></div>
+                    <p>Got a cool idea? This spot is <br> waiting for your success story.</p>
+                </div>
+                <div class="right">
+                    <a href="project-5.html" class="cont" id="project"><img src="../media/p-project.jpeg"
+                            alt="project image">
+                        <div class="project-details portfolify">
+                            <p class="project-type">Template</p>
+                            <div class="project-name">
+                                <p>Portfolify</p>
+                                <p><iconify-icon icon="ep:top-right" class="icon"></iconify-icon>View project</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="projects__view-all">
+                <a href="work.html">View all my projects<iconify-icon icon="ep:top-right" id="icon"
+                        class="icon"></iconify-icon></a>
+            </div>
+        </div>
+
     </section>
     <section class="take--action__con">
         <div class="take--action action__work">
