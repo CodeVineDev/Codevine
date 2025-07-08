@@ -44,10 +44,11 @@ p {
   --manrope-font: "Manrope", sans-serif;
   --figtree-font: "Figtree", sans-serif;
   --black: #0c0c0c;
-  --white: #f8f8f8;
+  --white: #ffffff;
+  --grey-white:#f8f8f8;
   --grey: #707070;
-  --grey-light: #f5f5f5;
-  --white-blur: rgba(248, 248, 248, 0.5);
+  --grey-light: #f7f7f7;
+  --white-blur: rgba(255, 255, 255, 0.5);
   --dark-blur: rgba(40, 40, 40, 0.5);
   --red-border: 2px solid red;
   --grey-border: 1px solid rgb(214, 214, 214);
@@ -77,7 +78,7 @@ html {
   box-sizing: border-box;
 }
 body {
-  background: var(--white);
+  background: var(--grey-white);
   font-family: var(--manrope-font);
 }
 h1,
@@ -259,7 +260,7 @@ footer {
   text-align: center;
 }
 .home__accent-txt {
-  background: var(--secondary-black);
+  background: var(--white);
   padding: 0.5rem 0.8rem;
   border-radius: 32px;
   font-size: var(--fifteen-px);
@@ -691,6 +692,7 @@ body .slider-wrapper:hover body .cursor-circle {
 }
 .tech-stack .stack {
   border-radius: 10px;
+  background: var(--white);
   padding: 0.8rem;
   border: var(--grey-border);
   display: flex;
@@ -843,6 +845,7 @@ body .slider-wrapper:hover body .cursor-circle {
 }
 .testimony {
   padding: 1.5rem;
+  background: var(--white);
   border-radius: 20px;
   border: var(--grey-border);
   display: flex;
@@ -945,8 +948,9 @@ body .slider-wrapper:hover body .cursor-circle {
 }
 .faqs-section .faqs-container__lower .accordion-content {
   max-height: 0;
-  margin: auto;
-  width: min(93%, 800px);
+  background: var(--white);
+  width: 100%;
+  padding: 0 1rem;
   overflow: hidden;
   transition: max-height 0.3s ease-out;
 }
@@ -960,6 +964,7 @@ body .slider-wrapper:hover body .cursor-circle {
   margin: 0;
 }
 .book--call {
+  background: var(--white);
   border-radius: 20px;
   border: var(--grey-border);
   padding: 2rem;
