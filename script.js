@@ -154,3 +154,36 @@ try {
     t
   );
 }
+function openDialog(e) {
+  document.getElementById("dialog" + e).showModal();
+}
+function closeDialog(e) {
+  document.getElementById("dialog" + e).close();
+}
+document.getElementById('myForm').addEventListener('submit', function (event) {
+  event.preventDefault(); // Prevent default form submission
+
+  const form = event.target;
+  const data = new FormData(form);
+
+  // Replace the action attribute with your Formspree endpoint
+  const formspreeURL = "https://formspree.io/f/xyyqbvbq";
+
+  fetch(formspreeURL, {
+    method: "POST",
+    body: data,
+    headers: {
+      'Accept': 'application/json'
+    }
+  }).then(response => {
+    if (response.ok) {
+      // Redirect to a thank you page
+      window.location.href = "https://codevine.vercel.app/pages/thankyou.html";
+    } else {
+      alert('There was an error submitting the form.');
+    }
+  }).catch(error => {
+    console.error('Error:', error);
+    alert('There was an error submitting the form.');
+  });
+});
