@@ -161,7 +161,7 @@ li {
 .navbar__container {
   position: fixed;
   z-index: 8;
-  width: min(50%, 600px);
+  width: min(55%, 600px);
   top: 2rem;
   left: 50%;
   transform: translateX(-50%);
@@ -1641,6 +1641,9 @@ footer {
   .services--right li {
     font-size: var(--twentyone-px);
   }
+  .familiar-problem {
+  padding: 7rem 1rem;
+}
   .hamburger.open .dot1,
   .hamburger.open .dot2,
   .hamburger.open .dot3 {
@@ -1710,6 +1713,7 @@ footer {
   :root {
     --four-rem: 40px;
     --sixty-px: 30px;
+    --nineteen-px: 16px;
     --transition-ani: 300ms ease-out;
   }
 }
