@@ -416,6 +416,9 @@ fieldset {
   border-left: var(--grey-border);
   border-right: var(--grey-border);
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .home__content {
   width: 100%;
@@ -1855,6 +1858,9 @@ footer {
   .work__clients .clients-num {
     transform: translateX(9px);
   }
+  .home__cont {
+  height: 80svh;
+}
   .home__right {
     display: none;
   }
