@@ -44,7 +44,7 @@
                         <ul>
                             <li><a href="work.html">Work</a></li>
                             <li><a href="../index.html#service">Services</a></li>
-                            <li><a href="#">Contact</a></li>
+                            <li><a onclick="openDialog(1)">Contact</a></li>
                         </ul>
                     </div>
                 </div>
@@ -60,9 +60,9 @@
     </header>
     <section class="work--hero__wrap js-section-1">
         <div class="bottom-nav" id="bottomNav">
-            <a href="#work"><iconify-icon icon="heroicons-solid:mail" width="24" height="24"></iconify-icon>
+            <a onclick="openDialog(1)"><iconify-icon icon="heroicons-solid:mail" width="24" height="24"></iconify-icon>
                 <span>Contact</span></a>
-            <a href="#contact"><iconify-icon icon="lets-icons:date-today" width="24" height="24"></iconify-icon>
+            <a onclick="openDialog(1)"><iconify-icon icon="lets-icons:date-today" width="24" height="24"></iconify-icon>
                 <span>Book a call</span></a>
         </div>
     </section>
@@ -192,11 +192,49 @@
                     <h3>Like what you see? <br>
                         <span>Book a free discovery call.</span>
                     </h3>
-                    <a href="mailto:codevine2023@gmail.com"><button>Reach Out Now</button></a>
+                    <a onclick="openDialog(1)"><button>Reach Out Now</button></a>
                 </div>
             </div>
 
         </div>
+        <dialog id="dialog1">
+            <div class="book__pop-up">
+                <iconify-icon class="fa-times" icon="stash:times-solid" onclick="closeDialog(1)"></iconify-icon>
+                <div class="testimonial--profile">
+                    <div class="img">
+                        <img src="media/my-img.webp" alt="client image">
+                    </div>
+                    <div>
+                        <h4>Codevine</h4>
+                        <p><a href="mailto:codevine2023@gmail.com">codevine2023@gmail.com</a></p>
+                    </div>
+                </div>
+                <h2>
+                    You’re one step closer to locking in!
+                </h2>
+                <p>Fill out the form below so we can start building the success you deserve.</p>
+                <div class="contact-sec">
+                    <fieldset class="fieldset" data-aos="fade-up">
+                        <form method="POST" id="myForm">
+                            <div class="upper-form">
+                                <input type="text" id="name" name="name" placeholder="Enter your name">
+                                <input type="email" id="email" name="email" placeholder="Enter your email">
+                            </div>
+                            <div class="center-form">
+                                <textarea id="textarea" name="message"
+                                    placeholder="Send a message or describe your project" required></textarea>
+                                <input type="hidden" name="_subject" value="CODEVINE SUBMISSION">
+                                <!-- <input type="hidden" name="_captcha" value="false"> -->
+                            </div>
+                            <div class="bottom-form">
+                                <input type="hidden" name="_next" value="pages/thankyou.html">
+                                <button type="submit" id="send">Send Message</button>
+                            </div>
+                        </form>
+                    </fieldset>
+                </div>
+            </div>
+        </dialog>
     </section>
     </main>
     <footer>
@@ -212,7 +250,7 @@
                     </div>
                     <div>
                         <p>Call Me</p>
-                        <a href="mailto:codevine2023@gmail.com">Book Now</a>
+                        <a onclick="openDialog(1)">Book Now</a>
                     </div>
                     <div>
                         <p>Socials</p>

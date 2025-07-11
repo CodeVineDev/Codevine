@@ -377,8 +377,13 @@ fieldset {
   width: min(97%, 500px);
   margin: auto;
   border: var(--grey-border);
-  padding: 5rem 1rem;
+  padding: 2rem 1rem;
   margin-top: clamp(10rem, 5vw, 15%);
+ border-radius: 20px;
+ box-shadow: var(--box-shadow);
+}
+.thank--you .confetti{
+  margin: auto;
 }
 .thank--you h3{
   font-size: var(--three-rem);
