@@ -45,7 +45,7 @@ p {
   --figtree-font: "Figtree", sans-serif;
   --black: #0c0c0c;
   --white: #ffffff;
-  --grey-white:#f8f8f8;
+  --grey-white: #f8f8f8;
   --grey: #707070;
   --grey-light: #f7f7f7;
   --white-blur: rgba(255, 255, 255, 0.5);
@@ -57,6 +57,7 @@ p {
   --width-800px: min(97%, 800px);
   --fifteen-px: 13px;
   --sixteen-px: 16px;
+  --nineteen-px: 19px;
   --twentyone-px: 21px;
   --sixty-px: 60px;
   --fifty-px: 50px;
@@ -439,6 +440,7 @@ body .slider-wrapper:hover body .cursor-circle {
   overflow: hidden;
   height: 3rem;
   border-radius: 50%;
+  box-shadow: var(--box-shadow);
 }
 .clients-img img {
   width: 100%;
@@ -456,6 +458,86 @@ body .slider-wrapper:hover body .cursor-circle {
 .clients-num p {
   font-weight: 600;
   color: var(--grey);
+}
+.familiar-problem__wrap {
+  border-bottom: var(--grey-border);
+}
+.familiar-problem {
+  width: var(--width-1080px);
+  margin: auto;
+  padding: 7rem 2rem;
+  border-left: var(--grey-border);
+  border-right: var(--grey-border);
+}
+.familiar-problem h2 {
+  font-size: var(--sixty-px);
+  margin-bottom: 2rem;
+  font-weight: 700;
+  color: var(--black);
+}
+.familiar-problem ul {
+  margin: 2rem 0;
+}
+.familiar-problem li {
+  font-size: var(--nineteen-px);
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--black);
+  line-height: 1.5;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+.problem-list .icon {
+  font-size: var(--sixteen-px);
+  color: var(--grey);
+}
+.familiar-problem .text {
+  font-size: var(--nineteen-px);
+  color: var(--black);
+  font-weight: 700;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+.problem--cta {
+  margin-top: 1rem;
+}
+.problem--cta p {
+  font-size: var(--nineteen-px);
+  color: var(--black);
+  font-weight: 700;
+  line-height: 1.5;
+}
+.problem--cta__con{
+  display: flex;
+  justify-content: start;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.problem--cta a {
+  background: var(--black);
+  border-radius: 32px;
+  color: var(--white);
+  display: flex;
+  width: 200px;
+  font-weight: 600;
+  justify-content: center;
+  padding: 0.6rem;
+  transition: var(--transition-ani);
+  box-shadow: inset 0 2px 5px rgba(170, 170, 170),
+    inset 0 -2px 4px rgba(0, 0, 0, 0.2), 0 8px 10px rgba(0, 0, 0, 0.4);
+  text-decoration: none;
+  background: linear-gradient(to bottom, #ffffff33, #00000011), var(--black);
+}
+.problem--cta a:hover{
+  box-shadow: none;
+}
+.problem--value .icon {
+  font-size: var(--sixteen-px);
+  color: var(--black);
 }
 .project-name p,
 .project-name p:nth-child(2) {
@@ -842,6 +924,10 @@ body .slider-wrapper:hover body .cursor-circle {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 350px), 1fr));
   gap: 2rem;
+}
+.testimonial--wrap {
+  width: 100%;
+  border-top: var(--grey-border);
 }
 .testimony {
   padding: 1.5rem;
@@ -1455,6 +1541,7 @@ footer {
     --four-rem: 48px;
     --sixty-px: 35px;
     --fifty-px: 30px;
+    --nineteen-px: 17px;
     --transition-ani: 300ms ease-out;
   }
   .cursor-circle {
