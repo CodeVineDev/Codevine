@@ -498,6 +498,7 @@ body .slider-wrapper:hover body .cursor-circle {
   color: var(--black);
   font-weight: 700;
   line-height: 1.5;
+  text-wrap: wrap;
   margin-bottom: 1rem;
 }
 .problem--cta {
