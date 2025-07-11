@@ -435,12 +435,11 @@ body .slider-wrapper:hover body .cursor-circle {
   align-items: center;
 }
 .clients-img div {
-  width: 3rem;
-  border: 5px solid var(--white);
+  width: 2.5rem;
+  border: 4px solid var(--white);
   overflow: hidden;
-  height: 3rem;
+  height: 2.5rem;
   border-radius: 50%;
-  box-shadow: var(--box-shadow);
 }
 .clients-img img {
   width: 100%;
