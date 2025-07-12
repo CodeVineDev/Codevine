@@ -373,7 +373,7 @@ fieldset {
   box-shadow: none;
 }
 .thank--you{
-  width: min(97%, 500px);
+  width: min(90%, 500px);
   margin: auto;
   border: var(--grey-border);
   padding: 2rem 1rem;
