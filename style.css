@@ -485,7 +485,7 @@ fieldset {
   line-height: 1.5;
   color: var(--black);
   font-weight: 500;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 .home__cta-btn {
   background: linear-gradient(to bottom, #ffffff33, #00000011), var(--black);
@@ -1833,17 +1833,11 @@ footer {
   }
   .home__header {
   font-size: var(--four-rem);
-  line-height: 1;
-  color: var(--black);
-  margin-bottom: 1rem;
-  font-weight: 700;
+ 
 }
 .home__description {
   font-size: var(--sixteen-px);
-  line-height: 1.5;
-  color: var(--black);
-  font-weight: 500;
-  margin-bottom: 1rem;
+ 
 }
   .mobile-menu.open {
     display: block;
