@@ -60,6 +60,7 @@ p {
   --seventeen-px: 17px;
   --nineteen-px: 19px;
   --twentyone-px: 21px;
+  --thirty-px: 32px;
   --sixty-px: 60px;
   --fifty-px: 50px;
   --two-rem: 27px;
@@ -637,7 +638,7 @@ body .slider-wrapper:hover body .cursor-circle {
   border-right: var(--grey-border);
 }
 .familiar-problem h2 {
-  font-size: var(--sixty-px);
+  font-size: var(--thirty-px);
   margin-bottom: 2rem;
   font-weight: 700;
   color: var(--black);
@@ -1897,6 +1898,7 @@ footer {
     --four-rem: 40px;
     --sixty-px: 30px;
     --nineteen-px: 16px;
+    --thirty-px: 28px;
     --transition-ani: 300ms ease-out;
   }
 }
