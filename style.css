@@ -659,7 +659,7 @@ body .slider-wrapper:hover body .cursor-circle {
 }
 .problem-list .icon {
   font-size: var(--sixteen-px);
-  color: var(--grey);
+  color: red;
 }
 .familiar-problem .text {
   font-size: var(--nineteen-px);
@@ -706,7 +706,7 @@ body .slider-wrapper:hover body .cursor-circle {
 }
 .problem--value .icon {
   font-size: var(--sixteen-px);
-  color: var(--black);
+  color: green;
 }
 .project-name p,
 .project-name p:nth-child(2) {
@@ -1833,13 +1833,13 @@ footer {
     right: 2.5px;
   }
   .home__header {
-  font-size: var(--four-rem);
- 
-}
-.home__description {
-  font-size: var(--sixteen-px);
- 
-}
+    font-size: var(--four-rem);
+    margin-bottom: 1.5rem;
+  }
+  .home__description {
+    font-size: var(--sixteen-px);
+    margin-bottom: 2.5rem;
+  }
   .mobile-menu.open {
     display: block;
     height: 180px;
@@ -1865,13 +1865,13 @@ footer {
   .work__clients .clients-num {
     transform: translateX(9px);
   }
- .slide {
-  flex: 0 0 auto;
-  aspect-ratio: 1/1;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: var(--box-shadow);
-}
+  .slide {
+    flex: 0 0 auto;
+    aspect-ratio: 1/1;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+  }
   /* .home__right {
     display: none;
   } */
