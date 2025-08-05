@@ -25,7 +25,7 @@ p {
 a,
 p,
 li {
-  letter-spacing: 0.6px;
+  letter-spacing: 0.5px;
 }
 .socials--con .bread-crum:hover,
 .socials--con .link:hover,
@@ -1719,7 +1719,7 @@ footer {
     --sixteen-px: 16px;
     --two-rem: 20px;
     --three-rem: 28px;
-    --four-rem: 48px;
+    --four-rem: 35px;
     --sixty-px: 35px;
     --fifty-px: 30px;
     --nineteen-px: 17px;
@@ -1907,7 +1907,6 @@ footer {
     gap: 3rem;
   }
   :root {
-    --four-rem: 40px;
     --sixty-px: 30px;
     --nineteen-px: 16px;
     --thirty-px: 28px;
