@@ -25,7 +25,7 @@ p {
 a,
 p,
 li {
-  letter-spacing: 0.5px;
+  letter-spacing: 0.7px;
 }
 .socials--con .bread-crum:hover,
 .socials--con .link:hover,
@@ -667,10 +667,10 @@ body .slider-wrapper:hover body .cursor-circle {
   color: var(--black);
   line-height: 1.5;
   font-weight: 600;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   padding: .4rem;
   border-radius: 10px;
-  border: var(--grey-border);
+  box-shadow: var(--box-shadow);
 }
 .problem-list .icon {
   font-size: var(--sixteen-px);
@@ -679,13 +679,12 @@ body .slider-wrapper:hover body .cursor-circle {
 .familiar-problem .text {
   font-size: var(--nineteen-px);
   color: var(--black);
-  font-weight: 700;
+  font-weight: 600;
   line-height: 1.5;
   text-wrap: wrap;
   margin-bottom: 1rem;
 }
 .solution{
-
   padding: 1rem;
   border-radius: 10px;
   background: var(--grey-light);
