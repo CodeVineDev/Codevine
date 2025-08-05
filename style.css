@@ -668,6 +668,9 @@ body .slider-wrapper:hover body .cursor-circle {
   line-height: 1.5;
   font-weight: 600;
   margin-bottom: 1rem;
+  padding: .4rem;
+  border-radius: 10px;
+  border: var(--grey-border);
 }
 .problem-list .icon {
   font-size: var(--sixteen-px);
@@ -680,6 +683,19 @@ body .slider-wrapper:hover body .cursor-circle {
   line-height: 1.5;
   text-wrap: wrap;
   margin-bottom: 1rem;
+}
+.solution{
+
+  padding: 1rem;
+  border-radius: 10px;
+  background: var(--grey-light);
+  box-shadow: var(--box-shadow);
+}
+.red-list{
+  background: rgba(255, 143, 143, 0.1);
+}
+.green-list{
+  background: rgba(0, 128, 0, 0.1);
 }
 .problem--cta {
   margin-top: 1rem;
