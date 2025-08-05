@@ -23,8 +23,9 @@ p {
 }
 .testimony p,
 a,
-p {
-  letter-spacing: -5%;
+p,
+li {
+  letter-spacing: 0.6px;
 }
 .socials--con .bread-crum:hover,
 .socials--con .link:hover,
@@ -372,7 +373,7 @@ fieldset {
   font-size: var(--sixteen-px);
   transition: var(--transition-ani);
 }
-.calendly-btn a{
+.calendly-btn a {
   width: 100%;
   justify-content: center;
   height: 100%;
@@ -381,7 +382,8 @@ fieldset {
   font-size: var(--sixteen-px);
   color: var(--white);
 }
-.bottom-form button:hover, .calendly-btn:hover {
+.bottom-form button:hover,
+.calendly-btn:hover {
   box-shadow: none;
 }
 .thank--you {
@@ -492,7 +494,7 @@ fieldset {
   font-weight: 700;
 }
 .home__description {
-  font-size: clamp(18px, 5vw, 20px);
+  font-size: clamp(16px, 5vw, 18px);
   line-height: 1.5;
   color: var(--black);
   font-weight: 500;

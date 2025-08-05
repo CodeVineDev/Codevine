@@ -178,7 +178,7 @@ document.getElementById('myForm').addEventListener('submit', function (event) {
   }).then(response => {
     if (response.ok) {
       // Redirect to a thank you page
-      window.location.href = "https://codevine.vercel.app/pages/thankyou.html";
+      window.location.href = "https://codevinedev.com/pages/thankyou.html";
     } else {
       alert('There was an error submitting the form.');
     }
