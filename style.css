@@ -849,6 +849,9 @@ body .slider-wrapper:hover body .cursor-circle {
   gap: 0.5rem;
   position: relative;
 }
+#projects{
+  border-bottom: var(--grey-border);
+}
 .projects__view-all a,
 .view-live a {
   text-decoration: none;
@@ -875,12 +878,15 @@ body .slider-wrapper:hover body .cursor-circle {
   transition: var(--transition-ani);
   backdrop-filter: blur(10px);
 }
-.about--wrap,
+
 .single-review--wrap,
 .take--action__con,
 .work--hero__wrap {
   border-top: var(--grey-border);
   border-bottom: var(--grey-border);
+}
+.about--wrap{
+  border-top: var(--grey-border);
 }
 .single-review {
   width: var(--width-1080px);
