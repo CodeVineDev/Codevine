@@ -1244,7 +1244,7 @@ body .slider-wrapper:hover body .cursor-circle {
 }
 .faqs-section .faqs-container__lower .accordion-content p {
   border-top: var(--grey-border);
-  font-size: var(--fifteen-px);
+  font-size: var(--sixteen-px);
   color: var(--black);
   font-weight: 700;
   text-wrap: wrap;
