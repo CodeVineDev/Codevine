@@ -649,6 +649,13 @@ body .slider-wrapper:hover body .cursor-circle {
   border-left: var(--grey-border);
   border-right: var(--grey-border);
 }
+ .familiar-problem__con{
+    box-shadow: var(--box-shadow);
+    border-radius: 20px;
+    width: var(--width-800px);
+    margin: auto;
+    padding: 2rem;
+  }
 .familiar-problem h2 {
   font-size: var(--thirty-px);
   margin-bottom: 2rem;
@@ -895,6 +902,13 @@ body .slider-wrapper:hover body .cursor-circle {
   border-right: var(--grey-border);
   padding: 7rem 1.5rem;
 }
+.single-review__con{
+  box-shadow: var(--box-shadow);
+  width: var(--width-800px);
+  margin: auto;
+  padding: 2rem;
+  border-radius: 20px;
+}
 .about,
 .more--projects,
 .services,
@@ -909,7 +923,6 @@ body .slider-wrapper:hover body .cursor-circle {
   font-size: var(--two-rem);
   font-weight: 600;
   color: var(--black);
-  text-wrap: balance;
 }
 .about--right p,
 .testimony p {
@@ -1700,6 +1713,11 @@ footer {
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
   gap: 2rem;
 }
+@media (min-width: 1300px) {
+.footer--con .bottom h1 {
+  font-size: clamp(30px, 14vw, 500px);
+}
+}
 @media (max-width: 1000px) {
   .take--action {
     grid-template-columns: 1fr;
@@ -1846,6 +1864,7 @@ footer {
   .familiar-problem {
     padding: 7rem 1rem;
   }
+ 
   .hamburger.open .dot1,
   .hamburger.open .dot2,
   .hamburger.open .dot3 {
