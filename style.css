@@ -645,17 +645,18 @@ body .slider-wrapper:hover body .cursor-circle {
 .familiar-problem {
   width: var(--width-1080px);
   margin: auto;
+  display: flex;
+  gap: 3rem;
   padding: 7rem 2rem;
   border-left: var(--grey-border);
   border-right: var(--grey-border);
 }
- .familiar-problem__con{
-    box-shadow: var(--box-shadow);
-    border-radius: 20px;
-    width: var(--width-800px);
-    margin: auto;
-    padding: 2rem;
-  }
+.my-video{
+  border-radius: 20px;
+  box-shadow: var(--box-shadow);
+  height: 15rem;
+  width: min(100%,50rem);
+}
 .familiar-problem h2 {
   font-size: var(--thirty-px);
   margin-bottom: 2rem;
@@ -1733,6 +1734,10 @@ footer {
     bottom: -90px;
     right: 0;
   }
+  .familiar-problem {
+  flex-direction: column-reverse;
+  /* gap: 2rem; */
+}
 }
 @media (max-width: 768px) {
   .about h2,
@@ -1864,7 +1869,6 @@ footer {
   .familiar-problem {
     padding: 7rem 1rem;
   }
- 
   .hamburger.open .dot1,
   .hamburger.open .dot2,
   .hamburger.open .dot3 {
