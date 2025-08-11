@@ -659,6 +659,8 @@ body .slider-wrapper:hover body .cursor-circle {
   box-shadow: var(--box-shadow);
   height: 15rem;
   width: min(100%,50rem);
+  background: var(--white);
+  border: var(--grey-border);
 }
 .familiar-problem h2 {
   font-size: var(--thirty-px);
@@ -676,6 +678,7 @@ body .slider-wrapper:hover body .cursor-circle {
   align-items: center;
   gap: 0.5rem;
   color: var(--black);
+  border: var(--grey-border);
   line-height: 1.5;
   font-weight: 600;
   margin-bottom: 1.5rem;
@@ -696,9 +699,10 @@ body .slider-wrapper:hover body .cursor-circle {
   margin-bottom: 1rem;
 }
 .solution{
-  padding: 1rem;
+  padding:2rem 1rem;
+  background: var(--white);
   border-radius: 10px;
-  background: var(--grey-light);
+  border: var(--grey-border);
   box-shadow: var(--box-shadow);
 }
 .red-list{
@@ -909,6 +913,8 @@ body .slider-wrapper:hover body .cursor-circle {
   box-shadow: var(--box-shadow);
   width: var(--width-800px);
   margin: auto;
+  border: var(--grey-border);
+  background: var(--white);
   padding: 2rem;
   border-radius: 20px;
 }
@@ -1148,6 +1154,7 @@ body .slider-wrapper:hover body .cursor-circle {
   padding: 1.5rem;
   background: var(--white);
   border-radius: 20px;
+  border: var(--grey-border);
   box-shadow: var(--box-shadow);
   display: flex;
   flex-direction: column;
