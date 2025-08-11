@@ -364,7 +364,7 @@ fieldset {
   width: 100%;
   padding: 0.6rem;
   box-shadow: inset 0 2px 5px rgba(170, 170, 170),
-    inset 0 -2px 4px rgba(0, 0, 0, 0.2), 0 8px 10px rgba(0, 0, 0, 0.4);
+    inset 0 -2px 4px rgba(0, 0, 0, 0.2), 0 2px 6px rgba(0, 0, 0, 0.4);
   text-decoration: none;
   background: linear-gradient(to bottom, #ffffff33, #00000011), var(--black);
   border-radius: 32px;
@@ -412,7 +412,7 @@ fieldset {
 .thank--you button {
   padding: 0.6rem;
   box-shadow: inset 0 2px 5px rgba(170, 170, 170),
-    inset 0 -2px 4px rgba(0, 0, 0, 0.2), 0 8px 10px rgba(0, 0, 0, 0.4);
+    inset 0 -2px 4px rgba(0, 0, 0, 0.2), 0 2px 6px rgba(0, 0, 0, 0.4);
   text-decoration: none;
   background: linear-gradient(to bottom, #ffffff33, #00000011), var(--black);
   border-radius: 32px;
@@ -459,7 +459,7 @@ fieldset {
 .bottom-nav a,
 .home__cta-btn {
   box-shadow: inset 0 2px 5px rgba(170, 170, 170),
-    inset 0 -2px 4px rgba(0, 0, 0, 0.2), 0 8px 10px rgba(0, 0, 0, 0.4);
+    inset 0 -2px 4px rgba(0, 0, 0, 0.2), 0 2px 6px rgba(0, 0, 0, 0.4);
   text-decoration: none;
 }
 .status-pulse-complete {
@@ -663,7 +663,7 @@ body .slider-wrapper:hover body .cursor-circle {
   border: var(--grey-border);
 }
 .familiar-problem h2 {
-  font-size: var(--thirty-px);
+  font-size: var(--fifty-px);
   margin-bottom: 2rem;
   font-weight: 700;
   color: var(--black);
@@ -678,13 +678,14 @@ body .slider-wrapper:hover body .cursor-circle {
   align-items: center;
   gap: 0.5rem;
   color: var(--black);
-  border: var(--grey-border);
   line-height: 1.5;
   font-weight: 600;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
   padding: .4rem;
   border-radius: 10px;
   box-shadow: var(--box-shadow);
+  background: var(--white);
+  border: var(--grey-border);
 }
 .problem-list .icon {
   font-size: var(--sixteen-px);
@@ -705,12 +706,12 @@ body .slider-wrapper:hover body .cursor-circle {
   border: var(--grey-border);
   box-shadow: var(--box-shadow);
 }
-.red-list{
+/* .red-list{
   background: rgba(255, 143, 143, 0.1);
 }
 .green-list{
   background: rgba(0, 128, 0, 0.1);
-}
+} */
 .problem--cta {
   margin-top: 1rem;
 }
@@ -739,7 +740,7 @@ body .slider-wrapper:hover body .cursor-circle {
   padding: 0.6rem;
   transition: var(--transition-ani);
   box-shadow: inset 0 2px 5px rgba(170, 170, 170),
-    inset 0 -2px 4px rgba(0, 0, 0, 0.2), 0 8px 10px rgba(0, 0, 0, 0.4);
+    inset 0 -2px 4px rgba(0, 0, 0, 0.2), 0 2px 6px rgba(0, 0, 0, 0.4);
   text-decoration: none;
   background: linear-gradient(to bottom, #ffffff33, #00000011), var(--black);
 }
@@ -1056,6 +1057,8 @@ body .slider-wrapper:hover body .cursor-circle {
 .about--left {
   background: var(--grey-light);
   border-radius: 20px;
+  background: var(--white);
+  box-shadow: var(--box-shadow);
 }
 .about--left img {
   border-radius: 10px;
