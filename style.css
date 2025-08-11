@@ -871,6 +871,7 @@ body .slider-wrapper:hover body .cursor-circle {
 }
 .project-card{
   border: var(--grey-border);
+  background: var(--white);
   box-shadow: var(--box-shadow);
   border-radius: 20px;
   padding: 2rem;
