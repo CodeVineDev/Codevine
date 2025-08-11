@@ -816,8 +816,7 @@ body .slider-wrapper:hover body .cursor-circle {
   color: var(--white);
 }
 .book--call,
-.tech-stack .stack,
-.testimony {
+.tech-stack .stack {
   box-shadow: var(--box-shadow);
 }
 .project-name {
@@ -1149,7 +1148,7 @@ body .slider-wrapper:hover body .cursor-circle {
   padding: 1.5rem;
   background: var(--white);
   border-radius: 20px;
-  border: var(--grey-border);
+  box-shadow: var(--box-shadow);
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
