@@ -893,8 +893,7 @@ body .slider-wrapper:hover body .cursor-circle {
   margin: auto;
   border-left: var(--grey-border);
   border-right: var(--grey-border);
-  text-align: center;
-  padding: 7rem 1rem;
+  padding: 7rem 1.5rem;
 }
 .about,
 .more--projects,
@@ -906,7 +905,7 @@ body .slider-wrapper:hover body .cursor-circle {
   border-right: var(--grey-border);
 }
 .single-review blockquote {
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
   font-size: var(--two-rem);
   font-weight: 600;
   color: var(--black);
@@ -934,11 +933,9 @@ body .slider-wrapper:hover body .cursor-circle {
   font-size: var(--fifteen-px);
 }
 .single-review__profile {
-  width: max-content;
-  margin: auto;
+  width: 100%;
   gap: 0.6rem;
   display: flex;
-  justify-content: center;
   align-items: center;
 }
 .about,
@@ -1900,7 +1897,7 @@ footer {
   }
   .slide {
     flex: 0 0 auto;
-    aspect-ratio: 1/1;
+    aspect-ratio: 4/3;
     border-radius: 10px;
     overflow: hidden;
     box-shadow: var(--box-shadow);
