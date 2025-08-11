@@ -1046,7 +1046,7 @@ body .slider-wrapper:hover body .cursor-circle {
     inset 0 -2px 4px rgba(0, 0, 0, 0.2), var(--box-shadow);
 }
 .about h2 {
-  font-size: clamp(48px, 5vw, 70px);
+  font-size: clamp(38px, 5vw, 60px);
   color: var(--black);
   margin-bottom: 3rem;
   font-weight: 800;
@@ -1140,7 +1140,7 @@ body .slider-wrapper:hover body .cursor-circle {
 }
 .faqs-section .faqs-container__top h2,
 .testimonial h2 {
-  font-size: var(--sixty-px);
+  font-size: clamp(38px, 5vw, 60px);
   color: var(--black);
   margin-bottom: 3rem;
 }
@@ -1325,7 +1325,7 @@ footer {
   border-bottom: 1px solid var(--white-blur);
 }
 .footer--con .top h2 {
-  font-size: var(--sixty-px);
+  font-size: clamp(38px, 5vw, 60px);
   color: var(--white);
   margin-bottom: 2rem;
 }
@@ -1516,7 +1516,7 @@ footer {
   margin: auto;
 }
 .project--hero h2 {
-  font-size: var(--fifty-px);
+  font-size: clamp(38px, 5vw, 60px);
   color: var(--black);
   margin-bottom: 2rem;
   font-weight: 600;
@@ -1613,7 +1613,7 @@ footer {
   line-height: 1.5;
 }
 .more--projects h2 {
-  font-size: var(--sixty-px);
+  font-size: clamp(38px, 5vw, 60px);
   margin-bottom: 3rem;
   color: var(--black);
 }
