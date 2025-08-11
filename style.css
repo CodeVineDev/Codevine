@@ -641,6 +641,7 @@ body .slider-wrapper:hover body .cursor-circle {
 }
 .familiar-problem__wrap {
   border-bottom: var(--grey-border);
+  position: relative;
 }
 .familiar-problem {
   width: var(--width-1080px);
@@ -652,6 +653,8 @@ body .slider-wrapper:hover body .cursor-circle {
   border-right: var(--grey-border);
 }
 .my-video{
+  position: sticky;
+  top: 7rem;
   border-radius: 20px;
   box-shadow: var(--box-shadow);
   height: 15rem;
@@ -667,7 +670,7 @@ body .slider-wrapper:hover body .cursor-circle {
   margin: 2rem 0;
 }
 .familiar-problem li {
-  font-size: var(--nineteen-px);
+  font-size: var(--sixteen-px);
   display: flex;
   justify-content: start;
   align-items: center;
@@ -685,7 +688,7 @@ body .slider-wrapper:hover body .cursor-circle {
   color: red;
 }
 .familiar-problem .text {
-  font-size: var(--nineteen-px);
+  font-size: var(--sixteen-px);
   color: var(--black);
   font-weight: 600;
   line-height: 1.5;
@@ -901,7 +904,7 @@ body .slider-wrapper:hover body .cursor-circle {
   margin: auto;
   border-left: var(--grey-border);
   border-right: var(--grey-border);
-  padding: 7rem 1.5rem;
+  padding: 7rem .7rem;
 }
 .single-review__con{
   box-shadow: var(--box-shadow);
@@ -1738,6 +1741,9 @@ footer {
   flex-direction: column-reverse;
   /* gap: 2rem; */
 }
+.my-video{
+  position: static;
+}
 }
 @media (max-width: 768px) {
   .about h2,
@@ -1910,6 +1916,9 @@ footer {
   }
 }
 @media (max-width: 640px) {
+  .single-review__con{
+  padding: 2rem 1rem;
+}
   .work__clients a {
     flex-direction: column;
     justify-content: center;
