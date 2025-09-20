@@ -646,8 +646,8 @@ body .slider-wrapper:hover body .cursor-circle {
 .familiar-problem {
   width: var(--width-1080px);
   margin: auto;
-  display: flex;
-  gap: 3rem;
+  /* display: flex;
+  gap: 3rem; */
   padding: 7rem 2rem;
   border-left: var(--grey-border);
   border-right: var(--grey-border);
@@ -698,6 +698,10 @@ body .slider-wrapper:hover body .cursor-circle {
   line-height: 1.5;
   text-wrap: wrap;
   margin-bottom: 1rem;
+}
+.familiar-problem__con{
+  width: var(--width-800px);
+  margin: auto;
 }
 .solution{
   padding:2rem 1rem;
@@ -1791,13 +1795,13 @@ footer {
     bottom: -90px;
     right: 0;
   }
-  .familiar-problem {
+  /* .familiar-problem {
   flex-direction: column-reverse;
-  /* gap: 2rem; */
+  gap: 2rem;
 }
 .my-video{
   position: static;
-}
+} */
 }
 @media (max-width: 768px) {
   .about h2,
